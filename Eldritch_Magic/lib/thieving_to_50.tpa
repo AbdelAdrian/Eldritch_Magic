@@ -1,0 +1,53 @@
+// let ranger stealth go above 99
+COPY_EXISTING ~skillrng.2da~ ~override~
+  COUNT_2DA_ROWS ~2~ "rows"
+  FOR (index = 0 ; index < rows ; ++index) BEGIN
+    READ_2DA_ENTRY index 0 2 "level"
+    READ_2DA_ENTRY index 1 2 "stealth"
+    PATCH_IF (IS_AN_INT level) BEGIN
+      SET stealth_adj = (10 + (7 * level))
+      PATCH_IF (stealth_adj > 200) BEGIN
+        SET stealth_adj = 200
+      END
+      PATCH_IF (stealth < stealth_adj) BEGIN
+        SET_2DA_ENTRY index 1 2 "stealth_adj"
+      END
+    END
+  END
+  BUT_ONLY
+
+// if table ends before level 50, use last read level from above
+OUTER_FOR (index = (level + 1) ; index < 51 ; ++index) BEGIN
+  OUTER_SET stealth_adj = (10 + (7 * index))
+  ACTION_IF (stealth_adj > 200) BEGIN
+    OUTER_SET stealth_adj = 200
+  END
+  APPEND ~skillrng.2da~ ~%index%          %stealth_adj%~
+END
+
+// let bard pp go above 99
+COPY_EXISTING ~skillbrd.2da~ ~override~
+  COUNT_2DA_ROWS ~2~ "rows"
+  FOR (index = 0 ; index < rows ; ++index) BEGIN
+    READ_2DA_ENTRY index 0 2 "level"
+    READ_2DA_ENTRY index 1 2 "pp"
+    PATCH_IF (IS_AN_INT level) BEGIN
+      SET pp_adj = (20 + (5 * level))
+      PATCH_IF (pp_adj > 200) BEGIN
+        SET pp_adj = 200
+      END
+      PATCH_IF (pp < pp_adj) BEGIN
+        SET_2DA_ENTRY index 1 2 "pp_adj"
+      END
+    END
+  END
+  BUT_ONLY
+
+// if table ends before level 50, use last read level from above
+OUTER_FOR (index = (level + 1) ; index < 51 ; ++index) BEGIN
+  OUTER_SET pp_adj = (20 + (5 * index))
+  ACTION_IF (pp_adj > 200) BEGIN
+    OUTER_SET pp_adj = 200
+  END
+  APPEND ~skillbrd.2da~ ~%index%          %pp_adj%~
+END

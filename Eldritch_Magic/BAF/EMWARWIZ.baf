@@ -1,0 +1,7 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+	ActionOverride(LastSummonerOf(Myself),AddKit(WAR_WIZ))
+	DestroySelf()
+END

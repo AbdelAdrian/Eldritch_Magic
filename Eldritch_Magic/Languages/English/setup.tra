@@ -1,0 +1,2270 @@
+//\def\SubEmdash#1{%
+//  \ctxlua{context(string.gsub("#1", "[-][-]", "\\emdash{}"))}}
+
+//\starttext
+//  \SubEmdash{Escaping ampersands -- \& -- is troublesome.}
+//\stoptext
+
+//\starttypescript [serif] [ContentBody]
+//  \definefontsynonym [Serif] [name:librebaskervilleregular] [features=default]
+//\stoptypescript
+
+//\definetypeface[ContentFont] [rm] [serif] [ContentBody] [default]
+//\usetypescript[ContentFont] [ec]
+//\setupbodyfont[ContentFont]
+
+     @0 = ~ABYSSAL WARRIOR: Those cutters hardy enough to not only survive but thrive in the deadly realms of the Abyss among the pain-inflicting, death-dealing tanar'ri are a tough breed indeed. The Abyss shows no kindness to wizards, but a blood who's good with a sword or axe is useful to the plane's lords and worthy of some respect. That which remains useful in that horrible place stays alive. Abyssal warriors are the mortal fighters who serve in the Blood War, guard tanar'ri palaces, and work as mercenaries in those Abyssal towns where planars can survive.
+
+Advantages:
+– Receives a +1 bonus to all Saving Throws.
+– Proficient in Blind-fighting.
+– 1st level:  Receives a weapon and suit of armor from the Abyss.*
+– 10th level: Gains +1 Strength.
+– 13th level: Immune to Demon Fear.
+– 15th level: May cast Cacofiend once per day.
+– 20th level: May cast Summon Fiend once per day.
+
+Disadvantages:
+– -1 Charisma.
+– -1 Penalty to THAC0 in bright sunlight.
+– Alignment restricted to chaotic neutral and chaotic evil.
+– Race restricted to tiefling.**
+
+
+*  Stand still for a moment, then hover over the quick spell options using TAB to select your weapon choice.
+** Character will be converted to tiefling upon creation.
+   Tieflings have the following traits:
+   – 50% cold and magic cold, 25% fire and magic fire, and 15% physical resistance.
+   – Infravision.
+   – +1 INT and CHA, -1 STR and WIS.~
+     @1 = ~BLADESINGER: Of the roving elves, there are few as deadly as the Bladesinger. They are masters of their weapons and have spent their lives in the study of their chosen weapons. They have also learned to cast spells while engaged in combat, and thus they double their might. While some characters may stay at home to defend the elven way, Bladesingers go out and actively promote it. They do this by seeking out their race's foes and eliminating them, either through words or actions. Acting as both diplomats and one-elf armies, they insure the safety of the elf race.
+
+CLASS FEATURES:
+
+– May achieve Grand Mastery (five slots) with any one-handed melee weapon, typically bladed.
+– May achieve Grand Mastery (five slots) in Single-Weapon Style.
+– May not Specialize in ranged weapons.
+– May focus on a single weapon only.
+– May not wear armor heavier than chain mail or studded leather. (Spells cannot be cast while wearing armor other than elven chain mail.)
+– May not dual-wield, use shields, or use two-handed weapons while bladesinging.
+– Level advancement and High Level Abilities (HLAs) of a multi-class fighter/mage.
+– May cast arcane spells one-handed with a +2 casting time penalty.
+– Must attempt to advance the cause of elvendom somehow at all times, and lend aid to any elf in need.
+– Race restricted to elf.
+– Alignment restricted to good.
+– Hit Die: d7
+
+– Proficient in Blind-fighting
+– 14th level: First HLA gained. (3 Million XP.)
+– 15th level: Gain recognition from Bladesinger's Guild.
+– 22nd level: (8 Million XP.)
+– 25th level: Divine Intervention.
+– 30th level: Seldarine's Chosen.
+
+Advantages:
+1. The Bladesinger chooses one weapon and practices with it extensively, to the exclusion of most other weapons. If practice makes perfect, the Bladesingers are very well practiced in their weapon of choice-for they are virtually perfect. The poised steps of the bladesong (the act of attack by a Bladesinger) not only reveals the Bladesinger to be a creature of beauty even during battle, but the steps also carry him into advantageous positions for either offense or defense. He can instinctively grasp the flow of the battle around him, and his feet will carry him through the intricate maneuvers necessary to optimize his attack. Such is the intensive training of the Bladesinger that he gains an automatic +1 to attack rolls as well as a +1 for damage. This is in addition to the normal elven +1 for use of the long or short sword (if applicable). Despite any additional, further training, this is as high as the bonus can be.
+
+2. Bladesingers receive a special bonus when they wish to try an unusual maneuver with their blade. This bonus is equal to +1 for every four levels the Bladesinger has attained. The bonus only serves to cancel the penalties normally applied for such a maneuver. All other penalties and bonuses still apply.
+
+3. Bladesingers have been taught from an early age to grasp the flow of magic around them and to turn it to their advantage. They can cast spells even while in the front lines. Although they cannot actually attack while casting their spells, they may defend themselves against incoming melee attacks.
+Their defense is equal to their level divided by 2, plus 1. All fractions are rounded down. Thus, a 6th-level Bladesinger gains a +4 to AC (6thlevel/2=3+1=+4 AC). The same goes for 7th-level Bladesingers (7/2=3.5-.5=3+1=+4 AC). This does not apply to rear or missile attacks, for it is nearly impossible to defend against those while casting a spell. Bladesingers have practiced the somatic portion of their spells well enough that they may cast their spells one-handed, suffering only a slight penalty. It adds +2 to their casting times, making it easier to disrupt their spells. Like any other spellcaster, if they are hit they lose the concentration necessary for maintaining their spells; they lose the spell. Their spells are, therefore, usually of an offensive nature with very short casting times.
+
+4. The training is hard enough that only a 3rd-level Bladesinger can begin to teach even the rudiments of the bladesong. If another elf wishes to learn the bladesong, he must seek one of the masters of the blade. Bladesingers charge a high price for sharing their skills.
+
+BLADESINGING:
+Although the cost is rather steep to learn bladesinging, its practitioners swear by it. Its wide versatility often astounds those who are not familiar with its intricacies. The things even an amateur bladesinger can do with one blade echo tricks that accomplished warriors can do with two, or with a weapon and shield. Those elves willing to devote two slots to learning the rudiments of bladesinging gain the use of the following benefits:
+1. They may gain a +1 bonus to their AC or, if they wish to spend an extra slot, may boost this bonus to +2 to their AC. That is the highest bonus those who choose blade-singing as an additional skill can attain. Or
+2. They may gain a +1 to hit or, if they wish to spend an extra slot, may boost this to a +2 to attack. As with the AC bonus, +2 is the best they can hope for. Or
+3. They may attack and parry in that same round, without wasting any additional attacks. Note that these three benefits are not cumulative; that is, practitioners cannot use all three at once. However, they do have the option of varying between these three options during the course of a combat.
+
+Disadvantages:
+The most obvious disadvantage to acquiring the bladesinging weapon style is that a character cannot carry a shield and practice the style at the same time. This technique requires far too much concentration on movement and flow, and the shield gets in the way of the grace and balance necessary to successfully use the style. A more esoteric disadvantage is that this style is most often used by loners-solitary individuals who have no desire to be part of a group. Rarely, this technique may be practiced by someone whose companions will part company with the PC for a decade. Since bladesinging is a very demanding style, the training is intense, difficult, and, above all, long. Therefore, a PC would be well advised to study this style in his or her early years before joining up with a group of adventurers-or else develop some long-lived and understanding friends.
+
+Special Hindrances: To offset their abilities, Bladesingers suffer some severe penalties. Not only must they attempt to advance the cause of elvendom somehow at all times, they must also lend aid to any elf in need. Unless the elf is proven to be an enemy of the elven way of life, the Bladesinger must sacrifice life and limb to save that elf's life. Of course, the Bladesinger is free to determine whether there is, in fact, an elf in danger.
+Bladesingers are so devoted to their chosen weapon that they can never learn another one. Unlike other elves, they do not gain a +1 to attack rolls with a bow. With all other weapons, they suffer a -1 penalty to attack rolls, even if they have taken it as a proficiency. If they have not devoted the slot to learn the weapon, the Bladesinger suffers the ordinary nonproficiency in addition to the -1 penalty.~
+     @2 = ~COLLECTOR: Occasionally, humans will come into possession of items that either aren't theirs or are too dangerous for these short-lived beings to have. The Collector is there to make sure these things return to elf hands. The Collector's role in life is to retrieve things from dangerous places. Whether this item is a stolen suit of elven plate armor or an ancient, unearthed artifact, the Collector will get it back. When humans seem in danger of destroying things of beauty or of historical power, the Collector makes sure those objects are spirited away to safety. The Collector is not only a thief, but an archaeologist as well; <PRO_HESHE> uses all <PRO_HISHER> classes' skills to retrieve the items from wherever they lie, even deep beneath the earth, then keeps them from the hands of the elves' enemies.
+     
+Advantages:
+– KIT COMING SOON
+
+Disadvantages:
+– Race restricted to elf.
+– Class restricted to fighter/mage/thief.~
+     @3 = ~ELDRITCH KNIGHT: The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook. Unlike Bladesingers and War Wizards, the Eldritch Knight kit is not uniquely elven, but rather is limited to fighter/mages and any race that may become one. In fact, there are even rumors of Gnomish Eldritch Knights who exclusively use illusionary magic.
+
+Advantages:
+– May cast Green-Flame Blade once per day/level.
+– May cast Booming Blade once per day/level.
+
+Disadvantages:
+– Race restricted to elf & half-elf.
+– Class restricted to fighter/mage.~
+     @4 = ~ELVEN MINSTEL: Only elves and half-elves can become Minstrels. Of all musicians in the world, none can play as purely as an elf. Minstrels spend their entire lives seeking musical perfection. Of course, the definition of perfection differs from one culture to the next. Elves believe that music should be simple, pure, beautiful, and natural. Furthermore, those who listen should become lost in the music, and their spirits should transcend their bodies to ride upon the sweet flow of glittering notes. Elves are a very magical race, and this is especially true of Minstrels. It is said that Minstrels cast spells by the simple strumming of an instrument.
+     
+Advantages:
+– KIT COMING SOON
+
+Disadvantages:
+– Race restricted to elf & half-elf.~
+     @5 = ~HERBALIST: Even when these priests have run out of healing spells, they are not useless as healers. The elf Herbalist can soothe fevers and mend wounds with the utmost ability and speed. Herbalists are very knowledgeable about the various herbs found in their domains. They can locate even the hard-to-find ones, although that might take some searching. Their herb lore is unsurpassed, except by druids.
+
+Advantages:
+– May cast Goodberry once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
+– May cast Neutralize Poison once per day. Gains one use at level 1 and an additional use every 10 levels thereafter.
+
+Disadvantages:
+– Race restricted to elf and half-elf.
+– Alignment restricted to good and neutral.~
+     @6 = ~HUNTSMAN: Although some call them bounty hunters, the Huntsmen know better. Their chief joy in life is the hunt, and they have trained themselves in the ways of life: fighting and stealth. A Huntsman is at home in both the city and the wilderness. His job is to track down errant wrongdoers and bring them to justice. He can be good, evil, or neutral; he may ethically bring criminals to face the law or hunt them just for money. Whether he is good or not good, his motivation is more the thrill of the hunt than material gain.
+     
+Advantages:
+– KIT COMING SOON
+
+Disadvantages:
+– Race restricted to elf.
+– Class restricted to fighter/thief.~
+     @7 = ~INFILTRATOR: The Infiltrator is the very model of an elf scout. Whether in urban or wilderness situations, the Infiltrator is the master of stealth and disguise. When elves need quick and reliable information with a minimum of fuss, they call on an Infiltrator. The Infiltrators' motto is "If it's a secret, it's not." Sometimes, the Infiltrator will gain information simply for the sheer joy of knowing it. Although this is a typically elven trait, only the Infiltrators go to such an extent to learn a secret.
+     
+Advantages:
+– KIT COMING SOON
+
+Disadvantages:
+– Race restricted to elf.
+– Class restricted to fighter/mage/thief.~
+     @8 = ~PRIEST OF MYSTRA: Mystra is the Mother of All Magic and tender of the Weave. Her followers are often proficient with both arcane and divine spells.
+
+Advantages:
+– May cast Mystra's Silver Fire once per day. Gains two uses at level 1 and an additional use every 5 and 10 levels thereafter.
+
+MYSTRA'S SILVER FIRE: This spell explodes for 1d6 fire damage per level of the caster up to 20d6. Save vs. Spell for half.
+
+Disadvantages:
+– Class restricted to cleric/mage.
+– Alignment restricted to good and neutral.~
+     @9 = ~PRIESTESS OF LOLTH: Lolth, or Lloth in the drow tongue, the Demon Queen of Spiders, is the chief goddess of drow elves. Her servants must appease the arachnid deity to avoid death, or punishment in the form of life as a drider. Priestesses of Lolth gain no more abilities from their deity than clerics of the surface elves; in fact, the Demon Queen only blesses drow with the most exceptional power, and only the greatest among those ever attain the rank of High Priestess. It is for this reason that followers of Lolth work exceptionally hard to overcome mortal limits. It is routine for priestesses to emulate spiders in their training at any cost. They must learn on their own how to avoid being caught in spider web, lest they be devoured by their own arachnids. Furthermore, each priestess relentlessly consumes poison in order to build up a natural resistance, either eventually overcoming the frail elven constitution, or dying.
+
+Advantages:
+– May cast Spider Spawn once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
+– May cast Shapeshift: Spider once per day. Gains one use at level 1 and an additional use every 10 levels thereafter.
+– 3rd level: Immune to Web.
+– 9th level: Immune to Poison.
+
+Disadvantages:
+– Alignment restricted to chaotic evil.
+– Race restricted to drow elf.*
+– Gender restricted to female.**
+
+
+*  Character will be converted to drow upon creation.
+   50% base magic resistance +2%/level up to 65%.
+** Character will be converted to female upon creation. Choose portrait, voice, and name accordingly.
+
+Ability Score Adjustments: Drow are extraordinarily dexterous and intelligent. They gain a bonus of +2 to Dexterity and a +1 to Intelligence. However, their personalities can be described as grating at best (although not usually to their faces), and they have the typical elf Constitution. Thus, they have a -2 penalty to Charisma and a -1 to their initial Constitution scores.~
+     @10 = ~SPELLFILCHER: This mage/thief is adept at breaking into wizard's domiciles to purloin magical goods, particularly spellbooks and rare spell components. Through a strange inner talent, the spellfilcher has an amazing ability. When there is a magical trap to be disarmed or magical treasure to be gotten, the Spellfilcher is the one to do it. Trained from her early years, the Spellfilcher uses an innate magical ability to locate and disarm traps that would victimize another.
+     
+Advantages:
+– KIT COMING SOON
+
+Disadvantages:
+– Race restricted to elf.
+– Class restricted to mage/thief.~
+     @11 = ~UNDEAD HUNTER: This holy avenger has honed his abilities toward the destruction of the undead and other unnatural creatures and is immune to many of their most devastating abilities.
+
+Advantages:
+– +3 bonus to hit and damage rolls against undead creatures.
+– Immune to hold and level drain.
+
+Disadvantages:
+– May not use Lay On Hands ability.~
+     @12 = ~WAR WIZARD: Although elves do not desire war, preferring instead to live their lives in peace and idyllic happiness, they recognize that the world is full of races hostile to elves, all of whom would love to see them driven into the dirt. A War Wizard is one who has devoted <PRO_HISHER> life to defending against such attacks. The War Wizard is usually the person in charge of defense for any given elf town. When there is a problem with an enemy, the War Wizard is the one to call. Even if not associated with a town, the War Wizard is an invaluable asset to any group that expects to face trouble. Simple strategic knowledge is <PRO_HISHER> bread and butter, but <PRO_HISHER> expertise does not end there - <PRO_HESHE> can work offensive marvels physically, and <PRO_HISHER> spellcasting skills are excellent. Magic is an integral part of the elven lifestyle. Elves' very lives are inherently magical; the blood of a god flowing through one's veins tends to give that person a much different perspective on the workings of magic. As such, War Wizards become increasingly defensive, in personality and passive protections. These elves excel at repelling enemy spellcasting and even weapons with their layers of contingencies, but War Wizards have no shortage of offensive spells for retaliation.
+
+Advantages:
+– +1 Save vs. Spell every 4th level up to +5 at level 20.
+– +1 bonus to Armor Class every 5th level up to +4 at level 20.
+– 6th level: May cast Enchanted Weapon once per day.
+– 12th level: May cast Mordenkainen's Sword once per day.
+
+Disadvantages:
+– Slower casting speed by 1.
+– May not Specialize in ranged weapons.
+– -1 THAC0 Penalty with all Missile Weapons.
+– Reduced Lore.
+– Increased Fatigue.
+– Race restricted to elf.
+– Class restricted to fighter/mage.~
+     @13 = ~WILDERNESS RUNNER: There are rangers, and then there are rangers. Elves are uniquely connected with the rhythms of the forests, some more deeply than others. Only those who have chosen to become rangers may elect to become more fully part of the forest. They are called Wilderness Runners. Wilderness Runners have cast aside the trappings of even elven society to serve the needs of the wood. Although they still respect and serve their own society, they take no part in its functions. They may serve as scouts or advance guards for elf cities, but they will not willingly enter civilization. If the Wilderness Runner is a high elf, <PRO_HESHE> is far less civilized than <PRO_HISHER> brethren and demonstrates the tendencies of sylvan elves.
+     
+Advantages:
+– +1 Constitution.
+– Gains one use of Charm Animal every level.
+– Gains 1% Fire and Cold resistance per level up to 20% at level 20.
+– Gains 5% Tracking bonus and +1 Movement Speed at 5th, 10th, 15th, and 20th level.
+
+Disadvantages:
+– -1 Charisma.
+– Race restricted to elf.
+– Alignment restricted to chaotic good.
+– May not wear armor heavier than studded leather.~
+     @14 = ~WINDRIDER: Few mounted cavalry are as glamorous and exciting as the Windriders. The elite of the elf forces, they are greatly envied by common elves and greatly feared by foes. The powerful and majestic mounts they ride into combat make Windriders more dangerous than most infantry, but at the cost of being a larger and more preferentially attacked target. The Windrider is the knight of the air, defending elf lands against aerial attacks. In times of war, they are both shock troops and scouts. While most Windriders mount griffons, hippogriffs, or pegasi, brave elves of the Sword Coast are rather limited in their choices and have been known to ride wyverns instead.
+     
+Advantages:
+– May cast Summon Mount once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
+
+SUMMON MOUNT: The Windrider calls forth a wyvern mount of appropriate maturity for <PRO_HISHER> level.
+This ability may only be used outdoors.
+
+Disadvantages:
+– -1 Armor Class.
+– Race restricted to elf.
+– Alignment restricted to good.
+– May not exceed Specialization (two slots) in any weapon class.~
+     @15 = ~tiefling~
+     @16 = ~TIEFLINGS: Of all the plane-touched, none precipitate as much fascination – or as much fear – as tieflings. Whereas aasimar are obviously touched by a celestial spark, and genasi have the potency of the elements running through their veins, tieflings are enshrouded with the mysteries of an unnamed heritage.
+Obviously human and "something-else" crossbreeds, the "something else" in the tieflings' case is usually assumed to be lower-planar. That stigma follows all tieflings throughout their lives. Loners by nature, they make their own paths out of necessity; no tiefling culture exists to aid the outcasts, since no two tieflings are alike. As distinctive from humans as they are from each other, tieflings tend to be wary and distrustful due to the reactions they come to expect from others. Tieflings take care of themselves, for they learn early that no one will take care of them.
+But rather than withdraw into individual hermitages, tieflings challenge the multiverse with everything in their dependent spirits. Determined to create their own fates, they dare things others might not even dream of and defy anything that stands in their way.
+
+Tieflings may be a common sight in Sigil, but they're a rarity on the Prime Material Plane, especially along the Sword Coast. More often than not, the few tieflings who can suvive Abeir-Toril appear to be elves or half-elves with traits to match. Only those tieflings who revel in their fiendish heritage display the traits listed below.
+
+Tieflings have the following traits:
+- 50% resistance against cold-based attacks.
+- Infravision.
+- +5% Find Traps, +10% Move Silently, +10% Hide in Shadows.
+- +1 Intelligence and Charisma, -1 Strength and Wisdom.~
+     @17 = ~Tiefling~
+     @18 = ~You know little of how you came to be a ward of Gorion's, but over the years you have gleaned something of your mother's tale from his vague allusions and from the words he sometimes uttered in tear-filled sleep. She was a tiefling from the High Forest and a friend of his for many seasons. As you have no memory of her, nor any keepsakes to remind you of her existence, you have come to believe that she died while giving birth to you. Perhaps it was the pain of such a parting that led Gorion to cloister himself within the narrow halls of Candlekeep and raise you as his own. Of your father, you have learned nothing.~
+     @19 = ~vampire~
+     @20 = ~VAMPIRES: Of all the chaotic evil undead creatures that stalk the world, none is more dreadful than the vampire. Moving silently through the night, vampires prey upon the living without mercy or compassion. Unless deep underground, they must return to the coffins in which they pass the daylight hours, and even in the former case they must occasionally return to such to rest, for their power is renewed by contact with soil from their graves. One aspect that makes the vampire far more fearful than many of its undead kindred is its appearance. Unlike other undead creatures, the vampire can easily pass among normal men without drawing attention to itself for, although its facial features are sharp and feral, they do not seem inhuman. In many cases, a vampire's true nature is revealed only when it attacks. There are ways in which a vampire may be detected by the careful observer, however. Vampires cast no reflection in a glass, cast no shadows, and move in complete silence.~
+     @21 = ~Vampire~
+     @22 = ~~
+     @23 = ~~
+     @24 = ~~
+     @25 = ~This component is not available for your game.~
+     @26 = ~Boots~
+     @27 = ~The Paws of the Lythari~
+     @28 = ~Boots are normally handmade by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+
+STATISTICS:
+
+Weight: 4~
+     @29 = ~Elven Boots of Speed: The Paws of the Lythari
+The origin of these boots is disputed, but one thing is clear: if they are of elven origin, they are either extremely ancient, or not from a subrace of elves common to Faerun. Rumors say they are not of the Teu-Tel'Quessir, Moon Elves or Silver Elves in the common tongue, the elves most prevalent in Faerun. Others say the remarkably lupine fur lining the boots is not that of a wolf, but rather a Lythari- elven lycanthropes so far from their elven roots as to be considered a separate race from elves by Faerunian scholars. These mysterious boots not only double the wearer's movement rate, but also provide free action. As with all items made (or aquired) by the Bladesinger's Guild and later given to their elites, so too are these boots warded for good-aligned elves.
+
+STATISTICS:
+
+Equipped abilities:
+– Doubles movement rate
+– Free Action
+
+Weight: 2~
+     @30 = ~Elven Chain Mail~
+     @31 = ~Holy Elven Chain +6~
+     @32 = ~The delicate yet sturdy craftsmanship of the elven races allows them to design many beautiful yet utilitarian goods. Among these is elven chain mail, which is so finely wrought that it can be worn under normal clothing without revealing its presence. This and its lightness allows it to be worn by Thieves and Fighter/Mages with few restrictions.
+
+STATISTICS:
+
+Equipped abilities:
+– Open Locks: -5%
+– Find Traps: -5%
+– Pick Pockets: -20%
+– Move Silently: -10%
+
+Armor Class: 5 (3 vs. slashing, 7 vs. crushing)
+Requires:
+ 5 Strength
+
+Weight: 7~
+     @33 = ~While in exile from Myth Drannor, Aslyferund learned the secret of fashioning powerful elven armor by gilding and heavily enchanting normal elven chain. Alas, his refusal to divulge the secret lead to his murder by a rival smith.
+This particular suit has protected many elven heroes, and radiates an intense aura of goodness, preventing evil ownership. The link between <CHARNAME> and the Divine allowed this artifact of godly power to materialize in the Pocket Plane during the Time of Troubles; perhaps to advance <PRO_HISHER> righteous cause, or aid in <PRO_HISHER> defeat, should Bhaal's taint manifest itself.
+
+STATISTICS:
+
+Equipped abilities:
+– Protection from Evil
+– Immunity to normal weapons
+– Open Locks: -5%
+– Find Traps: -5%
+– Pick Pockets: -20%
+– Move Silently: -10%
+
+Armor Class: -1 (-3 vs. slashing, 1 vs. crushing)
+Requires:
+ 5 Strength
+
+Weight: 15~
+     @34 = ~Cloak~
+     @35 = ~Bladesinger's Shroud~
+     @36 = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.
+
+STATISTICS:
+
+Weight: 3~
+     @37 = ~This cloak sewn with blessed silver threading and enchanted for weeks while soaked in Elven Holy Water, given to Bladesingers who have valiantly defended the elven way of life, allows the wearer to avoid magical detection when a mission requires subtlety, and resist level drain when going toe-to-toe with powerful undead and denizens of the Negative Plane. This already powerful shroud has been further enchanted to allow the Bladesinger to use Improved Invisibility once per day, in truly dire situations when spells are depleted. It's obvious why the noble Bladesinger's Guild would keep this item from those with unlawful intent.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to level drain
+– While hidden or invisible, the wearer is non-detectable by magical means such as Detect Invisibility and scrying
+
+Charge abilities:
+– Improved Invisibility once per day
+  Duration: 3 rounds
+  Area of Effect: The user
+
+Weight: 3~
+     @38 = ~Silver Ring~
+     @39 = ~Bladesinger's Signet~
+     @40 = ~A ring is a small band of precious metal that is used as jewelry. Some rare rings have had enchantments placed upon them that confer various magical abilities. These rings are highly sought after, especially by those of the adventuring profession. This ring is an unadorned silver band. However, its plain appearance belies the powerful magic within.
+
+STATISTICS:
+
+Weight: 0~
+     @41 = ~This ring is masterfully enchanted, granting immunity to silence while allowing the wearer to memorize more spells than normally possible and cast them more quickly. This ring designed by and for powerful elven fighter/mages is attuned specifically to good aligned elves. Bladesingers who have proven to be worthy protectors of the elven way are often given this signet to enhance their one-handed spell casting.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize one extra 1st-level spell, one extra 2nd-level spell, and one extra 3rd-level spell
+– Decrease spellcasting time by 2
+– Vocalize
+
+Weight: 0~
+     @42 = ~Long Sword~
+     @43 = ~Seldarine's Fury +6~
+     @44 = ~These swords are usually referred to as double-edged swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture and may vary within the same culture depending on the era. Among the most common characteristics of all long swords is their length, which ranges from thirty-five inches to forty-seven inches. In the latter case, the blade is known to take up forty inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+
+STATISTICS:
+
+Damage: 1d8 (slashing)
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @45 = ~Seldarine's Fury: Shame of the Gods
+The creation of this artifact is unknown to all but the most legendary elves. Knowledge of the blade's existence is exceedingly rare; wielding it is unheard of. To grasp the beautiful golden hilt is painful to all but good natured elves, and deadly to enemies of the elven race. Those deemed worthy will feel the sword's sentience immediately as images of the Seldarine of Arvandor in a time before history flood the mind. Seared into the wielder's memory are vivid depictions of Corellon Larethian leading the elven pantheon in the creation of their greatest weapon, and deepest regret- for if this sword were to be twisted by evil, it would surely be apocalyptic. With the fear of the Gods coursing through your body, another feeling begins to manifest- protect the elven way at all costs. The wielder can feel the sentient blade bolstering their mind and reflexes, as well as their vitality being drained just from holding it. Clearly this wasn't meant for mortal hands.
+
+STATISTICS:
+
+Combat abilities:
+– 1 extra attack per round
+
+Equipped abilities:
+– Dexterity: +1
+– Constitution: -1
+– Immunity to charm
+– Immunity to confusion
+– Immunity to all forms of death magic
+– Immunity to level drain
+
+THAC0: +6
+Damage: 1d10+6, double damage against demons and undead, instantly slays orcs, goblins, and hobgoblins
+Damage type: Slashing
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 16 Strength
+ 16 Intelligence
+
+Weight: 1~
+     @46 = ~bladesinger~
+     @47 = ~Angharradh's Song~
+     @48 = ~Bladesinger~
+     @49 = ~Not much is known of this blade, but the symbol on the hilt- three interconnected circles in an inverted triangle- is undeniably the symbol of Angharradh, chief goddess of the elven Seldarine. She is sometimes considered the personification of three seperate elven goddesses, Aerdrie Faenya, Hanali Celanil, and Sehanine Moonbow, as well as a single goddess who extends beyond these three separate aspects. It is said that this blade, shaped from the beauty of her song, is the physical maifestation of Angharradh's fierce protectiveness and strong resolve, and that similar to the Triune Goddess, reflects traits of each of these deities.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– 1 extra attack per round
+– Charisma: +1
+
+THAC0: +3, +5 vs. Lycanthropes
+Damage: 1d8+3, +5 vs. Lycanthropes (slashing)
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3~
+     @50 = ~Claw of Kazgaroth~
+     @51 = ~Little is known about this item, other than the claw itself was taken from the corpse of the great beast Kazgaroth. Kazgaroth the Beast is a powerful minion of Bhaal that has long haunted the Moonshae Isles. His origin is lost to the mists of time, but he is at least 5 centuries old. Although Kazgaroth can be slain, he always rises again a few years later to once again terrorize the Moonshaes. It is said that only the legendary sword of Cymrych Hugh can permanently destroy the Beast. Even then, his essence may live on within the heart of Kazgaroth, a black, stonelike artifact of great power. Bhaal's taint within the claw could be used to create an item of wicked power for a Bhaalspawn chaotic enough to do so.
+
+STATISTICS:
+
+Weight: 1~
+     @52 = ~Imoen's Belt~
+     @53 = ~Imoen does not know when or how she acquired this belt, but she can feel it react violently with her Divine blood. The item is cursed, but with sufficient control of her Bhaal-essence and the desire to do so, Imoen could remove the belt with a Remove Curse spell. However, wearing the girdle seems to make her feel one with the Weave and drastically improves her spell casting to a Godly level. You can only imagine the consequences of using such an item.
+
+STATISTICS:
+
+Equipped abilities:
+– May only be removed with a Remove Curse spell
+– Intelligence: +1
+– Can memorize one extra spell of each level
+– Decrease spellcasting time by 1
+
+Weight: 0~
+     @54 = ~Sarevok's Bladed Armor +5~
+     @55 = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail. This flawless +5 armor was created for Sarevok to harness his Divine blood, before his death beneath the city of Baldur's Gate. It's not only an excellent defense, the enchanted blades and spikes adorning the suit harm anyone foolish enough to attack the wearer, as well as deflecting incoming slashing attacks.
+
+STATISTICS:
+
+– Resistance to Slashing Damage: +25%
+– Serrated Damage: Any opponent within 6 ft. that successfully hits the wearer suffers 1d2 points of slashing damage.
+– Spiked Damage: Any opponent within 6 ft. that successfully hits the wearer suffers 1d2 points of piercing damage.
+
+Armor Class: -4 (-8 vs. slashing, -7 vs. piercing and missile)
+Requires:
+ 18 Strength
+
+Weight: 50~
+     @56 = ~Sword of Chaos +5~
+     @57 = ~Sarevok's Sword of Chaos
+The blade of Sarevok, brother of <CHARNAME>, used in the battle they fought in faraway Baldur's Gate. <CHARNAME> prevailed, destroying Sarevok's plans and rescuing the Sword Coast from the brink of war. The sword itself defies identification, likely forged specifically for Sarevok to best focus the infernal energy he hoped to control. Much of its power died with him, however, the blade has since been silvered and honed to a vorpal edge, as well as heavily enchanted to allow a restored link to the sliver of Bhaal's essence within Sarevok. Fused with the power of Kazgaroth the Beast by Cespenar, this sword is more chaotic than ever.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: +10%
+
+Combat abilities:
+– Each hit drains 1 to 5 Hit Points from the target and transfers it to the wielder. This will not heal beyond the wielder's maximum.
+– 10% chance of decapitating opponent with each successful attack
+– 5% chance of casting Chaos with each successful attack
+
+THAC0: +5
+Damage: 1d10+5 (slashing)
+Speed Factor: 5
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+ 18 Constitution
+
+Weight: 10~
+     @58 = ~Girdle of Titan Strength~
+     @59 = ~This belt is actually the woven hair from a titan's beard. When worn, the belt greatly increases the wearer's Strength, making <PRO_HIMHER> as strong as a titan.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: 25
+
+Weight: 2~
+     @60 = ~Red Robe of Thay~
+     @61 = ~This powerful mage robe offers protection from all forms of physical attack while simultaneously decreasing spellcasting time and increasing one's Magic Resistance and Saving Throws. Due to the nature of its enchantment, it can only be worn by wizards of evil alignment and loyalty to the nation of Thay. Simply wearing this robe will attract unwanted attention.
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: -1
+– Armor Class: 5
+– Saving Throws: +1
+– Magic Resistance: +5%
+– Decrease spellcasting time by 1
+
+Weight: 6~
+     @62 = ~Blue Flame Taragarth +3~
+     @63 = ~Taragarth the Bloodbrand
+Dungeon-delving Lehorgan was lucky indeed to discover this Halruaan blade in the ruins of the ancient sorcerer Kullon's haunt, for it would save his life that very day. The ghost of Kullon himself attacked the intruder, but the flames that followed only singed, absorbed into the glowing Bloodbrand. Concealing himself, Lehorgan watched in amazement as the ancient sorcerer tried to divine his location, and again the sword protected him. Surviving this brush with death, the young man used this second chance and the gold from selling the blade to, as he put it, "get the hell out of adventuring." 
+It is not known how Kullon found his way back to his Bloodbrand, but it is noticeably more powerful with the ghost of the ancient sorceror residing within. While a scrying spell cannot divine the location of this sword in space, similar spells reveal that the very nature of its current magical enchantment is a temporal anomaly; this sword should not exist the way it does in this era. All attempts to converse with Kullon's spirit are futile.
+
+STATISTICS:
+
+Equipped abilities: 
+– Fire Resistance: +50%
+– Cold Resistance: +50%
+– Non-detectable by magical means such as Detect Invisibility and scrying
+
+THAC0: +3 (stikes as a +5 weapon)
+Damage: 2d4+3, +1 fire damage, +1 cold damage 
+Damage type: Slashing
+Speed Factor: 5
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 7~
+     @64 = ~Netherese Spellblade~
+     @65 = ~Long before the Sharn trapped the evil Phaerimm beneath the Anauroch Desert, the Netherese archwizard Karsus devised a plan to temporarily become a deity and defeat the Phaerimm himself- subsequently leading to the fall of Netheril known as Karsus's Folly. Some blame the great archwizard Ioulaum for abandoning Netheril and promting Karsus to take such drastic measures. Before his disappearance, and even the start of the war with the Phaerimm, Ioulaum collaborated with Karsus on the creation of this powerful dagger. It's covered in indecipherable Loross written with Draconic script, the Netherese noble tongue and one of the languages of the City of Shade, Thultanthar. It's rumored that the dagger was a gift for Thultanthar's high mage, known only as Lord Shadow. It was Lord Shadow who experimented with the Plane of Shadow, and shifted his entire city over from the Prime Material Plane mere days before Karsus temporarily destroyed the Weave- and it seems like he took this now shade-touched dagger with him for at least 1700 years, before Thultanthar returned to Faerun. This dagger weighs heavily in your hand and is warm to the touch. Merely having it on your person makes you feel uneasy for some reason. The gem mounted in the hilt seems to have an inner light of some sort, though how it can have such illumination and still be so deathly black at its core, you do not know. It is also unknown which enchantments are original to the spellblade and which are from millennia of residing in the Plane of Shadow and being wielded by powerful Shadovar.
+
+STATISTICS:
+
+Combat abilities:
+– Intelligence: +1
+– Magic Resistance: +5%
+– Decrease spellcasting time by 1
+– Immunity to level drain
+– Blur (Armor Class: +3, Saving Throws: +1)
+
+Charge abilities:
+– Fireball-Lightning Bolt three times per day
+  Fireball: 10d6 fire damage to all in a 30-ft. radius (Save vs. Spell for half)
+  Lightning: 10d6 electrical damage to all in its path (Save vs. Spell for half)
+  Range: 150 ft.
+
+THAC0: +6
+Damage: 1d4+6 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+     @66 = ~Igneus Nova~
+     @67 = ~Plasma Blade of Kossuth: Igneus Nova
+The greater deity of elemental fire, Kossuth, created this sword from the core of a neutron star for one of his most powerful underlings. The gift, however, proved too much power for the demigod and ultimately absorbed him, bolstering the sword's flame even more, but also calming its elemental fury. Occasionally the dense neutron sword overpowers the deity within and releases a fraction of its cosmic fire.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: 100%
+
+Combat abilities:
+– Fireball: 5% chance per hit that a 10d6 fireball explodes, centered on the target
+– Celestial Lightning: 1% chance per hit that lightning strikes from the heavenly blade for 20 electrical damage
+
+Charge abilities:
+– Fireball once per day
+  Damage: 6d6 fire (Save vs. Wand for half)
+  Range: 90 ft.
+  Area of Effect: 30-ft. radius 
+
+THAC0: +4
+Damage: 1d8+4, 1d4 fire damage
+Damage type: Slashing
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+     @68 = ~Drow Psionicist's Cowl~
+     @69 = ~This ancient drow item was crafted by a powerful psionicist magi for a High Priestess of Lolth, hoping to gain the Matron Mother's favor. However, illithid could sense the object for miles, and they weren't fond of its creation. The drow creator, whose name has long since been forgotten, did not live long past his legacy. Dozens of mind flayers and umber hulks ambushed him in his sleep, but he had the advantage against their psionics. He might have survived the encounter too, if the beholders of the region hadn't decided it'd be an excellent time to ambush the illithid. Those who wield the Psionicist's Cowl are immune to the mind flayer's psionic attacks. The bewildering gaze of umber hulks, often found serving the illithid, are similarly rendered harmless. It seems as if the xenophobic creator expected this powerful item to trade hands often, and thus warded it against all non-elf races. Oddly enough, it works for surface elves.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to confusion and all psionic attacks
+
+Weight: 2~
+     @70 = ~Eye of Vecna~
+     @71 = ~This is the left eye of Vecna, the lich-king deity. Many know the tale of betrayal in which Vecna lost his left hand and eye to a sword he created himself for his vampiric lieutenant, Kas the Bloody-Handed. In order to use the vile artifact, one must implant it in their left orbital socket, usually having to remove the eye occupying the space first.
+
+STATISTICS:
+
+Equipped abilities:
+– May only be removed with a Remove Curse spell
+– Can memorize one extra 7th-level spell, one extra 8th-level spell, and one extra 9th-level spell
+– Saving Throws: +2
+– Charisma: -2
+– Constitution: -1
+– Intelligence: +1
+– Magic Resistance: +5%
+– Decrease spellcasting time by 2
+– Immunity to Blindness
+– Infravision
+
+Charge abilities:
+– True Sight three times per day
+ Range: 0
+ Duration: 1 turn
+ Area of Effect: 70-ft. radius
+ Saving Throw: None
+
+– Animate Dead once per day
+ Range: 30 ft.
+ Duration: 8 hours
+ Casting Time: 9
+ Area of Effect: Special
+
+– Domination once per day
+ Range: Visual range of the caster
+ Duration: 8 rounds
+ Area of Effect: 1 creature
+ Saving Throw: Neg.
+
+Weight: 1~
+     @72 = ~Hand of Vecna~
+     @73 = ~This is the dessicated left hand of Vecna, the lich-king deity. Many know the tale of betrayal in which Vecna lost his left hand and eye to a sword he created himself for his vampiric lieutenant, Kas the Bloody-Handed. In order to use the vile artifact, one must attach it to the stump of their left arm, usually having to cut off that hand first.
+
+STATISTICS:
+
+Equipped abilities:
+– May only be removed with a Remove Curse spell
+– Armor Class: +2
+– Charisma: -2
+– Constitution: -1
+– Magic Resistance: +5%
+– Decrease spellcasting time by 2
+– Increase spell duration by 10%
+
+Charge abilities:
+– Ghoul Touch three times per day
+ Range: 0
+ Duration: 5 rounds
+ Area of Effect: The caster
+ Saving Throw: Neg.
+
+– Vampiric Touch once per day
+ Range: Touch
+ Duration: Instant 
+ Area of Effect: 1 creature
+ Saving Throw: None 
+
+– Finger of Death once per day
+ Range: Visual range of the caster 
+ Duration: Permanent
+ Area of Effect: 1 creature
+ Saving Throw: Neg.
+
+Weight: 1~
+     @74 = ~Ioun Stone~
+     @75 = ~This is a small stone that floats in an orbit around the owner's head. Simply equip the stone to set it in its orbit. These obviously magical stones have different properties depending on their color.
+
+STATISTICS:
+
+Weight: 0~
+     @76 = ~Trollblood Ioun Stone~
+     @77 = ~This ioun stone gleams dark green, like a hardened globe of troll blood. Legend tells of its creation from the blood of seven different trolls, each one captured and then subjected to magical experiments for seven nights. The resulting ioun stone both grants its user a weaker form a troll's healing ability and increases their martial prowess against trolls.
+
+STATISTICS:
+
+Equipped abilities:
+– THAC0: +3 vs. trolls
+– Regenerate 1 Hit Point per round
+
+Weight: 0~
+     @78 = ~Blood Red Ioun Stone~
+     @79 = ~This spherical stone gleams crimson, like a hardened globe of blood. Once activated, it can enhance the wearer's hand-eye coordination, reflexes, and balance, which makes it a highly prized accessory among rogues.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+– Weapon Speed Factor: +2
+
+Weight: 0~
+     @80 = ~Pearly White Ioun Stone~
+     @81 = ~Legend tells us that this particular type of ioun stone is crafted with the enslaved soul of a troll. This pearly white ioun stone will grant the wearer the ability to regenerate at a rate of 1 Hit Point every 5 rounds.
+
+STATISTICS:
+
+Equipped abilities:
+– Regenerate 1 Hit Point every 5 rounds
+
+Weight: 0~
+     @82 = ~Dusty Rose Ioun Stone~
+     @83 = ~This ioun stone glows with a dusty rose hue, hinting at calming images and sensations. While pleasing, it does not appear to enhance the basic protection enchantment upon it.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+
+Weight: 0~
+     @84 = ~Pale Green Ioun Stone~
+     @85 = ~On his deathbed, aged hero Rigar Trueblood begged one last request of his mage companion Spectorial: that his skill and fortitude as a warrior live on. The reluctant friend consented and transferred these traits to an item, knowing the warrior's soul would then be lacking them. This pale green ioun stone now holds these essences and grants the owner Trueblood's health and skill.
+
+STATISTICS:
+
+Equipped abilities:
+– THAC0: +1
+– Hit Points: +10%
+
+Weight: 0~
+     @86 = ~Golden Ioun Stone~
+     @87 = ~Highly sought out by wizards, this ioun stone raises the intelligence of those who possess it.
+
+STATISTICS:
+
+Equipped abilities:
+– Intelligence: +1
+
+Weight: 0~
+     @88 = ~Obsidian Ioun Stone~
+     @89 = ~The tough obsidian stone imbues its owner with a similar hardiness.
+
+STATISTICS:
+
+Equipped abilities:
+– Constitution: +1
+
+Weight: 0~
+     @90 = ~Silver Ioun Stone~
+     @91 = ~Perhaps the silver and gray in this stone hints at the knowledge that only comes with age and experience.
+
+STATISTICS:
+
+Equipped abilities:
+– Wisdom: +1
+
+Weight: 0~
+     @92 = ~Lavender Ioun Stone~
+     @93 = ~The bright lavender hue of this stone dances and sparkles, as if the stone itself were alive.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Save vs. Death: +4
+
+Weight: 0~
+     @94 = ~Blades~
+     @95 = ~Spikes~
+     @96 = ~Bladesinger~
+     @97 = ~Red Wizard of Thay~
+     @98 = ~IMOEN~
+     @99 = ~BLADE_SINGER~
+     @100 = ~Kits~
+     @101 = ~~
+     @102 = ~Silver Long Sword +2~
+     @103 = ~These swords are usually referred to as double-edged swords, war swords, or military swords. This item, ornate and flawlessly crafted is composed of a razor-sharp silver blade, etched with elven script, and counterbalanced by a solid gold hilt. Heavily enchanted, the sword retains its edge while serving as an excellent, albeit gaudy, melee weapon. Although it was never intended for combat, the blade is especially lethal against lycanthropes due to its exotic materials.
+
+STATISTICS:
+
+THAC0: +2, +4 vs. lycanthropes
+Damage: 1d8+2, +4 vs. lycanthropes
+Damage type: Slashing
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 7 Strength
+
+Weight: 6~
+     @104 = ~Flaming Burst Long Sword +1~
+     @105 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. The blade hums slightly in your hand and produces a steady aura of magical fire - and a volatile eruption upon impact.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8+1, 1d3 fire damage
+Damage type: Slashing
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @106 = ~Frost-Fire Long Sword +2~
+     @107 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. The blade hums slightly in your hand and produces a steady aura of frost-fire, a contradictory fusion of elements only possible with powerful magic.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d8+2, +1 fire and cold damage
+Damage type: Slashing
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @108 = ~Mithral Long Sword +3~
+     @109 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. This particular sword is forged entirely from pure mithral, an incredibly strong metal renowned for its light-weight. This weapon is slightly faster than those of similar enhancement crafted with heavier materials.
+
+STATISTICS:
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 1
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 2~
+     @110 = ~Adamantite Long Sword of Biting +1~
+     @111 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. This greenish-black blade is coated in a layer of adamantite, an ultra-hard, expensive, rare metal found only in meteorites and veins in magical areas. There is also a thick acidic substance on the sword that poisons foes after seeping into their bloodstreams. Few metals could withstand this acidic coating as well as the adamantite of this sword, not to be confused with drow adamantine alloy, which disintegrates in sunlight.
+
+STATISTICS:
+
+Combat abilities:
+– 50% Chance hit target suffers 1 point of poison damage per second for 3 seconds (Save vs. Poison negates)
+
+THAC0: +1
+Damage: 1d8+1, +1 acid damage
+Damage type: Slashing
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @112 = ~Vampiric Short Sword +1~
+     @113 = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. This short blade is magical, improving accuracy and damage, as well as draining life with every hit.
+
+STATISTICS:
+
+Combat abilities:
+– Each hit heals the wielder 1 Hit Point.
+
+THAC0: +1
+Damage: 1d6+1 (piercing)
+Speed Factor: 2
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+     @114 = ~Masterwork Cold Iron Long Sword~
+     @115 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. This nonmagical longsword is crafted out of cold iron - mined deep underground, known for its effectiveness against fey creatures, and forged at a lower temperature to preserve its delicate properties. As a masterwork weapon, it has a +1 enhancement bonus on attack rolls.
+
+STATISTICS:
+
+THAC0: +1
+Damage: 1d8 (slashing)
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @116 = ~Elemental Long Sword +1~
+     @117 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. This magical longsword is a chaotic weapon favored by Elementalists and War Wizards alike. It has equal chances of stiking with fire, cold, and electricity damage - occassionally striking as a +1 longsword, and occassionally striking with all three elements.
+
+STATISTICS:
+
+Combat abilities:
+– 33% chance of inflicting 1 fire, cold, and/or electricity damage on a successful hit
+
+THAC0: +1
+Damage: 1d8+1 (slashing)
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @118 = ~Holy Avenger Long Sword +3~
+     @119 = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. This holy longsword is blessed by deities of both Law and Good, restricting use to only Paladins pure of heart, and dealing more damage with each strike to chaotic and evil foes.
+
+STATISTICS:
+
+Equipped abilities:
+– Protection from Evil
+
+THAC0: +3
+Damage: 1d8+3, +1 vs. Chaotic, +1 vs. Evil
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @120 = ~Bhaal's Holy Symbol~
+     @121 = ~Bhaal's Holy Symbol
+A depiction of the evil god of murder, Bhaal. This symbol displays a skull surrounded by twelve tears. It would most likely be more powerful than it currently is were it not for Bhaal's demise.
+
+STATISTICS:
+
+Charge abilities:
+– Cloak of Fear once per day
+  (Conjuration)
+
+  Range: 0
+  Duration: Instant
+  Casting Time: Instant
+  Area of Effect: The caster
+  Saving Throw: Neg.
+
+Cloak of Fear empowers the caster to radiate a personal aura of fear out to a 3-ft. radius. All other characters and creatures within this aura must roll a successful Saving Throws vs. Spell or run away in panic for 4 rounds. Affected individuals may even drop items. Party members are immune to the effects, although the aura of fear may still disturb them.
+
+Weight: 1~
+     @122 = ~Whispering Wind~
+     @123 = ~James the Page, a mortal man with a humble origin become traveler of both time and space, is the only one known to have ever possessed this ring. It is said that he received it from elders of the gentle race, whoever those may be, no one seems to agree as it changes with every recount- some swear it was an ancient group of elves, others say titans or dragons, and a few even say it was a gift from the gods themselves. One thing is fairly certain though: James lived an incredible life that puts most bardic tales of bravery and heroism to shame. He sailed on the Wandering Eye with Balduran and battled lycanthropes with a sword of gold that he supposedly stole from a dragon's hoard. Being one of the few survivors to make it back to the mainland, James decided to charter his own ship and sail westward, believing the Father of the Four Winds blessed his explorations. Along the way, he angered Talos with his lack of fear or tribute to the Stormlord, but despite the deity leaving no trace of his vessel, James miraculously made it to uncharted shores. While mapping this new world, he saved the fey Prince of Peace from a black dragon and was subsequently knighted by the Queen of Light. Many historians, however, doubt any of this actually happened- seeing as nothing recorded beyong his youth as a page has been uncovered, and it is even said he never made the rank of squire for reasons unknown. Furthermore, many of the characters involved in the wild tale of Sir James have never been documented, only strengthening the resolve of disbelievers. Possibly all that remains of his adventures is this ring, if it was truly his- all you know for sure is that this band of gold, inscribed with magic runes, possesses incredible power.~
+     @124 = ~Defensive Bladesong~ //embs1
+     @125 = ~The Bladesinger gains a +1 bonus to their AC. Defensive Bladesong may not be used in conjunction with any other bladesong.~
+     @126 = ~Greater Defensive Bladesong~ //embs1g
+     @127 = ~The Bladesinger gains a +2 bonus to their AC. Greater Defensive Bladesong may not be used in conjunction with any other bladesong.~
+     @128 = ~Balanced Bladesong~ //embs3
+     @129 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1/2 attack per round. Balanced Bladesong may not be used in conjunction with any other bladesong.~
+     @130 = ~Greater Balanced Bladesong~ //embs3g
+     @131 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1 attack per round. Greater Balanced Bladesong may not be used in conjunction with any other bladesong.~
+     @132 = ~Offensive Bladesong~ //embs2
+     @133 = ~The Bladesinger gains a +1 bonus to hit. Offensive Bladesong may not be used in conjunction with any other bladesong.~
+     @134 = ~Greater Offensive Bladesong~ //embs2g
+     @135 = ~The Bladesinger gains a +2 bonus to hit. Greater Offensive Bladesong may not be used in conjunction with any other bladesong.~
+     @136 = ~Holy Symbol of Lolth~
+     @137 = ~Only the most worthy and devoted servants of the Demon Queen are granted these powerful holy symbols.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +1
+– Magic Resistance: +5%
+– Can memorize one extra 6th- and 7th-level Cleric spell
+
+Weight: 0~
+     @138 = ~Obyrithian Executioner~
+     @139 = ~This ancient blade predates the tanar'ri and their eternal Blood War with the baatezu, the Abyss, and even many Gods. The vile artifact was forged by the obyrith demon lord, Queen of Chaos, for the sole purpose of slaying another of her race, the then-Prince of Demons, Obox-ob. Sometime after the fall of Obox-ob, the blade was given to the Queen's consort and the next Prince of Demons, Miska the Wolf-Spider, before her other creation, Demogorgon, took the title of Prince for himself. Few mortals, especially those lacking demonic-heritage, can wield such a chaotic weapon without going insane, and those who do possess the blade need to be ever cautious of the day Miska escapes banishment and comes looking for his sword.
+
+STATISTICS:
+
+Equipped abilities:
+– Immunity to fear and panic
+– Immunity to Death Gaze
+
+Combat abilities:
+– Each hit heals the wielder 1 Hit Point
+– +5 slashing damage vs. devils
+– +5 slashing damage vs. demons
+
+THAC0: +3 (strikes as a +5 weapon)
+Damage: 1d10+3
+Damage type: Slashing
+Speed Factor: 7
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 9~
+     @140 = ~Elven Chain Mail of the Collector~
+     @141 = ~The delicate yet sturdy craftsmanship of the elven races allows them to design many beautiful yet utilitarian goods. Among these is elven chain mail, which is so finely wrought that it can be worn under normal clothing without revealing its presence. This particular suit is believed to have been created by a long-forgotten apprentice of the legendary elven armorsmith, Asylferund. While the master sought a way to forge chain mail of the highest enchantments, the student focused on smithing armor more practical for warrior rogues and wizards. By studying the magical robes worn by archmages and the dark suits of leather iconic to the Shadowmasters of Amn, Asylferund's apprentice was able to create a suit of armor able to meet the demands of any misson conceivable. Due to the nature of its enchantment, it can only be worn by those of good alignment.
+
+STATISTICS:
+
+Equipped abilities:
+– Saving Throws: +1
+– Magic Resistance: +5%
+– Pick Pockets: -15%
+– Move Silently: -5%
+– Hide In Shadows: +5%
+
+Armor Class: 5 (3 vs. slashing, 7 vs. crushing)
+Requires: 
+ 5 Strength
+
+Weight: 7~
+     @142 = ~Bronze Ioun Stone~
+     @143 = ~The powerful enchantments on this ioun stone make it a treasure eagerly sought after by wizards.
+
+STATISTICS:
+
+Equipped abilities:
+– Can memorize one extra 7th-level wizard spell
+
+Weight: 0~
+     @144 = ~Wong Fei's Ioun Stone~
+     @145 = ~This ioun stone was said to be a gift given to the Shou-ling monk Wong Fei Hung by the Kara-Turan god of war, Chan Cheng. The god came down in the form of a dragon and fought Wong Fei for three days and three nights. Chan Cheng was so impressed by the monk's prowess that he bestowed the ioun stone upon him. The stone disappeared when Wong Fei died.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Hit Points: +15
+– Regenerate 1 Hit Point/round
+
+Weight: 0~
+     @146 = ~Malla's Soul Stone~
+     @147 = ~The small star sapphire gem that holds the soul of the innocent young woman, Malla, has the magical ability to float about the forehead and act as an ioun stone of considerable power. Only those of little conscience would consider using this device, however.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+– Constitution: +1
+
+Charge abilities:
+– Neutralize Poison once per day
+  Special: Heals 10 Hit Points and cures poison, disease, deafness, and blindness
+  Range: 10 ft.
+  Area of Effect: 1 creature
+
+Weight: 2~
+     @148 = ~Gemstone~
+     @149 = ~This otherwise normal star sapphire shimmers with a pale aura and floats serenely above your hand, lighter than air.
+
+STATISTICS:
+
+Weight: 2~
+     @150 = ~Deep Red Ioun Stone~
+     @151 = ~Originally crafted for a master thief, this deep red ioun stone was found—along with most of a gnome's skull—inside the shell of a giant clam off the Sword Coast. Although its power has since been used in more noble causes by hunters, weavers, and one particularly vain harpist, the stone remains an invaluable asset to those of a less honorable bent.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +1
+
+Weight: 0~
+     @152 = ~Scarlet/Blue Ioun Stone~
+     @153 = ~Many stories have been told about Chief Geraq's rise to power within his tribe of Swivelback goblins. Some point to his talent for strategy, feeding his tribe for weeks on the spoils of a single raid, while others look to his knowledge of obscure lore. The truth is both less interesting and more: the source of Geraq's power was a strange stone, which the goblin carried everywhere he went. Where he found the stone is a mystery, as well as where it went after Geraq's mysterious disappearance, but holding it in one's hand, one can hear the whispers of Geraq's expertise sounding across the centuries. Of course, the whispers are all spoken in the language of goblins, making them more or less useless to the humanoid races; even so, the stone bestows greater knowledge on any who possess it.
+
+STATISTICS:
+
+Equipped abilities:
+– Intelligence: +1
+
+Weight: 0~
+     @154 = ~Clear Ioun Stone~
+     @155 = ~This ioun stone has had many owners over the centuries, from the thief who carried it as a good luck charm to the ogre who thought it to be the world's smallest crystal ball. It was once even used by a gnome as a prosthetic eye, although its properties did not improve her vision. Eventually the stone fell into the hands of a group of elven wizards. It is uncertain whether it was used for research purposes or merely worn for protection against hostile magic. Unlike common ioun stones, this one appears to be colorless and almost entirely transparent.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: 5%
+
+Weight: 0~
+     @156 = ~~
+     @157 = ~~
+     @158 = ~~
+     @159 = ~~
+     @160 = ~~
+     @161 = ~~
+     @162 = ~~
+     @163 = ~~
+     @164 = ~~
+     @165 = ~~
+     @166 = ~~
+     @167 = ~~
+     @168 = ~~
+     @169 = ~~
+     @170 = ~~
+     @171 = ~~
+     @172 = ~~
+     @173 = ~~
+     @174 = ~~
+     @175 = ~~
+     @176 = ~~
+     @177 = ~~
+     @178 = ~~
+     @179 = ~~
+     @180 = ~~
+     @181 = ~~
+     @182 = ~~
+     @183 = ~~
+     @184 = ~~
+     @185 = ~~
+     @186 = ~~
+     @187 = ~~
+     @188 = ~~
+     @189 = ~~
+     @190 = ~~
+     @191 = ~~
+     @192 = ~~
+     @193 = ~~
+     @194 = ~~
+     @195 = ~~
+     @196 = ~~
+     @197 = ~What this? A big claw? And a horn? *sniff sniff* Yuck! Kazgaroth! I hates that guy- serves him right. With this and 10,000 gp, I make Sarevok's sword worthy of Bhaal himself!~
+     @198 = ~Never mind. Let's just continue on for now.~
+     @199 = ~What's your status, sword?~
+     @200 = ~(The sword flashes for a moment, then permeates your mind with melodic Elven whispers.)~
+     @201 = ~...~
+     @202 = ~"I am as I have always been."~
+     @203 = ~What is the answer to life, the universe, and everything?~
+     @204 = ~(The sword emits a shockingly demi-human sigh) "42."~
+     @205 = ~What's the most powerful foe you've vanquished?~
+     @206 = ~(The sword is silent a moment.) "That would have to be a hectaoncheire, 'hundredhanded one' - a few Gods fell that day. Pray you never face one, much less two."~
+     @207 = ~What would you have me do, O Sentient Sword?~
+     @208 = ~"I may be a holy artifact forged by the Gods, but I'm still a sword. Aren't there any evil Bhaalspawn left?"~
+     @209 = ~Is...is that Sarevok's Sword of Chaos? Ooo scary! But it's weak now- needs more Bhaal essence. You know where to find some?~
+     @210 = ~Bring me some Bhaal essence, two hand fulls, maybe, and 10,000 gp. I hope I don't regrets this...~
+     @2100 = ~What this? A big claw? And a horn? *sniff sniff* Yuck! Kazgaroth! I hates that guy- serves him right. With this and 10,000 gp, I make Sarevok's sword worthy of Bhaal himself!~
+     @211 = ~No thanks.~
+     @212 = ~Alright, then.~
+     @213 = ~You have been acknowledged by the Bladesinger's Guild.~
+     @214 = ~You are an exemplary Bladesinger and a hero among elves. The Gods themselves have taken notice of your righteous fury and now the Seldarine have blessed you with the tool to exact it. Be advised not to abuse a divine gift.~
+     @215 = ~Cacofiend~
+     @216 = ~Cacofiend
+(Conjuration/Summoning)
+
+Level: 7
+Range: 35 ft.
+Duration: 15 rounds
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+When this spell is cast, it teleports in a powerful fiend that will go on a rampage and attack everything in sight. Anyone under the effects of a Protection From Evil spell or scroll will not be targeted by the fiend. This is a dangerous spell to invoke, best saved for desperate times.~
+     @217 = ~Summon Fiend~
+     @218 = ~Summon Fiend
+(Conjuration/Summoning) 
+
+Level: 8
+Range: Visual range of the caster
+Duration: 15 rounds
+Casting Time: 9
+Area of Effect: None
+Saving Throw: None 
+
+More powerful than the 7th-level variant, casting this Cacofiend spell summons a frenzied demon or devil. This fiend will attack everyone in the area who is not protected by a Protection From Evil spell. Only desperate or suicidal wizards use this spell.~
+     @219 = ~You feel a tug from the Pocket Plane as an artifact lost to time materializes among your possessions. Surely such a happening is linked to your powerful heritage.~
+     @220 = ~Black Heart of Kazgaroth~
+     @221 = ~Although Kazgaroth can be slain, he always rises again a few years later to once again terrorize the Moonshaes. It is said that only the legendary sword of Cymrych Hugh can permanently destroy the Beast. Even then, his essence may live on within the heart of Kazgaroth, a black, stonelike artifact of great power~
+     @222 = ~Kazgaroth's Hide~
+     @223 = ~This is the enchanted flesh of Kazgaroth the Beast, studded with what looks to be the creature's own bones and tusks. A potent magical item, this suit of armor conforms to the body shape and size of virtually any wearer and grants unique powers of form control, but perhaps most powerful about this hide is its magical flexibility which, much like the user's own skin, allows spell casting unhindered.
+    
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Petrification/Polymorph: +5
+
+Charge abilities:
+– Shapechange once per day
+ (Alteration)
+
+ Range: 0
+ Duration: 1 hour
+ Area of Effect: The caster
+ Saving Throw: None
+
+With this spell, a wizard is able to assume the form of a powerful creature (mind flayer, iron golem, greater wolfwere, earth elemental, fire elemental, or giant troll). The spellcaster becomes the creature <PRO_HESHE> wishes and has almost all of its abilities. Thus, <PRO_HESHE> can change into a mind flayer to stun <PRO_HISHER> opponents and then become an earth elemental to crush <PRO_HISHER> foes. These creatures have whatever Hit Points the wizard had at the time of the shapechange. Each alteration in form requires only a second, and no system shock is incurred.
+
+Armor Class: 1 (-1 vs. slashing, 0 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 5~
+     @224 = ~It seems that even death and dismemberment has not eased Kazgaroth's hatred for the Sword of Cymrych Hugh.~
+     @225 = ~Studded Leather Armor~
+     @226 = ~Studded leather armor has little in common with normal leather armor. Instead of a hardened shell, studded leather offers hundreds of metal rivets affixed to a supple backing. The numerous studs form a flexible coat of metal that helps to turn aside slashing and cutting attacks, while the leather is little more than a means of securing the rivets in place.
+
+STATISTICS:
+
+Armor Class: 7 (5 vs. slashing, 6 vs. piercing and missile)
+Requires:
+ 6 Strength
+
+Weight: 25~
+     @227 = ~~
+     @228 = ~~
+     @229 = ~~
+     @230 = ~~
+     @231 = ~~
+     @232 = ~~
+     @233 = ~~
+     @234 = ~~
+     @235 = ~~
+     @236 = ~~
+     @237 = ~~
+     @238 = ~~
+     @239 = ~~
+     @240 = ~~
+     @241 = ~~
+     @242 = ~~
+     @243 = ~~
+     @244 = ~~
+     @245 = ~~
+     @246 = ~~
+     @247 = ~~
+     @248 = ~~
+     @249 = ~~
+     @250 = ~~
+     @251 = ~Spider Spawn~
+     @252 = ~Spider Spawn
+(Conjuration/Summoning)
+
+Level: 4
+Range: 120 ft.
+Duration: 6 rounds + 1 round/level
+Casting Time: 6
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting this spell, the wizard must throw several spider eggs into the air while saying the final command word. The result is that the eggs morph into a fully grown spider that will remain under the wizard’s telepathic control. The type of spider that appears depends upon the level of the wizard casting the spell.
+ 7th: giant spider.
+ 9th: phase spider.
+ 12th+: sword spider.
+When the spell is cast, there is a 20% chance that two spiders of the proper type will appear instead of just one. These spiders will remain under the wizard’s control until they are slain, or until the spell duration expires.~
+     @253 = ~Shapeshift: Spider~
+     @254 = ~Shapeshift: Spider
+
+Strength: 16
+Dexterity: 16
+
+Base Armor Class: 3
+Number of Attacks: 4
+Attack Damage: 1d4 (piercing), poison on successsful hit: 1 damage/2 seconds for 6 rounds (no save)
+
+Special Abilities:
+– Armor Class: +4
+– Haste
+– Immunity to web~
+     @255 = ~Sword of Cymrych Hugh~
+     @256 = ~The Sword of Cymrych Hugh, named after one of the great kings of the Moonshae Isles, was the weapon of High King Tristan Kendrick. The sword has a special enmity towards giants and the undead. The legendary sword was used to inflict permanent death unto Kazgaroth the Beast, minion of Bhaal, and is said to be the only weapon capable of doing so.
+    
+STATISTICS:
+
+Combat abilities:
+– 2d6 extra damage vs. giants and undead
+
+THAC0: +3, +5 vs. giants, +5 vs. undead
+Damage: 1d8+3, +5 vs. giants, +5 vs. undead
+Damage type: Slashing
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 2~
+     @257 = ~Breath of Auril +3~
+     @258 = ~Kontik, servant of Auril, once wielded this blade. It has been enchanted with several beneficial magics.
+
+STATISTICS:
+
+Equipped abilities:
+– Intelligence: +1
+– Charisma: -1
+– Fire Resistance: -50%
+– Cold Resistance: 100%
+– Can only be removed by a Remove Curse spell
+
+Charge abilities:
+– Cone of Cold twice per day
+  Damage: 10d4+10 cold (Save vs. Spell for half)
+  Range: 0
+  Area of Effect: 41-ft. cone with 60-deg. arc
+
+THAC0: +3
+Damage: 1d4+3 (piercing)
+Speed Factor: 2 
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+     @259 = ~Lore of the Bladesingers~
+     @260 = ~Lore of the Bladesingers
+By McComb and Pryor
+
+  An elite group of elven fighter mages, the blade-singers are dedicated to the defense of the elven nation, and many of them journey back to Faerûn to help defend those elves who stayed behind or have yet to join the Retreat. 
+  Bladesingers are terrifying weapons experts and spellcasters. On Evermeet they are organized into small warrior lodges, each specializing in a different weapon. They are even more dedicated to the ancient ways and styles of dress than other Silver elves. They often tattoo themselves with old runes and symbols and their armor and weapon are all of great antiquity and beautiful craftsmanship.~
+
+    @261 = ~Bathed-In-Blood +4~
+    @262 = ~Kheros the Red wore this blood-red suit of plate mail through many of the years that he fought for the church of Tempus. He was born as the son of humble farmers near Calaunt. When he was a young man, he set off for the city to hire himself out as a mercenary. After a number of successful endeavors, Kheros became a short-term member of many adventuring companies. Along the way, despite his many victories, Kheros became disgusted and terrified by the sight of blood.
+
+His fear eventually spiraled out of control, consuming him with madness. Priests of Tempus found the huge warrior and took him into safekeeping. The priests believed that they could cure Kheros of his fear. Over several years, Kheros learned the ways of the Tempuran religion, eventually becoming a priest. His final step in overcoming his fear was being submerged in a tub of blood until he almost drowned. All the time he was held down, he never struggled, flinched, or tried to escape. In his later years, he had a suit of armor made to remind him of his past.
+
+STATISTICS:
+
+Armor Class: -1 (-4 vs. slashing)
+Requires:
+ 12 Strength
+
+Weight: 55~
+     @263 = ~Cloak of Scintillating Colors~
+     @264 = ~The origins of this cloak have been lost in the mists of time. However, for some time it was in the possession of Drosus, a mage of no small power from Waterdeep. Drosus fell afoul of an unusually large group of winter wolves on a solo expedition into the Spine of the World mountains having been forced to don a heavier cloak to keep out of the cold...
+
+At first glance this cloak appears to be blinding white in color. However, it is in fact a composite of thousands of colors, which dance and play in any available light source. This barrage of scintillating colors tends to distract and partially blind anyone staring directly at the wearer. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +3
+– Can be worn in combination with any other protective enchantment
+
+Weight: 3~
+     @265 = ~Elven Chain Mail of the Hand +3~
+     @266 = ~During the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep, special versions of the illustrious elven chain mail were made that added protection against the harsh weather conditions of the north.
+
+STATISTICS:
+
+Equipped abilities:
+– Cold Resistance: +20%
+– Open Locks: -5%
+– Find Traps: -5%
+– Pick Pockets: -20%
+– Move Silently: -10%
+– Hide In Shadows: -10%
+
+Armor Class: 2 (0 vs. slashing, 4 vs. crushing)
+Requires:
+ 8 Strength
+
+Weight: 15~
+     @267 = ~The Glory of Suffering +6~
+     @268 = ~This armor was a gift from Sister Calliana for saving the soul of the Voice of Durdel Anatha. It was once worn by a humble paladin of Ilmater named Idstan the Simple. Donning the armor is a painful process, as it drives small spikes into the flesh of the wearer and weighs an incredible amount. In exchange for this sacrifice, the armor protects the wearer from attacks on his or her person. The armor is shining silver, but there is always fresh blood staining its surface, even when it is not being worn.
+
+STATISTICS:
+
+Equipped abilities:
+– Physical Damage Resistance: +10%
+– Maximum Hit Points: -25
+
+Armor Class: -3 (-6 vs. slashing)
+Requires:
+ 12 Strength
+
+Weight: 80~
+     @269 = ~Singing Blade of Aihonen +5~
+     @270 = ~This once-shattered blade lay in the breast of Icasaracht, the last of the white dragon matriarchs that ruled the Spine of the World. It was wielded by Aihonen, a distant ancestor of Jhonen the fisherman in Easthaven-the sword has lain at the bottom of the lake for almost a century, waiting to be returned to one of its wielder's bloodline. The blade seems to draw its strength from Lac Dinneshere itself. As long as the wielder is within a dragon's flight of the lake (a considerable distance by most race's standards), the blade is a fearsome weapon.
+
+The dwarven smith Tiernon has "soothed" this blade-apparently, he was the one who forged it in the first place. His skills have awoken some of the blade's original powers that had been drained when it was used to slay Icasaracht.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +30%
+– Cold Resistance: +30%
+– Maximum Hit Points: +10 within a dragon's flight of Lac Dinneshere
+
+Charge abilities:
+– Cure Critical Wounds three times per day
+  Heals 27 Hit Points
+  Range: Touch
+
+– Strength +3 once per day
+  Area of Effect: The wielder
+
+THAC0: +1, +5 within a dragon's flight of Lac Dinneshere
+Damage: 1d8+1, +5 within a dragon's flight of Lac Dinneshere
+Damage Type: Slashing
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3~
+     @271 = ~Dead God's Dreaming +4, +6 vs. good~
+     @272 = ~The story of the ascension of Bane, Bhaal, and Myrkul, the gods of strife, murder, and death, is well known among learned men across the face of Faerûn. Despite this, most theologians know very little about what happened to the unfortunate dying god whom the malefic trio consumed prior to their encounter with Jergal. What is known is that a small portion of the dead god's essence found its way to the Astral Plane, where it coalesced into one of the smallest islands of slain divinity. This small hunk of rock and odd ore was captured hundreds of years later by an enchanter named Merdros. Merdros's duergar servants created this blade for the wizard's most powerful warrior ally. Owners of the blade claimed that they could feel the dead god's final memories flowing through the weapon when they held it.
+
+STATISTICS:
+
+Charge abilities:
+– Emotion: Fear three times per day (Save vs. Spell negates)
+    Range: 50 ft.
+    Duration: 5 rounds
+    Area of Effect: 15-ft. radius
+
+– Symbol, Pain once per day
+    -2 to Dexterity, -4 to THAC0, and -2 to Armor Class (Save vs. Spell negates)
+    Range: 35 ft.
+    Duration: 11 turns
+    Area of Effect: 18-ft. radius
+
+THAC0: +4, +6 vs. good
+Damage: 2d4+4, +6 vs. good
+Damage Type: Slashing
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 4~
+     @273 = ~Emotion: Fear~
+     @274 = ~Emotion: Fear
+(Enchantment/Charm)
+
+Level: 4
+Range: Visual range of the caster
+Duration: 5 rounds
+Casting Time: 4
+Area of Effect: 15-ft. radius
+Saving Throw: Neg.
+
+This spell creates the emotion of fear within the area of effect. All enemies who fail to save vs. Spell flee for 5 rounds.~
+     @275 = ~Symbol, Pain~
+     @276 = ~Symbol, Pain
+(Conjuration/Summoning)
+
+Level: 7
+Sphere: Guardian
+Range: Visual range of the caster
+Duration: 11 turns
+Casting Time: 3
+Area of Effect: 30-ft. radius
+Saving Throw: Neg.
+
+All enemies within 30 ft. of the symbol of pain at the moment it is invoked must make a Save vs. Spell. Those who fail their Saving Throws are overwhelmed by pain, suffering a -4 penalty to their attack rolls, a -2 penalty to their Dexterity scores, and a -2 penalty to their Armor Class.~
+     @277 = ~Panic~
+     @278 = ~Wracking Pains~
+     @279 = ~Eye of the Beholder~
+     @280 = ~EYE OF THE BEHOLDER
+(Minor Artifact)
+Special:
+   +1 Intelligence
+   +1 Wisdom
+   +1 Charisma
+   Infravision
+Weight: 0
+
+This is an eye from one of the stalks of an Elder Orb beholder. The eyeball seems to have been enchanted such that it imparts upon the wielder a fraction of the beholder's mental acuity. More curiously, the orb seems to exude a minor charming aura. One could say that beauty is in the eye of the beholder.~
+     @281 = ~Eye of Gruumsh~
+     @282 = ~EYE OF GRUUMSH
+(Artifact)
+Special:
+   +2 Strength
+   +2 Constitution
+   -2 Charisma
+   -2 Intelligence
+   Infravision
+   Berserking
+Weight: 0
+
+This is the eyeball of Orc deity Gruumsh, cut out by his hated rival and leader of the elven Seldarine, Corellon Larethian. While it probably isn't a wise idea to implant a divine body part into one's self, some will undoubtedly do so in the pursuit of power. To implant this eye will cause the wielder to become more orc-like in a few notable ways, one of which being the inability to control violent outburts.~
+     @283 = ~Tattoo of the Archmagi~
+     @284 = ~TATTOO OF THE ARCHMAGI
+Special:
+   +3 to Intelligence
+   +2 to Wisdom
+   Doubles all 1st Level Mage Spells
+   Doubles all 2nd Level Mage Spells
+   Doubles all 3rd Level Mage Spells
+Weight: 0
+Usable only by Mages
+
+This tattoo represents the fact you have achieved the pinnacle of your skills in the arts of magic. This tattoo enhances your natural talent for the Art considerably, heightening your reasoning and deductive abilities, and doubling your spell memorization capacity for minor spells. This tattoo also bolsters the user's wisdom, allowing him a greater chance of gaining memories and giving him a greater percentage of experience points earned.~
+     @285 = ~Tattoo of the Planewalker~
+     @286 = ~TATTOO OF THE PLANEWALKER
+Special:
+   +1 to Strength
+   +1 to Dexterity
+   +1 to Constitution
+   +1 to Intelligence
+   +1 to Wisdom
+   +1 to Charisma
+   +5% Resistance to Magic
+Weight: 0
+Usable only by Nameless One~
+     @287 = ~The Elven Arts of War and Wizardry~
+     @288 = ~Tome of Eldritch Secrets~
+     @289 = ~Green-Flame Blade~
+     @290 = ~Green-Flame Blade
+(Evocation)
+
+Level: 0
+Range: 0
+Duration: 1 round/level
+Casting Time: 0
+Area of Effect: Special
+Saving Throw: None
+
+This spell creates a green, fire-like, weightless area of magical force extending from the fingers of one of the caster's hands. The crackling, blade-shaped construct's cutting edges inflict slashing damage just as those of a real sword do. The caster wields the green-flame blade as if proficient with it, at <PRO_HISHER> normal THAC0. An opponent that hits the caster with any weapons or spells within a 5-ft. radius suffers 1d8+2 points of fire damage so long as the green-flame blade is wielded.
+
+The green-flame blade initially acts as a +1 magical sword in terms of to-hit and damage bonuses as well as the type of creatures it can hit. To-hit, damage bonuses, and effective enchantment level increase by +1 every 4th level up to a maximum bonus of +6 at level 20. The fire damage also increases in intensity from +1 up to +1d6. This sword can only be used by the caster and remains in <PRO_HISHER> hand for the duration of the spell or until dispelled. Furthermore, spellcasting is disabled while the green-flame blade is in use.
+
+– Level 1: 1d8+1, +1 fire damage
+– Level 4: 1d8+2, +1d2 fire damage
+– Level 8: 1d8+3, +1d3 fire damage
+– Level 12: 1d8+4, +1d4 fire damage
+– Level 16: 1d8+5, +1d5 fire damage
+– Level 20: 1d8+6, +1d6 fire damage~
+     @291 = ~Booming Blade~
+     @292 = ~Booming Blade
+(Evocation)
+
+Level: 0
+Range: 0
+Duration: 1 round/level
+Casting Time: 0
+Area of Effect: Special
+Saving Throw: None
+
+This spell creates a blue, lightning-like, weightless area of magical force extending from the fingers of one of the caster's hands. The thundering, blade-shaped construct's cutting edges inflict slashing damage just as those of a real sword do. The caster wields the booming blade as if proficient with it, at <PRO_HISHER> normal THAC0. An opponent that hits the caster with any weapons or spells within a 5-ft. radius suffers 1d8+2 points of electricity damage so long as the booming blade is wielded.
+
+The booming blade initially acts as a +1 magical sword in terms of to-hit and damage bonuses as well as the type of creatures it can hit. To-hit, damage bonuses, and effective enchantment level increase by +1 every 4th level up to a maximum bonus of +6 at level 20. The electricity damage also increases in intensity from +1 up to +1d6. This sword can only be used by the caster and remains in <PRO_HISHER> hand for the duration of the spell or until dispelled. Furthermore, spellcasting is disabled while the booming blade is in use.
+
+– Level 1: 1d8+1, +1 electricity damage
+– Level 4: 1d8+2, +1d2 electricity damage
+– Level 8: 1d8+3, +1d3 electricity damage
+– Level 12: 1d8+4, +1d4 electricity damage
+– Level 16: 1d8+5, +1d5 electricity damage
+– Level 20: 1d8+6, +1d6 electricity damage~
+     @293 = ~Wizard-Clerics of Mystra~
+     @294 = ~Mystra's Silver Fire~
+     @295 = ~Mystra's Silver Fire
+(Evocation)
+
+Level: 1
+Range: 80 ft.
+Duration: Instant
+Casting Time: 0
+Area of Effect: 30-ft. radius
+Saving Throw: Special
+
+Mystra's Silver Fire is an explosive burst of flame, which detonates with a low roar and delivers damage proportional to the level of the wizard-priest who cast it—1d6 points of damage for each level of experience of the caster (up to a maximum of 20d6). The wizard-priest points <PRO_HISHER> finger and speaks the range (distance and height) at which the Mystra's Silver Fire is to burst. A streak flashes from the pointing digit and, unless it impacts upon a material body or solid barrier prior to attaining the prescribed range, blossoms into the fireball (an early impact results in an early detonation). Creatures failing their Saving Throws each suffer full damage from the blast. Those who roll successful Saving Throws manage to dodge, fall flat, or roll aside, each receiving half.~
+     @296 = ~Summon Mount~
+     @297 = ~Summon Mount
+(Conjuration/Summoning)
+
+Level: 1
+Range: 30 ft.
+Duration: 3 turns
+Casting Time: 0
+Area of Effect: Special 
+Saving Throw: None 
+
+By means of this ability, the Windrider calls forth an aerial mount appropriate for <PRO_HISHER> level and location. The creature will remain under the master's control until slain or the spell duration expires.
+The Windrider may only summon their mount outdoors.~
+     @298 = ~Manual of Artifact Collecting~
+     @299 = ~Sylvan Hunting Techniques~
+     @300 = ~Infiltrator's Manuscripts~
+     @301 = ~Spellfilcher's License~
+// 25022-(BGEE) 31137-(BG2EE) 31137-(IWDEE)
+// Single-Weapon Style
+// 25046-(BGEE) 34174-(BG2EE) 37732-(IWDEE)
+     @15000 = ~SINGLE-WEAPON: This fighting style is for characters who do not wish to use a shield but want some bonus when using a one-handed melee weapon.
+
+Proficient (1 slot): The wielder gets a -1 bonus to AC and inflicts critical damage on an attack roll of 19 or 20.
+
+Specialized (2 slots): The wielder gets a -2 bonus to AC and inflicts critical damage on an attack roll of 19 or 20.
+
+Master (3 slots): The wielder gets a -2 bonus to AC, a -1 bonus to speed, and inflicts critical damage on an attack roll of 19 or 20.
+
+High Master (4 slots): The wielder gets a -2 bonus to AC, a -2 bonus to speed, and inflicts critical damage on an attack roll of 19 or 20.
+
+Grand Master (5 slots): The wielder gets a -2 bonus to AC, a -2 bonus to speed, +1 to hit, and inflicts critical damage on an attack roll of 19 or 20.~
+//                  DAMAGE_RIGHT DAMAGE_LEFT THAC0_RIGHT THAC0_LEFT AC_BASE    AC_MISSILE SPEED      CRITICALROLL
+// SINGLEWEAPON-1   0            0           0           0          -1         0          0          1
+// SINGLEWEAPON-2   0            0           0           0          -2         0          0          1
+// SINGLEWEAPON-3   0            0           0           0          -2         0         -1          1
+// SINGLEWEAPON-4   0            0           0           0          -2         0         -2          1
+// SINGLEWEAPON-5   0            0          -1           0          -2         0         -2          1
+     @1001 = ~Fireball-Lightning Bolt~
+     @1002 = ~Fireball-Lightning Bolt
+(Evocation)
+
+Level: 6
+Range: 40 ft. / 150 ft.
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30-ft. radius / Special
+Saving Throw: 1/2
+
+This spell combines the explosive force of a fireball with the uncontrollable destruction of a lightning bolt. This spell, one that can kill the caster as easily as his enemies, is only ever used by dangerously confident or suicidally insane wizards.
+
+  Fireball: 10d6 fire damage to all in a 30-ft. radius (Save vs. Spell for half)
+
+  Lightning Bolt: 10d6 electrical damage to all in its path (Save vs. Spell for half)
+  Range: 150 ft.~
+     @1003 = ~Improved Magic Missile~
+     @1004 = ~Improved Magic Missile
+(Evocation)
+
+Level: 1
+Range: Visual range of the caster
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: None 
+
+Use of the Improved Magic Missile spell, an improved variant of one of the most popular 1st-level spells, creates up to eleven missiles of magical energy that dart forth from the wizard's fingertip and unerringly strike their target, which must be a creature of some sort. Each missile inflicts 1d4+1 points of damage. For every 2 extra levels of experience, the wizard gains an additional missile—<PRO_HESHE> has 2 at 3rd level, 3 at 5th level, 4 at 7th level, up to a total of 11 at 21st level.~
+     @1005 = ~Shadovar Wraithform~
+     @1006 = ~Shadovar Wraithform
+(Necromancy)
+
+Level: 6
+Range: 0
+Duration: 4 turns
+Casting Time: 1
+Area of Effect: The caster
+Saving Throw: None 
+
+There are a few notable differences between Wraithform and the more powerful Shadovar variant. Most notably, Wraithform is of the Alteration and Illusion schools while Shadovar Wraithform is of the Necromancy school, reflecting the more realistic nature of this form. When this spell is cast, the wizard and all of <PRO_HISHER> gear become insubstantial. The caster is subject only to magical or special attacks, including those by weapons of +1 or better enchantment, or by creatures otherwise able to affect those struck only by magical weapons. The wizard no longer gains the 25% resistance to magic damage associated with Wraithform, but instead gains 100% resistance to cold, magic cold, and acid damage. Shadovar wraiths have a base armor class of 4, THAC0 of 15, and 1 attack per round. They are also immune to charm, sleep, hold, and poison. This spell will allow the caster to deal 1d6 slashing or piercing damage (whichever is better) +1 magical cold and drain 1 level per attack with an effective +4 magic level. While in shadovar wraithform, the caster can cast arcane or divine spells normally.~
+     @1007 = ~Greater Animate Dead~
+     @1008 = ~Greater Animate Dead
+(Necromancy)
+
+Level: 8
+Range: 30 ft.
+Duration: 8 hours
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+This spell causes a skeleton warrior to rise and serve the caster under any conditions. The type of skeleton warrior that appears depends upon the level of the wizard casting the spell.
+  1st – 6th: a 3 HD skeleton warrior wielding a long sword.
+  7th – 10th: a 5 HD skeleton warrior wielding a long sword +1.
+  11th – 14th: a 7 HD skeleton warrior wielding a bastard sword +1.
+  15th – 18th: a 9 HD skeleton warrior wielding a two-handed sword +1.
+  19th – 22nd: an 11 HD skeleton warrior wielding a two-handed sword +1.
+  23rd – 26th: a 13 HD skeleton warrior wielding a two-handed sword +2.
+  27th – 30th: a 15 HD skeleton warrior wielding a two-handed sword +3, +1 cold.
+  31st: a 17 HD skeleton warrior wielding a two-handed sword +4, +1 cold.
+The skeleton warrior can follow the caster, remain in an area and attack any creature entering the place, etc. It remains animated until it is destroyed in combat, 8 hours pass, or it is turned. This spell cannot be dispelled.~
+     @1009 = ~Shapeshift: Lycanthrope~
+     @1010 = ~Shapeshift: Lycanthrope
+(Alteration)
+
+Level: 5
+Range: 0
+Duration: 1 hour
+Casting Time: 9
+Area of Effect: The caster
+Saving Throw: None
+
+With this spell, a wizard is able to assume the form of a powerful werewolf, and at higher levels, the form of a greater werewolf. No wizard is known to have mastered lycanthropy to the extent of druid shapeshifters and thus the transformation is limited to one hour.
+Rumors talk of ancient werewolves with more primal power than any mortal should have, but it's unlikely that the form of such an apex predator can be attained without succumbing to a more permanent curse of lycanthropy.
+
+Shapeshift: Werewolf
+
+Strength: 19
+Dexterity: 16
+
+Base Armor Class: 1
+Number of Attacks: 2
+Attack Damage: 1d12 (slashing)
+
+Special Abilities:
+– Immune to non-magical weapons
+– Magic Resistance: 20%
+
+Shapeshift: Greater Werewolf
+
+Strength: 21
+Dexterity: 20
+
+Base Armor Class: -6
+Number of Attacks: 3
+Attack Damage: 2d8 (slashing)
+
+Special Abilities:
+– Immune to all weapons except cold iron
+– Fire Resistance: 50%
+– Cold Resistance: 50%
+– Electricity Resistance: 50%
+– Acid Resistance: 50%
+– Magic Resistance: 40%
+– Regenerates 3 hit points per second~
+     @1011 = ~Shapeshift: Tanar'ri Lord~
+     @1012 = ~Shapeshift: Tanar'ri Lord
+(Any School)
+
+Level: 10
+Range: 0
+Duration: 1 hour
+Casting Time: 9
+Area of Effect: The caster
+Saving Throw: None
+
+A favorite among the most chaotic and evil of wizards, this transformation will settle most disputes quickly, albeit with no shortage of bloodshed. Supposedly this spell was created by one of the very first Draegloth sorcerors, the unholy union of Drow and tanar'ri. The rumor implies that the Draegloth attained the pinnacle of arcane prowess among the Drow, but continually sought greater power. Legend says he found his way to the Demonweb Pits where Lolth taught him to tap directly into the Abyss to channel his demonic power. No one knows the truth of this spell's origin except the creator, but all stories agree that the original caster of this spell never could return to his half-drow, half-demon form and to this day wanders the Abyss seeking a way to undo his shapechange. Tieflings with less than half demon heritage *should* be okay. Not usable by good characters.
+(By casting this spell, you agree that you have read and fully understand all warnings. Furthermore, by casting this spell you accept full liability of any and all injuries and/or financial damages that may and probably will occur.)
+
+Requires: Summon Dark Planetar
+
+Shapeshift: Tanar'ri Lord
+
+Strength: 25
+Dexterity: 25
+
+Base Armor Class: -4
+Number of Attacks: 3
+Attack Damage: 1d10+5 (slashing)
+
+Special Abilities:
+– Immune to all weapons below +3 enchantment
+– Fire Resistance: 100%
+– Cold Resistance: 100%
+– Electricity Resistance: 100%
+– Acid Resistance: 100%
+– Magic Resistance: 75%
+– Regenerates 5 hit points per second~
+     @1013 = ~Call Lightning-Flame Strike~
+     @1014 = ~Call Lightning-Flame Strike
+(Evocation/Alteration)
+Level: 6
+Range: 40 ft.
+Duration: Instant
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: 1/2
+
+This spell taps directly into the weave, extracting and manipulating raw arcane energy to call down a massive column of flame and lightning on one creature.
+
+Call Lightning: 10d8 points of electrical damage, save vs. Spell for half.
+
+Flame Strike: 10d8 points of fire damage, save vs. Spell for half.~
+     @1015 = ~Contingency I~
+     @1016 = ~Contingency I
+(Conjuration/Abjuration)
+Level: 3
+Range: 0
+Duration: 24 hours
+Casting Time: 3
+Area of Effect: The caster
+Saving Throw: None
+
+Armor
+Protection from Evil
+Protection from Petrification~
+     @1017 = ~Contingency II~
+     @1018 = ~Contingency II
+(Illusion/Phantasm, Abjuration/Alteration)
+Level: 5
+Range: 0
+Duration: 12 hours
+Casting Time: 3
+Area of Effect: The caster
+Saving Throw: None
+
+Vocalize
+Blur
+Resist Fear~
+     @1019 = ~Contingency III~
+     @1020 = ~Contingency III
+(Evocation, Alteration)
+Level: 7
+Range: 0
+Duration: 9 hours
+Casting Time: 3
+Area of Effect: The caster
+Saving Throw: None
+
+Stoneskin
+Fireshield (Blue)
+Fireshield (Red)~
+     @1021 = ~Improved Chromatic Orb~
+     @1022 = ~Improved Chromatic Orb
+(Evocation)
+
+Level: 1
+Range: 90 ft.
+Duration: Special
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Special
+
+This spell causes a 2-ft. diameter sphere to appear in the caster's hand. When thrown, the sphere heads unerringly to its target. The effect the orb has upon the target varies with the level of the caster. Each orb will do damage to the target against which there is no save and an effect against which the target must save vs. Spell with a +6 bonus:
+ 1st Level: 1d4 damage and blinds the target for 1 round.
+ 2nd Level: 1d4 damage and inflicts pain (-1 penalty to Strength, Dexterity, AC, and THAC0) upon the victim.
+ 3rd Level: 1d6 damage and burns the victim for an additional 1d8 damage.
+ 4th Level: 1d6 damage and blinds the target for 1 turn.
+ 5th Level: 1d8 damage and stuns the target for 3 rounds.
+ 6th Level: 1d8 damage and causes weakness (-4 penalty to THAC0) in the victim.
+ 7th Level: 1d10 damage and paralyzes the victim for 2 turns.
+ 10th Level: 1d12 acid damage and turns the victim to stone.
+ 12th Level: 2d8 acid damage and instantly kills the victim.
+ 14th Level: 2d10 acid damage and instantly kills the victim.
+ 16th Level: 2d12 acid damage and instantly kills the victim.
+ 18th Level: 2d12+1 acid damage and instantly kills the victim.
+ 20th Level: 2d12+1 acid damage, 1d4+1 poison damage drained to caster, and instantly kills the victim.
+
+NOTE: The victim saves vs. Spell with a +6 bonus against all the effects and gets no save against the damage.~
+     @1023 = ~Unweave Magic~
+     @1024 = ~Unweave Magic
+(Any School)
+
+Level: 10
+Range: 80 ft.
+Duration: Instant
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Special
+
+This spell was designed by Mystra herself to utterly dismantle the Weave around a wizard with a barrage of Spellstrike, Pierce Shield, Ruby Ray of Reversal, and Khelben's Warding Whip. The intense arcane energies daze the afflicted target prompting a save vs. Spell at a -2 penalty against Miscast Magic, an 80% chance of arcane and divine spell failure for 1 turn. Not usable by evil characters.
+
+Spellstrike
+(Abjuration, Alteration)
+When this spell is cast at a target creature, it will dispel all of the magical protections that surround that creature. This includes Minor Spell Turning, Minor Globe of Invulnerability, Spell Immunity, Globe Of Invulnerability, Minor Spell Deflection, Spell Turning, Spell Shield, Spell Deflection, and Spell Trap. The target's Magic Resistance, if any, does not affect this spell.
+
+Pierce Shield
+(Abjuration)
+When this spell is cast, it launches a massive attack on an enemy wizard's spell defenses. The target's Magic Resistance will be lowered by 30%. Next, Pierce Shield will cancel one spell protection of any level. The list of spells that this includes: Minor Spell Deflection, Minor Spell Turning, Spell Deflection, Minor Globe of Invulnerability, Spell Immunity, Globe Of Invulnerability, Spell Turning, Spell Shield, and Spell Trap. Magic Resistance does not affect this spell, nor do any of the spell protections. The resistance remains lowered for 1 round per level of the caster. It cannot be dispelled.
+
+Ruby Ray Of Reversal
+(Alteration)
+When this spell is cast, it dispels one spell protection of any level affecting the target creature. The spells affected by Ruby Ray Of Reversal are Minor Spell Turning, Minor Globe of Invulnerability, Spell Immunity, Globe Of Invulnerability, Minor Spell Deflection, Spell Turning, Spell Shield, Spell Deflection, and Spell Trap. This will always remove the highest-level spell protection affecting the target; if more than one same-level protection is active on the target simultaneously, one of them will be randomly chosen and dispelled. The target's Magic Resistance, if any, does not affect this spell.
+
+Khelben's Warding Whip
+(Abjuration)
+When this spell is cast, it will dispels one spell protection of up to 8th level affecting the target creature. Every round thereafter till the duration of the spell expires, another spell protection will be removed from the target. The spells affected by Khelben's Warding Whip are Minor Spell Turning, Minor Globe of Invulnerability, Spell Immunity, Globe Of Invulnerability, Minor Spell Deflection, Spell Turning, Spell Deflection, and Spell Shield. This will always remove the highest-level spell protection affecting the target; if more than one same-level protection is active on the target simultaneously, one of them will be randomly chosen and dispelled. The target's Magic Resistance, if any, does not affect this spell.
+
+Requires: Extra Level 6 Spell, Extra Level 7 Spell, Extra Level 8 Spell~
+     @1025 = ~Call Upon Abyss: Baphomet~
+     @1026 = ~Call Upon Abyss: Baphomet
+(Any School)
+
+Level: 10
+Range: 60 ft.
+Duration: Instant
+Casting Time: 3
+Area of Effect: 1 creature
+Saving Throw: 1/3
+
+This spell conjures a gate to the 600th layer of the Abyss, the Endless Maze, through which you channel the power of Baphomet the Demon Prince of Minotaurs. What emerges from the abyssal rift is a massive meateor singed with flame. The impact spells udder cowtastrophe for the victim of this bovine-boulder; one would be lucky to escape mootilated. Only the most evil wizards would milk the benefits of this brutal spell. Abusers of this spell steer away from the notions of law and good, surely becoming as beasts. Not usable by Lawful characters or vegans.
+
+Requires: Comet~
+     @1027 = ~Extra Level 6 Spell~
+     @1028 = ~Choosing this ability allows the wizard to cast one additional Level 6 spell.~
+     @1029 = ~Extra Level 7 Spell~
+     @1030 = ~Choosing this ability allows the wizard to cast one additional Level 7 spell.~
+     @1031 = ~Extra Level 8 Spell~
+     @1032 = ~Choosing this ability allows the wizard to cast one additional Level 8 spell.~
+     @1033 = ~Improved Alacrity~
+     @1034 = ~Improved Alacrity
+(Any School)
+
+Level: 10
+Range: 0
+Duration: 2 rounds
+Casting Time: 9
+Area of Effect: The caster
+Saving Throw: None
+
+Improved Alacrity essentially erases the pause between casting spells. When cast, the wizard can begin casting a new spell the instant <PRO_HESHE> is finished casting <PRO_HISHER> current spell. The effect lasts for 2 rounds.~
+     @1035 = ~Dragon's Breath~
+     @1036 = ~Dragon's Breath
+(Any School)
+
+Level: 10
+Range: 320 ft.
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30-ft. radius
+Saving Throw: Special
+
+This spell causes a disembodied head of a red dragon to appear and breathe fire with the strength of an adult red dragon. In addition to the enormous 20d10 fireball, the force of the dragon's breath knocks an opponent off their feet and away from the caster. The victim can save vs. Breath Weapon to take half damage and not be blown backwards. 
+
+This spell will not harm party members.~
+     @1037 = ~Summon Planetar~
+     @1038 = ~Summon Planetar
+(Any School)
+
+Level: 10
+Range: 120 ft.
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens a celestial gate and calls forth a planetar to fight at the caster's side until the spell expires or the planetar's avatar is slain.~
+     @1039 = ~Summon Dark Planetar~
+     @1040 = ~Summon Dark Planetar
+(Any School)
+
+Level: 10
+Range: 120 ft.
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens an abyssal gate and calls forth a fallen planetar to fight at the caster's side until the spell expires or the planetar's avatar is slain.~
+     @1041 = ~Comet~
+     @1042 = ~Comet
+(Any School)
+
+Level: 10
+Range: 270 ft.
+Duration: Instant
+Casting Time: 3
+Area of Effect: 30-ft. radius
+Saving Throw: Special
+
+This spell is a more powerful and specialized version of Meteor Swarm. A huge meteor or comet strikes the earth, damaging all enemies in its path and sending out a powerful shockwave that knocks away all foes in the area of effect. Those knocked down must save vs. Paralysis or be stunned for 3 rounds. The comet itself does 10d10 fire damage with no save.
+
+This spell will not harm party members.~
+     @1043 = ~Set Spike Trap~
+     @1044 = ~Set Spike Trap
+This ability allows the rogue to set a powerful spring-loaded spike trap that does 20d6 damage to the unsuspecting creature that sets it off.~
+     @1045 = ~Set Exploding Trap~
+     @1046 = ~Set Exploding Trap
+This ability allows the rogue to set a powerful trap that unleashes a fireball which causes 10d6 damage (Save vs. Spells for half damage) and will knock its victims off their feet.~
+     @1047 = ~Set Time Trap~
+     @1048 = ~Set Time Trap
+This ability allows the rogue to set a magical trap that casts a weaker version of the high-level Time Stop spell. For 10 seconds, the flow of time slows for all but the rogue. Often, a rogue will use this trap to get behind an opponent for a free attack. ~
+     @1049 = ~Evasion~
+     @1050 = ~Evasion
+A rogue's natural sense of preservation becomes heightened with the use of the Evasion ability. Evasion gives a bonus of 4 to AC and 2 to all Saving Throws. The effect lasts for 3 rounds.~
+     @1051 = ~Greater Evasion~
+     @1052 = ~Greater Evasion
+A more powerful version of Evasion, this ability improves Armor Class by 6 and Saving Throws by 3. In addition, Greater Evasion allows the rogue to move so quickly that <PRO_HISHER> movement rate is increased by 2 (base is 10) and normal missiles have no chance of striking <PRO_HIMHER>. Greater Evasion lasts for 5 rounds.
+
+Requires: Evasion~
+     @1053 = ~Use Any Item~
+     @1054 = ~Use Any Item
+Rogues take pride in their ability to adapt and make clever use of whatever is at hand. This ability is an extension of that basic skill. Once learned, the effect is permanent. The ability allows the rogue to use any item, even items that are typically restricted to one class. This allows the rogue to use everything from wands and scrolls to mighty weapons that none but a warrior could otherwise use.~
+     @1055 = ~Assassination~
+     @1056 = ~Assassination
+Using every clever trick an experienced Thief has learned in countless battles, this ability allows every strike in the next round to act as a backstab, using the Thief's existing backstab modifier to determine damage.~
+     @1057 = ~Avoid Death~
+     @1058 = ~Avoid Death
+With extraordinary effort, a high-level rogue can avoid almost certain death. The effect lasts for 5 rounds, and during this time, the rogue's Save vs. Death receives a bonus of 5, Hit Points are increased by 20, and the rogue becomes immune to death magic.~
+     @1059 = ~Alchemy~
+     @1060 = ~Alchemy
+With cleverness innate to the class, an experienced rogue has seen enough potions in his or her adventuring career to simulate the creation of one. With the Alchemy skill, the rogue can create one of eight types of potions once per day. 
+
+The potions a rogue can create are randomly chosen from the following list: 
+1) Potion of Master Thievery 
+2) Potion of Perception
+3) Potion of Extra Healing
+4) Potion of Superior Healing
+5) Potion of Regeneration
+6) Antidote
+7) Oil of Speed
+8) Potion of Frost Giant Strength (only useable by Thieves or Bards)~
+     @1061 = ~Scribe Scrolls~
+     @1062 = ~Scribe Scrolls
+This ability allows a rogue to create low- and mid-level spell scrolls. The scrolls that the rogue can create are randomly chosen from the following list:
+1) Magic Missile
+2) Haste
+3) Fireball
+4) Dispel Magic
+5) Dire Charm
+6) Invisibility
+7) Cone of Cold
+8) Monster Summoning II
+9) Monster Summoning III
+
+Requires: Use Any Item~
+     @1063 = ~Enhanced Bard Song~
+     @1064 = ~Enhanced Bard Song
+This is a powerful aid to both the Bard and to <PRO_HISHER> allies. The song gives the Bard <PRO_HIMHER>self a 10-point bonus to <PRO_HISHER> Armor Class and a 10% bonus to <PRO_HISHER> Magic Resistance due to the power of the song. The song also gives <PRO_HISHER> allies +4 to hit; +4 to damage; -4 to Armor Class; immunity to fear, stun, and confusion; +5% Magic Resistance; and immunity to normal weapons.
+
+This ability replaces the current Bard Song.~
+     @1065 = ~Magic Flute~
+     @1066 = ~Magic Flute
+This ability creates a magic flute made of pure magical energy. When played, the flute can be used to cast the following spells:
+Resist Fear (Party) – 1 charge
+Globe of Invulnerability – 1 charge
+Delayed Blast Fireball – 3 charges
+
+The spell-like abilities on the Flute are used in the same way that a wand's powers are used. The Flute lasts for 1 day.~
+     @1067 = ~Whirlwind Attack~
+     @1068 = ~Whirlwind Attack
+This ability allows the warrior to unleash a flurry of super-fast blows. The ability sets one's number of attacks per round to 10, but one's THAC0 and damage suffer a 4 point penalty. The Whirlwind Attack lasts for one round.~
+     @1069 = ~Greater Whirlwind Attack~
+     @1070 = ~Greater Whirlwind Attack
+A more powerful version of the Whirlwind Attack, Greater Whirlwind gives the warrior the same bonuses without penalties. Their number of attacks per round are set to 10 for one round.
+
+Requires: Whirlwind Attack~
+     @1071 = ~Deathblow~
+     @1072 = ~Deathblow
+The Deathblow ability allows the warrior to blow through the defenses of any lesser creature. For the next 2 rounds, any creature of 10th level or lower is instantly killed when struck by the warrior.~
+     @1073 = ~Greater Deathblow~
+     @1074 = ~Greater Deathblow
+Like Deathblow, this ability allows the warrior to vanquish lesser foes with a single blow.  For the next 2 rounds, any creature of 12th level or lower is instantly killed when struck by the warrior.
+
+Requires: Deathblow~
+     @1075 = ~Resist Magic~
+     @1076 = ~Resist Magic
+This ability allows the warrior to temporarily tap a great inner strength and fight off the effects of malevolent magic. For 4 rounds, the warrior's Magic Resistance is set to 50%. This is not cumulative with other forms of Magic Resistance, so if the warrior already has 50% Magic Resistance or greater, the ability is useless.~
+     @1077 = ~Critical Strike~
+     @1078 = ~Critical Strike
+A high-level warrior's intimate knowledge of vital spots on opponents allows <PRO_HIMHER> to, once per day, concentrate all of the attacks in one round to strike a vital area every time. With this ability, every attack roll made in the next round is a natural 20, a critical hit.
+
+Requires: Power Attack~
+     @1079 = ~Power Attack~
+     @1080 = ~Power Attack
+A Power Attack allows the warrior to strike blows so forceful that they stun an opponent for 2 rounds if the opponent fails a Save vs. Death at a -4 penalty. The ability lasts for 2 rounds.~
+     @1081 = ~Hardiness~
+     @1082 = ~Hardiness
+Calling upon hidden reserves of strength during times of danger, a warrior can use the Hardiness ability to gain 40% resistance to all forms of physical damage. The ability lasts for 1 round for every 2 levels of the warrior.
+This ability does not stack with Defensive Stance.~
+     @1083 = ~War Cry~
+     @1084 = ~War Cry
+With a War Cry, the warrior emits a powerful and frightening yell that will panic all opponents in a 30-ft. radius if they don't make their Save vs. Spell.~
+     @1085 = ~Smite~
+     @1086 = ~Smite
+With the Smite ability, the warrior gains the ability to strike a mighty blow, knocking an opponent back for a considerable distance and stunning the opponent for 1 round. All attacks made in the first round are critical hits. The ability lasts for 2 rounds.
+
+Large creatures such as a dragons or giants will not be knocked back or stunned.
+
+Requires: Power Attack, Critical Strike~
+     @1087 = ~Tracking~
+     @1088 = ~Tracking
+With an intimate knowledge of <PRO_HISHER> surroundings and the creatures that live within them, a ranger can use the Tracking ability to give <PRO_HIMHER>self a general idea of what creatures are in an area and which direction they are. Red arrows at the edge of the screen will point in the general direction of the creatures in the area.~
+     @1089 = ~Energy Blades~
+     @1090 = ~Energy Blades
+(Any School)
+
+Level: Quest
+Range: Special
+Duration: 4 turns
+Casting Time: 3
+Area of Effect: Special
+Saving Throw: None
+
+An energy blade is a discus made of pure energy. The disc gives +10 to THAC0, and when thrown does 1d4+5 missile damage as well as 1d10 additional electrical damage. This spell creates 1 energy disc per level of the caster and sets the caster's attacks to 9 as long as the discs are held.~
+     @1091 = ~Storm of Vengeance~
+     @1092 = ~Storm of Vengeance
+
+Level: Quest
+Range: 270 ft.
+Duration: 3 rounds
+Casting Time: 8
+Area of Effect: 30-ft. radius
+Saving Throw: Special
+
+Casting this spell causes the earth to shake and the heavens to boil with blood and energy. All enemies of the caster are struck down by acidic rain, earthquakes, and lightning.
+
+All enemies of 8th level or lower are slain instantly. The survivors are struck by acidic, poisonous rain and lightning. The storm lasts for 3 rounds. Each round, the victims suffer 1d6 electrical damage, 1d6 fire damage, and 1d6 acid damage (Save vs. Spells for half damage). They also have a chance to be poisoned (Save Vs. Death) in the first round.~
+     @1093 = ~Elemental Summoning~
+     @1094 = ~Elemental Summoning
+
+Level: Quest
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+Drawing power from the environment, this spell summons 2 16-HD elementals randomly chosen from earth, air, or fire. The elementals stay for 1 turn and will obey the caster as long as they remain summoned. There is a 10% chance that a randomly chosen Elemental Prince will be summoned instead. The Elemental Princes rule over other elementals in their respective planes. The Elemental Prince of Air is Chan, the Elemental Prince of Earth is Sunnis, and the Elemental Prince of Fire is Zaaman Rul.~
+     @1095 = ~Greater Elemental Summoning~
+     @1096 = ~Greater Elemental Summoning
+
+Level: Quest
+Range: 30 ft.
+Duration: 1 turn
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: None
+
+Druids, having a more powerful link to the elements, can cast a stronger version of Elemental Summoning. This spell can summon the Elemental Princes themselves, randomly chosen from earth, air, or fire. The Elemental Prince of Air is Chan, the Elemental Prince of Earth is Sunnis, and the Elemental Prince of Fire is Zaaman Rul. The Elemental Princes stay for 1 turn and will obey the caster as long as they remain summoned.
+
+Requires: Elemental Summoning~
+     @1097 = ~Globe of Blades~
+     @1098 = ~Globe of Blades
+(Evocation)
+
+Level: Quest
+Sphere: Guardian, Creation 
+Range: 0
+Duration: 1 turn
+Casting Time: 9
+Area of Effect: Special
+Saving Throw: Special
+
+The priest employs this spell to set up a globe of razor-sharp blades. These whirl and flash around the caster, creating a dangerous barrier. Any creature attempting to pass through the blade barrier suffers 10d10 points of damage. Creatures within the area of the barrier when it is invoked are entitled to a Saving Throw vs. Spell at -2. If this is successful, the blades are avoided and no damage is suffered. The barrier remains for 1 turn.~
+     @1099 = ~Summon Deva~
+     @1100 = ~Summon Deva
+(Conjuration/Summoning)
+
+Level: Quest
+Range: 120 ft.
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens a celestial gate and calls forth an angelic deva to fight at the caster's side until the spell expires or the deva's earthly avatar is slain.~
+     @1101 = ~Summon Fallen Deva~
+     @1102 = ~Summon Fallen Deva
+(Conjuration/Summoning)
+ 
+Level: Quest
+Range: 120 ft.
+Duration: 4 rounds + 1 round/level
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens an abyssal gate and calls forth a demonic deva to fight at the caster's side until the spell expires or the deva's earthly avatar is slain.~
+     @1103 = ~Implosion~
+     @1104 = ~Implosion 
+(Evocation)
+
+Level: Quest
+Range: 40 ft.
+Duration: 2 rounds
+Casting Time: 5
+Area of Effect: 1 creature
+Saving Throw: Special
+
+This spell creates a rift in the earth beneath the target which implodes and closes in upon itself, crushing and burning the target and holding it for 1 round. The spell does 10d10 fire damage and 10d10 blunt damage. The victim can save vs. Spell for half.~
+     @1105 = ~Mass Raise Dead~
+     @1106 = ~Mass Raise Dead
+(Necromancy)
+
+Level: 7
+Sphere: Necromantic
+Range: 30 ft.
+Duration: Permanent
+Casting Time: 2
+Area of Effect: Up to 5 party members
+Saving Throw: None
+
+A more powerful version of Raise Dead, this spell brings up to 5 party members back to life and heals 3d10+1 Hit Points per level of the caster. They can regain the rest of their Hit Points by natural healing or curative magic. This spell restores life to dwarves, gnomes, half-elves, halflings, elves, half-orcs, and humans.~
+     @1107 = ~Aura of Flaming Death~
+     @1108 = ~Aura of Flaming Death
+(Evocation, Alteration)
+
+Level: Quest
+Range: 0
+Duration: 1 round/2 levels
+Casting Time: 4
+Area of Effect: The caster
+Saving Throw: None
+
+This spell causes the caster to be enveloped by an aura of intense flame that both injures opponents and protects the caster from damage. This shield not only grants the user 90% Fire Resistance and an AC bonus of 4, but also protects <PRO_HIMHER> from attacks made within a 5-ft. radius. An opponent that hits the caster with any weapons or spells within this radius suffers 2d10+2 fire damage. In addition, the intense heat protects the caster from all non-magical weapons, melee or missile. ~
+     @1109 = ~Fire Elemental Transformation~
+     @1110 = ~Fire Elemental Transformation
+
+Level: Quest
+Range: 0
+Duration: 1 hour
+Casting Time: 1
+Area of Effect: The caster
+Saving Throw: None
+
+Harnessing the power of fire, this powerful shapechange ability allows the Druid to become a 24-HD fire elemental of immense strength. The elemental form has an AC of -5, a THAC0 of 2, and does 1d10 normal and 1d10 fire damage with its attacks. When the Druid returns to human form, <PRO_HESHE> is also healed 3d10 Hit Points.~
+     @1111 = ~Earth Elemental Transformation~
+     @1112 = ~Earth Elemental Transformation
+
+Level: Quest
+Range: 0
+Duration: 1 hour
+Casting Time: 1
+Area of Effect: The caster
+Saving Throw: None
+
+Harnessing the power of the earth, this powerful shapechange ability allows the Druid to become a 24 HD earth elemental of immense strength. The elemental form has an AC of -5, a THAC0 of 2, and does 2d10 crushing damage with its attacks. When the Druid returns to human form, <PRO_HESHE> is also healed 3d10 Hit Points.~
+     @1113 = ~~
+     @1114 = ~~
+     @1115 = ~~
+     @1116 = ~~
+     @1117 = ~~
+     @1118 = ~~
+     @1119 = ~~
+     @1120 = ~~
+     @1121 = ~~
+     @1122 = ~~
+     @1123 = ~~
+     @1124 = ~~
+     @1125 = ~~
+     @1126 = ~~
+     @1127 = ~~
+     @1128 = ~~
+     @1129 = ~~
+     @1130 = ~~
+     @1131 = ~~
+     @1132 = ~~
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     @5000 = ~Wand~
+     @5001 = ~Wands are 1 1/4 ft. long and slender. They are made of ivory, bone, or wood and are usually tipped with something—metal, crystal, stone, and so on. They are fragile and tend to break easily. Because of this, they are often kept in cases.
+
+Wands are powered by charges, each use costing one or more charges (depending on the item). When a wand runs out of charges, it is consumed and destroyed.
+
+STATISTICS:
+
+Weight: 1~
+     @5002 = ~Wand of Fire and Lightning~
+     @5003 = ~Wand of Fire and Lightning~
+// Ascension
+     @2000 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Mass Healing (Necromancy)
+Range: Sight of caster 
+Duration: Permanent 
+Casting Time: 1
+Area of Effect: 30 foot radius
+Saving Throw: None 
+
+When using this ability, the Bhaalspawn must picture the faces of <PRO_HISHER> fellow party members clearly and focus on the unity of the group.  Upon completion, all party members within 30 foot radius of the caster are healed 2d8 + 2/level hit points.  Other conditions suffered by the party are cured, as well: fatigue, poison, disease, blindness and deafness.~
+@2001 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Regeneration (Necromancy) 
+Range: Touch
+Duration: 1 round/ 2 levels
+Casting Time: 7
+Area of Effect: Target Creature
+Saving Throw: None 
+
+This powerful ability enables the Bhaalspawn to imbue 1 creature with the ability to regenerate.  This regeneration will heal any wounds and even regenerate lost limbs.  The creature affected will regain 3 hit points per second.  The effect lasts for 1 round per every 2 levels of the caster or until dispelled.  For example, a 14th level character would regenerate 18 hit points per round for 7 rounds.~
+@2002 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Draw Upon Holy Might (Invocation) 
+Range: 0 
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: The caster 
+Saving Throw: None 
+
+The Bhaalspawn calls upon the might of <PRO_HISHER> blood to grant him power for a short period.  When <PRO_HESHE> does this, <PRO_HISHER> strength, constitution and dexterity all are raised by 1 point for every 3 levels of the caster.  A third level caster would have <PRO_HISHER> abilities raised by 1, while a 12th level caster would have all <PRO_HISHER> abilities raised by 4.~
+@2003 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Dark Taint (Necromancy) 
+Range: 20 feet
+Duration: 1 turn
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Negates
+
+Through this spell, the Bhaalspawn can expel the taint of <PRO_HISHER> evil sire onto a victim, poisoning those who fail their save vs. death.  The effects depend upon the caster's level and are detailed below:
+7-9th level:  2d8  +  2/round, slow for 12 seconds, save at -2
+10-12th level:  3d8  + 3/round, slow for 12 seconds, save at -2
+13-14th level:  4d8  +  4/round, slow for 12 seconds, save at -2
+15-16th level:  6d8  +  5/round, slow for 24 seconds, save at -2
+17-21st level:  8d8  +  6/round, slow for 24 seconds, save at -4
+25th level: 8d8 + 6/round, slow for 36 seconds, save at -4, affects group of targets~
+@2004 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained permanent negative plane protection (i.e., <CHARNAME> cannot be level-drained) and 5% magic resistance.~
+@2005 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Hand of Murder (Necromancy) 
+Range: Caster
+Duration: 1 rounds/5 levels
+Casting Time: 1
+Saving Throw: none 
+
+When this power is called upon by the Bhaalspawn, <PRO_HESHE> immediately does extra damage with each hit to <PRO_HISHER> target with any melee weapon desired (whether it be fist or sword). <PRO_HISHER> dark energies travel through <PRO_HISHER> weapon and assaulting <PRO_HISHER> victim...and absorb that damage as healing for <PRO_HIMHER>self.
+The effects vary by level as follows:
+10th: 2 rounds, 4 hp extra damage, 4 hp healed
+15th: 3 rounds, 6 hp extra damage, 6 hp healed
+20th: 4 rounds, 8 hp extra damage, 8 hp healed
+25th: 5 rounds, 10 hp extra damage, 10 hp healed
+30th: 6 rounds, 12 hp extra damage, 12 hp healed~
+@2006 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained the ability, usable once per day: 
+
+Resurrection (Necromancy)
+Range: Touch
+Duration: Permanent
+Casting Time: 1
+Area of Effect: Creature Touched
+Saving Throw: None
+
+Like the 5th level spell Raise Dead, Resurrection will return a character back to life.  However, Resurrection also heals the character so that they are ready for the adventuring life once more.~
+@2007 = ~Bhaalspawn Powers
+
+<CHARNAME> has gained 25% resistance to physical damage (i.e., slashing, piercing, crushing and missile damage).~
+
+@3000 = ~Sword of Chaos +4~
+@3001 = ~Sarevok's Sword of Chaos
+The blade of Sarevok, brother of <CHARNAME>, used in the battle they fought in faraway Baldur's Gate.  <CHARNAME> prevailed, destroying Sarevok's plans and rescuing the Sword Coast from the brink of war.  Now Sarevok has joined with <CHARNAME>'s cause and his blade has been restored to him.  Sarevok describes the weapon as a Deathbringer blade and has restored some of the weapon's old power.  Without his Bhaalspawn essence to channel through the sword, however, it cannot achieve the power it once had.  Still, however, it is a formidable weapon...and one that Sarevok warns would become increasingly difficult to wield in the hands of one who was not a Deathbringer, if they could use it at all.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: +10%
+
+Combat abilities:
+– Each hit drains 1 to 5 Hit Points from the target and transfers it to the wielder. This will not heal beyond the wielder's maximum.
+
+THAC0: +4
+Damage:  1D10 +4 (slashing)
+Speed Factor: 6
+Proficiency Type: Two-handed Sword
+Type:  Two-handed
+Requires:
+ 14 Strength
+ 18 Constitution
+ 
+Weight: 10~
+     @2750 = ~My blade, is it?  I had thought this lost forever.  It is good to have it back.  While I no longer have the essence to channel through it, it is still a Deathbringer's weapon and I can restore much of its power.  I would not suggest you attempt to use it yourself, now.~
+     @2760 = ~You wouldn't have my armor, too, hidden about somewhere within your packs?  Hmph.  I suppose some things are too much to hope for.~
