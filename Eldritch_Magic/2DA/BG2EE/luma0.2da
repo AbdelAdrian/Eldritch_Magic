@@ -1,0 +1,15 @@
+2DA V1.0
+*
+           ABILITY    ICON       STRREF     MIN_LEV    MAX_LEVEL  NUM_ALLOWED PREREQUISITE EXCLUDED_BY ALIGNMENT_RESTRICT 
+1          AP_SPCL928 *          *          1          99         1          *          *          *          
+2          AP_SPCL929 *          *          1          99         1          AP_SPCL928 *          *          
+3          AP_SPCL930 *          *          1          99         1          AP_SPCL929 *          *          
+4          GA_EMIMPSS *          *          1          99         1          AP_SPCL930 GA_SPWI923 ALL_EVIL   
+5          GA_SPWI920 *          *          1          99         1          *          *          *          
+6          GA_SPWI921 *          *          1          99         1          *          *          *          
+7          GA_SPWI922 *          *          1          99         1          *          *          *          
+8          GA_SPWI923 *          *          1          99         1          *          GA_SPWI924 ALL_EVIL   
+9          GA_EMSSDL  *          *          1          99         1          GA_SPWI924 GA_SPWI923 ALL_GOOD   
+10         GA_SPWI924 *          *          1          99         1          *          GA_SPWI923 ALL_GOOD   
+11         GA_SPWI925 *          *          1          99         1          *          *          *          
+12         GA_EMIMPSC *          *          1          99         1          GA_SPWI925 *          ALL_GOOD   
