@@ -1,4 +1,4 @@
-﻿[MOD] Eldritch Magic v1.0
+﻿[MOD] Eldritch Magic v1.5
 BG:EE v2.1, BGII:EE v2.1, IWD:EE v1.4
 
 Author: Eric.McLaughlin@Alumni.StonyBrook.edu
@@ -46,23 +46,19 @@ Mod Features:
 
 	Items/Spells:
 
-		BGEE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough.
-		BGEE: High Level Abilities [BETA]** - This is mostly because my kits remove the xp cap and, in theory, someone could require HLAs in BGEE, if only to allow leveling up. Most HLAs work perfectly, but other mods can do this better.
-						      (Not yet SoD compatible.)
+		BGEE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough. Includes High Level Abilities (HLAs) for BGEE, but not SoD.
 
-		BG2EE: Item Expansion [BETA]**      - All options include Bladesinger's Artifacts, a few of which require the Bladesinger kit installed to be found in-game/used. BG2EE Item Expansions do not require any kit mods nor is the item expansion required for items critical to a custom kit.
-			(1) Bladesinger's Artifacts - Adds items granted to Bladesinger kit upon leveling up, increased sword selection, and equips Revanek of the Twisted Rune with gear appropriate for a 19th level fighter.
-			(2) Bladesinger's Artifacts and Bhaalspawn Items                            - Includes items for Sarevok and Imoen.
-			(3) Bladesinger's Artifacts and Ribald, Deidre, and Joluv Mods              - Includes greater store selections.
-			(4) Bladesinger's Artifacts, Bhaalspawn, and Ribald, Deidre, and Joluv Mods - Comprehensive of above BG2EE: Item Expansions.
+		BG2EE: Item Expansion [BETA]** 	    - Equips Revanek of the Twisted Rune with gear appropriate for a 19th level fighter.
+			                            - Includes Bhaalspawn items for Sarevok and Imoen.
+			           		    - Includes greater store selections with Deidre, Joluv, and Ribald.
 
 		IWDEE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough.
 		
 		Congenio's Pebble Collection	    - Allows multiple Ioun stones to stack without using any equipment slots.
+						    WARNING: Ioun stones that use Opcode "Stat: Maximum HP Modifier [18]" work differently than others. In order for the HP modifier to be removed when the Ioun stone is, the HP modifier cannot be saved and loaded. In other words, if you save with the Pale Green Ioun Stone and/or Wong Fei's Ioun Stone equipped in orbit, you must equip them again upon loading to receive the HP modifier.
 			
-		IWD2: Item Expansion [ALPHA]***     - Deactivated with MOD v1.11, can easily be reactivated by deleting "//" immediately before component in Eldritch_Magic.tp2
-			
-		PST: Item Expansion [ALPHA]***      - Deactivated with MOD v1.11, can easily be reactivated by deleting "//" immediately before component in Eldritch_Magic.tp2
+			IWD2: Item Expansion [ALPHA]***     - Deactivated with MOD v1.11		
+			PST: Item Expansion [ALPHA]***      - Deactivated with MOD v1.11
 
 *   All kits include level expansion to 50. Kit descriptions are more or less directly from AD&D 2E PHBs, not everything is my own work.
     Full kit descriptions at bottom. Multiclass kits must be "selected" in-game after character creation through the use of a specific
