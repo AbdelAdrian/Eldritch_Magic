@@ -1,4 +1,5 @@
 [MOD] Eldritch Magic v1.61
+
 BG:EE v2.3, BGII:EE v2.3, IWD:EE v1.4
 
 Author: Eric.McLaughlin@Alumni.StonyBrook.edu
