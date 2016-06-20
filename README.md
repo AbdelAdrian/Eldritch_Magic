@@ -7,9 +7,9 @@ Author: Eric.McLaughlin@Alumni.StonyBrook.edu
 
 Mod Features:
 
-	Kits (BG:EE/BG2:EE/IWD:EE):											Class:					Required Tome for Multiclass Kits (Pre-2.0):
+	Kits (BG:EE/BG2:EE/IWD:EE):											Class:						Required Tome for Multiclass Kits (Pre-2.0):
 
-		Abyssal Warrior - Chaotic Neutral/Evil, Tiefling warrior with minor demonic abilities. 				(Fighter kit)*					N/A
+		Abyssal Warrior - Chaotic Neutral/Evil, Tiefling warrior with minor demonic abilities				(Fighter kit)*					N/A
 
 		Bladesinger - Good, Elf, Fighter/Mage specializing in arcane magic & single-weapon style, loyal			(Fighter/Mage or Bard kit)*			N/A
 			to Bladesinger's Guild.
@@ -18,32 +18,32 @@ Mod Features:
 			& use fighter-only potions. Bard spell progression becomes that of mages while XP/level
                         reflects that of a fighter/mage multiclass.
 
-		Collector - Neutral/Chaotic Good, Elf, Fighter/Mage/Thief loyal to Collector's Guild.				(Fighter/Mage/Thief kit)* 	COMING SOON	Manual of Artifact Collecting
+		Collector - Neutral/Chaotic Good, Elf, Fighter/Mage/Thief loyal to Collector's Guild.				(Fighter/Mage/Thief kit)	COMING SOON	Manual of Artifact Collecting
 
-		Eldritch Knight - Any alignment, Elf/Half-Elf Fighter/Mage w/ Green-Flame Blade & Booming Blade cantrips. 	(Fighter/Mage kit)*				Tome of Eldritch Secrets
+		Eldritch Knight - Any alignment, Elf/Half-Elf Fighter/Mage w/ Green-Flame Blade & Booming Blade cantrips	(Fighter/Mage kit)*				Tome of Eldritch Secrets
 
-		Elven Minstrel - Non-lawful, Good/Neutral, Elf/Half-Elf, Mage/Thief-esque Demi-Bard.				(Bard kit)* 			COMING SOON	N/A
+		Elven Minstrel - Non-lawful, Good/Neutral, Elf/Half-Elf, Mage/Thief-esque Demi-Bard.				(Bard kit)			COMING SOON	N/A
 
-		Herbalist - Good, Elf/Half-Elf Priest of the Seldarine w/ Druidic influence. 					(Cleric kit)* 					N/A
+		Herbalist - Good, Elf/Half-Elf Priest of the Seldarine w/ Druidic influence					(Cleric kit)					N/A
 
-		Huntsman - Any non-lawful alignment, Elf, Fighter/Thief hunter.							(Fighter/Thief kit)* 		COMING SOON	Sylvan Hunting Techniques
+		Huntsman - Any non-lawful alignment, Elf, Fighter/Thief hunter.							(Fighter/Thief kit)		COMING SOON	Sylvan Hunting Techniques
 
 		Infiltrator - Neutral/Chaotic Good, Elf, Fighter/Mage/Thief, loses racial bonuses.				(Fighter/Mage/Thief kit)*	COMING SOON	Infiltrator's Manuscripts
 
-		Priest of Mystra - Good/Neutral, Half-Elf, Cleric/Mage kit.			 				(Cleric/Mage kit)*				Wizard-Clerics of Mystra
+		Priest of Mystra - Good/Neutral, Half-Elf, Cleric/Mage kit.							(Cleric/Mage kit)*				Wizard-Clerics of Mystra
 
-		Priestess of Lolth - Chaotic Evil, Female, Drow Priestess of the Demon Queen of Spiders. 			(Cleric kit)*					N/A
+		Priestess of Lolth - Chaotic Evil, Female, Drow Priestess of the Demon Queen of Spiders.			(Cleric kit)*					N/A
 
-		Spellfilcher - Non-lawful, Good/Neutral, Elf, Mage/Thief w/ Detect Magic, loyal to the Spellfilcher Guild.	(Mage/Thief kit)* 		COMING SOON	Spellfilcher's License
+		Spellfilcher - Non-lawful, Good/Neutral, Elf, Mage/Thief w/ Detect Magic, loyal to the Spellfilcher Guild.	(Mage/Thief kit)		COMING SOON	Spellfilcher's License
 
-		Undead Hunter - Paladin kit usually restricted to humans, enables elven baseclass paladins and undead hunters. 	(Paladin kit)*					N/A
+		Undead Hunter - Paladin kit usually restricted to humans, enables elven baseclass paladins and undead hunters	(Paladin kit)*					N/A
 			Allows elves to be baseclass paladins, but all elven paladins should kit as undead hunters.
 
-		War Wizard - Good/Neutral, Elf, Fighter/Mage w/ defensive passives and offensive innates. 			(Fighter/Mage kit)*				The Elven Arts of War and Wizardry
+		War Wizard - Good/Neutral, Elf, Fighter/Mage w/ defensive passives and offensive innates			(Fighter/Mage kit)*				The Elven Arts of War and Wizardry
 
-		Wilderness Runner - Chaotic Good, Elf, Ranger more in-tune with nature, but less civilized.			(Ranger kit)* 					N/A
+		Wilderness Runner - Chaotic Good, Elf, Ranger more in-tune with nature, but less civilized.			(Ranger kit)					N/A
 
-		Windrider - Good, Elf, aerial cavalry w/ Armor Class and Proficiency penalties.					(Fighter kit)* 					N/A
+		Windrider - Good, Elf, aerial cavalry w/ Armor Class and Proficiency penalties.					(Fighter kit)					N/A
 
 		Clergy of the Seldarine - Elven & Half-Elven Cleric, Druid, and Ranger kits.									COMING SOON
 
