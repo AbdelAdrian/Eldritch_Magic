@@ -1,0 +1,172 @@
+// Remove XP Cap
+
+//ACTION_IF GAME_IS ~bgee~ BEGIN
+//COPY_EXISTING ~STARTARE.2da~ ~override~
+//SET_2DA_ENTRY   11     2     2     -1
+//COPY_EXISTING ~STARTBP.2da~ ~override~
+//COPY_EXISTING ~XPCAP.2da~ ~override~
+//END
+//ACTION_IF FILE_EXISTS_IN_GAME SODSTRTA.2da BEGIN
+//COPY_EXISTING ~SODSTRTA.2da~ ~override~
+//ACTION_IF GAME_IS ~bg2ee~ BEGIN
+//COPY_EXISTING ~STARTARE.2da~ ~override~
+//SET_2DA_ENTRY   10     2     2     161000
+//SET_2DA_ENTRY   11     2     2     -1
+//COPY_EXISTING ~STARTBP.2da~ ~override~
+//END
+//ACTION_IF GAME_IS ~iwdee~ BEGIN
+//COPY_EXISTING ~STARTARE.2da~ ~override~
+//COPY_EXISTING ~STARTBP.2da~ ~override~
+//COPY_EXISTING ~XPCAP.2da~ ~override~
+//END
+
+COPY  ~Eldritch_Magic/2DA/XPCAP.2DA~   ~override~
+ACTION_IF GAME_IS ~bgee~ BEGIN
+COPY  ~Eldritch_Magic/2DA/STARTARE.2DA.~   ~override~
+COPY  ~Eldritch_Magic/2DA/STARTBP.2DA.~   ~override~
+COPY  ~Eldritch_Magic/2DA/SODSTRTA.2DA~   ~override~
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY  ~Eldritch_Magic/2DA/BG2EE/STARTARE.2DA.~   ~override~
+COPY  ~Eldritch_Magic/2DA/BG2EE/STARTBP.2DA.~   ~override~
+END
+
+ACTION_CLEAR_ARRAY  cd_extend_tables
+ACTION_DEFINE_ASSOCIATIVE_ARRAY cd_extend_tables BEGIN
+  lvlmodwm => 0 // wild mage level modulation for wild surges
+  monkfist => 0 // monk fist progression
+  mxsplbrd => 0 // bard spell table
+  mxspldd  => 0 // dragon disciple spell table
+  mxspldru => 0 // druid spell table
+  mxsplpal => 0 // paladin spell table
+  mxsplprs => 0 // priest spell table
+  mxsplran => 0 // ranger spell table
+  mxsplsrc => 0 // sorcerer spell table
+  mxsplwiz => 0 // mage spell table
+  raisdead => 0 // raise dead temple prices
+  splsrckn => 0 // sorcerer spell table
+END
+
+// extend hp tables for ee games
+ACTION_IF FILE_EXISTS_IN_GAME hpclass.2da THEN BEGIN
+
+  // add hp tables to list of tables to extend
+  COPY_EXISTING ~hpclass.2da~ ~override~
+    COUNT_2DA_ROWS ~2~ "rows"
+    FOR ( index = 1 ; index < rows ; index = index + 1 ) BEGIN
+      SET "exists" = 0
+      READ_2DA_ENTRY "%index%" 1 2 "table"
+      DEFINE_ASSOCIATIVE_ARRAY cd_extend_tables BEGIN "%table%" => 0 END
+    END
+
+END
+
+// easy replacements for 2das with levels as rows
+ACTION_PHP_EACH cd_extend_tables AS file => foo BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+
+    COPY_EXISTING ~%file%.2da~ ~override~
+      PATCH_IF (SOURCE_SIZE > 0) BEGIN
+        REPLACE_TEXTUALLY ~^40\([ %TAB%].*\)~
+          ~40\1
+41\1
+42\1
+43\1
+44\1
+45\1
+46\1
+47\1
+48\1
+49\1
+50\1~
+      END
+      UNLESS ~^50[ %TAB%]~
+      BUT_ONLY_IF_IT_CHANGES
+  END
+
+END
+
+// extend level-based abilities to 50; 2das with a zero column
+ACTION_FOR_EACH file IN backstab crippstr layhands savemonk saveprs saverog savewar savewiz sneakatt thac0 xpbonus BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+
+    COPY_EXISTING ~%file%.2da~ ~override~
+       REPLACE_TEXTUALLY ~^\(.+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+[ %TAB%]+[0-9]+\)\([ %TAB%]+[0-9]+\)~
+        ~\1\2\2\2\2\2\2\2\2\2\2\2~
+       REPLACE_TEXTUALLY ~\([ %TAB%]+\)40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40[ %TAB%]+40~
+        ~\140\141\142\143\144\145\146\147\148\149\150~  
+      UNLESS ~41[ %TAB%]+42[ %TAB%]+43[ %TAB%]+44[ %TAB%]+45[ %TAB%]+46[ %TAB%]+47[ %TAB%]+48[ %TAB%]+49[ %TAB%]+50~
+      BUT_ONLY_IF_IT_CHANGES
+      
+  END
+
+END
+
+// extend level-based abilities to 50; wspatck
+COPY_EXISTING ~wspatck.2da~ ~override~ // warrior bonus attacks for proficiencies and levels
+  // everything else, extend from 41 to 50
+  REPLACE_TEXTUALLY ~\(1[ %TAB%]+2[ %TAB%]+3[ %TAB%]+4[ %TAB%]+5[ %TAB%]+6[ %TAB%]+7[ %TAB%]+8[ %TAB%]+9[ %TAB%]+10[ %TAB%]+11[ %TAB%]+12[ %TAB%]+13[ %TAB%]+14[ %TAB%]+15[ %TAB%]+16[ %TAB%]+17[ %TAB%]+18[ %TAB%]+19[ %TAB%]+20[ %TAB%]+21[ %TAB%]+22[ %TAB%]+23[ %TAB%]+24[ %TAB%]+25[ %TAB%]+26[ %TAB%]+27[ %TAB%]+28[ %TAB%]+29[ %TAB%]+30[ %TAB%]+31[ %TAB%]+32[ %TAB%]+33[ %TAB%]+34[ %TAB%]+35[ %TAB%]+36[ %TAB%]+37[ %TAB%]+38[ %TAB%]+39\)\([ %TAB%]+\)40~
+    ~\1\240\241\242\243\244\245\246\247\248\249\250~
+  REPLACE_TEXTUALLY ~^\([0-5]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+[ %TAB%]+-?[0-9]+\)\([ %TAB%]+-?[0-9]+\)~
+    ~\1\2\2\2\2\2\2\2\2\2\2\2~
+  UNLESS ~41[ %TAB%]+42[ %TAB%]+43[ %TAB%]+44[ %TAB%]+45[ %TAB%]+46[ %TAB%]+47[ %TAB%]+48[ %TAB%]+49[ %TAB%]+50~
+  BUT_ONLY_IF_IT_CHANGES
+
+ACTION_CLEAR_ARRAY  cd_extend_clabs
+ACTION_DEFINE_ASSOCIATIVE_ARRAY cd_extend_clabs BEGIN // start with class tables
+  clabba01 => 0 // generic bard abilities
+  clabdr01 => 0 // generic druid abilities
+  clabfi01 => 0 // generic fighter abilities
+  clabmo01 => 0 // generic monk abilities
+  clabpa01 => 0 // generic paladin abilities
+  clabpa05 => 0 // fallen paladin abilities
+  clabpr01 => 0 // generic priest abilities
+  clabrn01 => 0 // generic ranger abilities
+  clabrn05 => 0 // fallen ranger abilities
+  clabth01 => 0 // generic thief abilities
+END
+
+// add kit tables dynamically by reading kitlist
+COPY_EXISTING ~kitlist.2da~ ~override~
+  COUNT_2DA_ROWS ~9~ "rows"
+  FOR ( index = 1 ; index < rows ; index = index + 1 ) BEGIN
+    SET "exists" = 0
+    READ_2DA_ENTRY "%index%" 5 9 "clab"
+    DEFINE_ASSOCIATIVE_ARRAY cd_extend_clabs BEGIN "%clab%" => 0 END
+  END
+  BUT_ONLY_IF_IT_CHANGES
+
+// extend clab abilities to 50
+ACTION_PHP_EACH cd_extend_clabs AS file => foo BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+
+    COPY_EXISTING ~%file%.2da~ ~override~
+      PATCH_IF (SOURCE_SIZE > 0) BEGIN
+        REPLACE_TEXTUALLY ~[%WNL%%MNL%]+~ ~%LNL%~
+        REPLACE_TEXTUALLY ~\(1[ %TAB%]+2[ %TAB%]+3[ %TAB%]+4[ %TAB%]+5[ %TAB%]+6[ %TAB%]+7[ %TAB%]+8[ %TAB%]+9[ %TAB%]+10[ %TAB%]+11[ %TAB%]+12[ %TAB%]+13[ %TAB%]+14[ %TAB%]+15[ %TAB%]+16[ %TAB%]+17[ %TAB%]+18[ %TAB%]+19[ %TAB%]+20[ %TAB%]+21[ %TAB%]+22[ %TAB%]+23[ %TAB%]+24[ %TAB%]+25[ %TAB%]+26[ %TAB%]+27[ %TAB%]+28[ %TAB%]+29[ %TAB%]+30[ %TAB%]+31[ %TAB%]+32[ %TAB%]+33[ %TAB%]+34[ %TAB%]+35[ %TAB%]+36[ %TAB%]+37[ %TAB%]+38[ %TAB%]+39\)\([ %TAB%]+\)40[ %TAB%]*~
+          ~\1\240\241\242\243\244\245\246\247\248\249\250~
+        REPLACE_TEXTUALLY ~^\(ABILITY[0-9A-Z]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+\)\([ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%]+[ %TAB%]+[^ %TAB%%LNL%]+\)[ %TAB%]*$~
+          ~\1\2\2~
+      END
+      UNLESS ~41[ %TAB%]+42[ %TAB%]+43[ %TAB%]+44[ %TAB%]+45[ %TAB%]+46[ %TAB%]+47[ %TAB%]+48[ %TAB%]+49[ %TAB%]+50~
+      BUT_ONLY
+
+  END
+
+END
+
+// for EE
+ACTION_FOR_EACH file IN startare startbp BEGIN
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~%file%.2da~ THEN BEGIN
+
+    COPY_EXISTING ~%file%.2da~ ~override~
+      REPLACE_TEXTUALLY ~\(START_XP_CAP[ %TAB%]+\)[0-9]+~ ~\1-1~
+      BUT_ONLY
+
+  END
+
+END

@@ -1,0 +1,64 @@
+ADD_KIT ~EM_INFILTRATOR~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_INFILTRATOR                1           1           1           1           1           1           1           1~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_INFILTRATOR 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_INFILTRATOR                9       9       6       9       3       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_INFILTRATOR                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_INFILTRATOR                17      17      0       17      0       0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_INFILTRATOR                15      15      0       15      0       0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_INFILTRATOR                0       0       0       0       0       0       0       1       1~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_INFILTRATOR                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABEK.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    4~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Fi0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~infiltrator~
+  SAY ~Infiltrator~
+  SAY @7
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_INFILTRATOR
+    clswpbon = ~1 0 2~
+    numwslot = ~2~
+    clascolr = ~30 91 93 23 93~ // Fighter colors
+    clasiskl = ~0 0 0 0 0 0 0~
+    clasthac = ~0~
+    thiefscl = ~0 0 0 0 0 0 0 0~
+    hpclass  = ~HPWAR~
+    clsrcreq = ~0 1 0 0 0 0 0~
+END
+
+COMPILE ~Eldritch_Magic/BAF/EMINFILT.baf~   ~override~
+COPY ~Eldritch_Magic/ITM/EMSPY.itm~   ~override~ // Infiltrator's Manuscripts
+  SAY NAME1 ~~
+  SAY NAME2 @300
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @7 
+ACTION_IF GAME_IS ~bgee~ BEGIN
+COPY_EXISTING ~INN2616.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY_EXISTING ~RIBALD.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD2.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD3.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL2.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+COPY_EXISTING ~EHPOMAB.sto~ ~override~
+ ADD_STORE_ITEM ~EMSPY~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+
+ PRINT ~Thank you for installing: "Infiltrator Kit"~

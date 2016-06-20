@@ -1,0 +1,139 @@
+// FIGHTER_MAGE
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_MAGE"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// FIGHTER_CLERIC
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_CLERIC"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// FIGHTER_THIEF
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_THIEF"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// FIGHTER_MAGE_THIEF
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_MAGE_THIEF"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// MAGE_THIEF
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "MAGE_THIEF"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// CLERIC_MAGE
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "CLERIC_MAGE"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// CLERIC_THIEF
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "CLERIC_THIEF"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// FIGHTER_DRUID
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_DRUID"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// FIGHTER_MAGE_CLERIC
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "FIGHTER_MAGE_CLERIC"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// CLERIC_RANGER
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "CLERIC_RANGER"      = 0) BEGIN
+      FOR (col = 1; col < 2 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY

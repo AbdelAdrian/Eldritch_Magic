@@ -1,0 +1,83 @@
+// Elf
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 2; col < 3 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+// Half-Elf
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 3; col < 4 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+// Dwarf
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 4; col < 5 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+// Halfling
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 5; col < 6 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+// Gnome
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 6; col < 7 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// Half-Orc
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DUALCLASS"      = 0) BEGIN
+      FOR (col = 7; col < 8 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY

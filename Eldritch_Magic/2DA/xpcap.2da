@@ -1,6 +1,9 @@
 2DA V1.0
-2950000
+89000
                     VALUE      
+SORCERER            -1         
+MONK                -1         
+SHAMAN              -1         
 MAGE                -1         
 FIGHTER             -1         
 CLERIC              -1         
@@ -19,5 +22,3 @@ CLERIC_THIEF        -1
 FIGHTER_DRUID       -1         
 FIGHTER_MAGE_CLERIC -1         
 CLERIC_RANGER       -1         
-MONK                -1         
-SORCERER            -1         

@@ -1,0 +1,139 @@
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+ACTION_IF GAME_IS ~bgee~ BEGIN
+COPY_EXISTING ~racetext.2da~ ~override~
+SET_2DA_ENTRY	8	2	5	RESOLVE_STR_REF(@15) // tiefling
+SET_2DA_ENTRY 	8	3	5	RESOLVE_STR_REF(@16) // tiefling race description
+SET_2DA_ENTRY	8	4	5	RESOLVE_STR_REF(@17) // Tiefling
+SET_2DA_ENTRY 	8	5	5	RESOLVE_STR_REF(@18) // tiefling bio
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY_EXISTING ~racetext.2da~ ~override~
+SET_2DA_ENTRY	8	2	5	RESOLVE_STR_REF(@19) // vampire
+SET_2DA_ENTRY 	8	3	5	RESOLVE_STR_REF(@20)
+SET_2DA_ENTRY	8	4	5	RESOLVE_STR_REF(@21) // Vampire
+SET_2DA_ENTRY 	8	5	5	RESOLVE_STR_REF(@18)
+SET_2DA_ENTRY	9	2	5	RESOLVE_STR_REF(@15) // tiefling
+SET_2DA_ENTRY 	9	3	5	RESOLVE_STR_REF(@16)
+SET_2DA_ENTRY	9	4	5	RESOLVE_STR_REF(@17) // Tiefling
+SET_2DA_ENTRY 	9	5	5	RESOLVE_STR_REF(@18)
+END
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+COPY_EXISTING ~racetext.2da~ ~override~
+SET_2DA_ENTRY	8	2	5	RESOLVE_STR_REF(@19) // vampire
+SET_2DA_ENTRY 	8	3	5	RESOLVE_STR_REF(@16)
+SET_2DA_ENTRY	8	4	5	RESOLVE_STR_REF(@20) // Vampire
+SET_2DA_ENTRY 	8	5	5	RESOLVE_STR_REF(@18)
+SET_2DA_ENTRY	9	2	5	RESOLVE_STR_REF(@15) // tiefling
+SET_2DA_ENTRY 	9	3	5	RESOLVE_STR_REF(@16)
+SET_2DA_ENTRY	9	4	5	RESOLVE_STR_REF(@17) // Tiefling
+SET_2DA_ENTRY 	9	5	5	RESOLVE_STR_REF(@18)
+END
+ACTION_IF FILE_EXISTS_IN_GAME SODRACE.2da BEGIN
+COPY_EXISTING ~SODRACE.2da~ ~override~
+SET_2DA_ENTRY	8	2	5	RESOLVE_STR_REF(@15) // tiefling
+SET_2DA_ENTRY 	8	3	5	RESOLVE_STR_REF(@16) // tiefling race description
+SET_2DA_ENTRY	8	4	5	RESOLVE_STR_REF(@17) // Tiefling
+SET_2DA_ENTRY 	8	5	5	RESOLVE_STR_REF(@18) // tiefling bio
+END
+END
+
+ADD_KIT ~EM_ABYSSAL_WARRIOR~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_ABYSSAL_WARRIOR                1           1           1           1           1           1           1           1~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_ABYSSAL_WARRIOR 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_ABYSSAL_WARRIOR                15      7       6       8       3       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_ABYSSAL_WARRIOR               -1      -1       1       1      -1       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_ABYSSAL_WARRIOR                17      0       0       0       0       0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_ABYSSAL_WARRIOR                15      0       0       0       0       0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_ABYSSAL_WARRIOR                0       0       0       0       0       0       0       1       1~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_ABYSSAL_WARRIOR                0       1       1       1       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABAB.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_F_H    K_F_D   K_F_G   K_F_E   K_F_HE   K_F_HL   K_F_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    2~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Fi0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~abyssal warrior~
+  SAY ~Abyssal Warrior~
+  SAY @0
+
+LAF fl#add_kit_ee
+   INT_VAR
+     biography = ~-1~
+     briefdesc = 31252 // Normal briefdesc for fighters
+     fallen = 0
+     fallen_notice = ~-1~
+   STR_VAR
+     kit_name = EM_ABYSSAL_WARRIOR
+     clswpbon = ~1 0 2~
+     numwslot = ~4~
+     clascolr = ~182 182 136 184 142~ // Blackguard colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~1~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPWAR~
+     clsrcreq = ~0 1 0 0 0 0 0~
+END
+
+COPY ~Eldritch_Magic/Spells/EMTIEF.spl~   ~override~
+     SAY 0x8  @17
+     SAY 0x50 @17
+COPY ~Eldritch_Magic/Spells/EMDEFEAR.spl~ ~override~
+COPY ~Eldritch_Magic/Spells/EMTHAC0.spl~  ~override~
+COPY ~Eldritch_Magic/Effects/EMABTH0.eff~ ~override~
+COPY ~Eldritch_Magic/Spells/EMCACO.spl~   ~override~
+     SAY 0x8  @215
+     SAY 0x50 @216
+COPY ~Eldritch_Magic/Spells/EMFIEND.spl~  ~override~
+     SAY 0x8  @217
+     SAY 0x50 @218
+COPY ~Eldritch_Magic/ITM/EMOBYRIT.itm~    ~override~ // Obyrithian Executioner
+  SAY NAME1 ~~
+  SAY NAME2 @138
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @139
+COPY ~Eldritch_Magic/ITM/EMABPLAT.itm~    ~override~ // Abyssal Plate Mail
+  SAY NAME1 ~~
+  SAY NAME2 @227
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @228
+
+ACTION_IF GAME_IS ~bgee iwdee~ BEGIN
+COPY ~Eldritch_Magic/2DA/EMCDAB.2da~      ~override~
+COPY ~Eldritch_Magic/Spells/EMCDAB.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDAX.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDBS.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDCL.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDDA.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDFL.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDHA.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDKA.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDLS.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDMA.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDMS.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDNJ.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDSC.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDSP.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDSS.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDTH.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDWH.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDWZ.spl~   ~override~
+END
+
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+COPY ~Eldritch_Magic/ITM/IWDEE/EMABPLAT.itm~    ~override~ // Abyssal Plate Mail (no description image)
+  SAY NAME1 ~~
+  SAY NAME2 @227
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @228
+END
+
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY ~Eldritch_Magic/ITM/EMOBYRIT.itm~    ~override~ // Obyrithian Executioner
+  SAY NAME1 ~~
+  SAY NAME2 @138
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @139
+COPY_EXISTING ~WMART2.sto~ ~override~
+ ADD_STORE_ITEM ~EMOBYRIT~ LAST #0 #0 #0 ~IDENTIFIED~ #1
+END
+
+ PRINT ~Thank you for installing: "Abyssal Warrior Kit"~

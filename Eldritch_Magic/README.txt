@@ -1,16 +1,16 @@
-﻿[MOD] Eldritch Magic v1.5
-BG:EE v2.1, BGII:EE v2.1, IWD:EE v1.4
+﻿[MOD] Eldritch Magic v1.6a
+BG:EE v2.3, BGII:EE v2.3, IWD:EE v1.4
 
 Author: Eric.McLaughlin@Alumni.StonyBrook.edu
 "EM" prefix reserved by Abdel_Adrian (https://forums.beamdog.com/profile/Abdel_Adrian) as of June 23rd, 2015 (http://www.blackwyrmlair.net/prefixes/).
 
 Mod Features:
 
-	Kits (BG:EE/BG2:EE/IWD:EE):											Class:					Required Tome for Multiclass Kits:
+	Kits (BG:EE/BG2:EE/IWD:EE):											Class:					Required Tome for Multiclass Kits (Pre-2.0):
 
 		Abyssal Warrior - Chaotic Neutral/Evil, Tiefling warrior with minor demonic abilities. 				(Fighter kit)*					N/A
 
-		Bladesinger - Good, Elf, Fighter/Mage specializing in arcane magic & single-weapon style, loyal			(Bard kit)*					N/A
+		Bladesinger - Good, Elf, Fighter/Mage specializing in arcane magic & single-weapon style, loyal			(Fighter/Mage or Bard kit)*					N/A
 			to Bladesinger's Guild.
 			Changes to all Bards: Elven Bards enabled, Fighter APR & proficiencies (first level & rate),
 			Fighter max proficiences for first & other levels, bards may now wear helmets and robes,
@@ -44,30 +44,21 @@ Mod Features:
 
 		Windrider - Good, Elf, aerial cavalry w/ Armor Class and Proficiency penalties.					(Fighter kit)* 					N/A
 
+		Clergy of the Seldarine - Elven & Half-Elven Cleric, Druid, and Ranger kits.									COMING SOON
+
 	Items/Spells:
 
-		BGEE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough. Includes High Level Abilities (HLAs) for BGEE, but not SoD.
-
-		BG2EE: Item Expansion [BETA]** 	    - Equips Revanek of the Twisted Rune with gear appropriate for a 19th level fighter.
-			                            - Includes Bhaalspawn items for Sarevok and Imoen.
-			           		    - Includes greater store selections with Deidre, Joluv, and Ribald.
-
-		IWDEE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough.
+		EE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough. Includes High Level Abilities (HLAs) for BGEE, but not SoD.
 		
 		Congenio's Pebble Collection	    - Allows multiple Ioun stones to stack without using any equipment slots.
 						    WARNING: Ioun stones that use Opcode "Stat: Maximum HP Modifier [18]" work differently than others. In order for the HP modifier to be removed when the Ioun stone is, the HP modifier cannot be saved and loaded. In other words, if you save with the Pale Green Ioun Stone and/or Wong Fei's Ioun Stone equipped in orbit, you must equip them again upon loading to receive the HP modifier.
-			
-			IWD2: Item Expansion [ALPHA]***     - Deactivated with MOD v1.11		
-			PST: Item Expansion [ALPHA]***      - Deactivated with MOD v1.11
 
-*   All kits include level expansion to 50. Kit descriptions are more or less directly from AD&D 2E PHBs, not everything is my own work.
-    Full kit descriptions at bottom. Multiclass kits must be "selected" in-game after character creation through the use of a specific
+*   Kit descriptions are more or less directly from AD&D 2E PHBs, not everything is my own work.
+    Full kit descriptions at bottom. Multiclass (Pre-2.0) kits must be "selected" in-game after character creation through the use of a specific
     tome that must be used as a quick item by the character you wish to apply a kit to (Race and Alignment restrictions apply).
     Tomes for multiclass kits may be purchased from Winthrop in the Candlekeep Inn (BGEE), Ribald in the Adventure's Mart (BG2EE),
     Lazarus Librarus in the Arcana Archives (BG2EE:ToB), and Pomab in Pomab's Emporium (IWDEE).
 **  Enhanced Edition Item Expansions and HLAs are reasonably tested, but still in progress.
-*** Item Expansions for original, non-enhanced Infinity Engine games will be in a perpetual ALPHA test until their respective games are enhanced. Most
-    changes have not been tested, much less confirmed to work. Use at your own risk.
 
 Instructions: 
 	(1) Download Eldritch_Magic folder to game directory (BGEE = 00766, BG2EE = 00783, IWDEE = 00798, SoD = 00806).
@@ -75,7 +66,6 @@ Instructions:
             Alternatively, download latest version of WeiDU and rename executable to setup-Eldritch_Magic.exe. Move
             to game directory and run application as usual.
 	(3) Choose which components to install. The mod currently only features English.
-
 
 Kit Descriptions:
 

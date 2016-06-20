@@ -1,0 +1,171 @@
+LAF qd_multiclass_tables STR_VAR mc_dir = ~Eldritch_Magic/Multiclass~ END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+ADD_KIT ~EM_BLADESINGER~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_BLADESINGER                1           1           1           1           1           1           1           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_BLADESINGER 5 5 1 0 5 5 5 1 5 5 5 5 0 5 5 5 5 5 0 0 5 5 0 1 1 1 1 1 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_BLADESINGER                13      15      13      15      3       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_BLADESINGER                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_BLADESINGER                17      17      17      17      0       0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_BLADESINGER                15      15      15      15      0       0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_BLADESINGER                1       0       0       1       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_BLADESINGER                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABFM.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00200000    7~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~EM0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN16 * EMPSION BAG29 RING46 * CLCK06 BOOT01 AMUL21 BRAC16 BELT10 AROW11,40 AROW11,40 AROW11,40 POTN52,5 POTN04,2 POTN14,5 * * SW1H73~ // Modified F/M ToB starting weapons
+  SAY ~bladesinger~
+  SAY ~Bladesinger~
+  SAY @1
+
+LAF fl#add_kit_ee
+   INT_VAR
+     biography = ~-1~
+     briefdesc = 102499 // Normal briefdesc for fighter/mages
+     fallen = 0
+     fallen_notice = ~-1~
+   STR_VAR
+     kit_name = EM_BLADESINGER
+     clswpbon = ~1 0 3~
+     numwslot = ~2~
+     clascolr = ~57 58 122 1 43~ // F/M colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPFM~
+     clsrcreq = ~0 1 0 0 0 0 0~
+END
+
+LAF qd_multiclass
+  STR_VAR
+	kit_name = ~EM_BLADESINGER~
+	kit_clab = ~EMCLABFM~
+	base_class = ~F~
+	mc_dir = ~Eldritch_Magic/Multiclass~
+  END 
+
+COPY  ~Eldritch_Magic/Spells/emcdcha.spl~   ~override~
+      SAY 0xfe @219 //You feel a tug from the Pocket Plane as an artifact lost to time materializes among your possessions. Surely such a happening is linked to your powerful heritage.
+COPY  ~Eldritch_Magic/Spells/emcdbls.spl~   ~override~
+      SAY 0x15e @213 //You have been acknowledged by the Bladesinger's Guild.
+COPY  ~Eldritch_Magic/Spells/emcdsw1.spl~   ~override~
+      SAY 0xfe @214 //You are an exemplary Bladesinger and a hero among elves. The Gods themselves have taken notice of your righteous fury and now the Seldarine have blessed you with the tool to exact it. Be advised not to abuse a divine gift.
+COPY  ~Eldritch_Magic/Effects/emundead.eff~   ~override~
+COPY  ~Eldritch_Magic/Effects/emdemon.eff~   ~override~
+COPY  ~Eldritch_Magic/Dialog/emsw1h01.dlg~   ~override~
+      SAY 0x34  @200 //(The sword flashes for a moment, then permeates your mind with melodic Elven whispers.)
+      SAY 0x44  @201 // ...
+      SAY 0x54  @202 // "I am as I have always been."
+      SAY 0x64  @204 //(The sword emits a shockingly demi-human sigh) "42."
+      SAY 0x74  @206 //(The sword is silent a moment.) "That would have to be a hectaoncheire, 'hundredhanded one' - a few Gods fell that day. Pray you never face one, much less two."
+      SAY 0x84  @208 // "I may be a holy artifact forged by the Gods, but I'm still a sword. Aren't there any evil Bhaalspawn left?"
+      SAY 0x98  @198 // Never mind. Let's just continue on for now.
+      SAY 0xb8  @199 // What's your status, sword?
+      SAY 0xd8  @203 // What is the answer to life, the universe, and everything?
+      SAY 0xf8  @205 // What's the most powerful foe you've vanquished?
+      SAY 0x118 @207 // What would you have me do, O Sentient Sword?
+COPY_EXISTING ~lunumab.2da~ ~override~
+  APPEND ITEMDIAL.2da ~EMSW1H01      5689   EMSW1H01~
+COPY ~Eldritch_Magic/ITM/emboot01.itm~ ~override~ // Elven Boots of Speed: The Paws of the Lythari
+  SAY NAME1 @26
+  SAY NAME2 @27
+  SAY UNIDENTIFIED_DESC @28
+  SAY DESC @29
+  SAY 0x15e @96 // Bladesinger
+COPY ~Eldritch_Magic/ITM/emchan01.itm~ ~override~ // Holy Elven Chain +6
+  SAY NAME1 @30
+  SAY NAME2 @31
+  SAY UNIDENTIFIED_DESC @32
+  SAY DESC @33
+  SAY 0x3fe @96
+COPY ~Eldritch_Magic/ITM/emclck01.itm~ ~override~ // Bladesinger's Shroud
+  SAY NAME1 @34
+  SAY NAME2 @35
+  SAY UNIDENTIFIED_DESC @36
+  SAY DESC @37
+  SAY 0x2b6 @96
+COPY ~Eldritch_Magic/ITM/emring01.itm~ ~override~ // Bladesinger's Signet
+  SAY NAME1 @38
+  SAY NAME2 @39
+  SAY UNIDENTIFIED_DESC @40
+  SAY DESC @41
+  SAY 0x2de @96
+COPY ~Eldritch_Magic/BAM/emsw1h01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/emsw1h01.itm~ ~override~// Seldarine's Fury +6: Shame of the Gods
+  SAY NAME1 @42
+  SAY NAME2 @43
+  SAY UNIDENTIFIED_DESC @44
+  SAY DESC @45
+  SAY 0x586 @96
+COPY ~Eldritch_Magic/ITM/emsw1h11.itm~ ~override~ // Angharradh's Song
+  SAY NAME1 ~~
+  SAY NAME2 @47
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @49
+  SAY 0x1f6 @96
+
+// Includes Bladesinger's High-Level Abilities
+ACTION_IF (NOT FILE_EXISTS_IN_GAME ~LUEM0.2da~) BEGIN
+  COPY ~Eldritch_Magic/2DA/LUEM0.2da~ ~override~
+END
+
+// Adds Bladesinger's custom CLAB spells.
+COPY  ~Eldritch_Magic/Spells/emac1.spl~   ~override~
+COPY  ~Eldritch_Magic/Spells/emsee.spl~   ~override~
+COPY  ~Eldritch_Magic/Spells/emblsr.spl~   ~override~
+
+// SWS Grand Mastery
+COPY_EXISTING ~stylbonu.2da~ ~override~
+  APPEND stylbonu.2da ~SINGLEWEAPON-3   0                0                0                0                -2               0                -1               1~
+  APPEND stylbonu.2da ~SINGLEWEAPON-4   0                0                0                0                -2               0                -2               1~
+  APPEND stylbonu.2da ~SINGLEWEAPON-5   0                0                -1               0                -2               0                -2               1~
+
+// Bladesongs
+COPY  ~Eldritch_Magic/Spells/embs1.spl~   ~override~
+      SAY 0x8 @124
+      SAY 0x50 @125
+COPY  ~Eldritch_Magic/Spells/embs1g.spl~   ~override~
+      SAY 0x8 @126
+      SAY 0x50 @127
+COPY  ~Eldritch_Magic/Spells/embs2.spl~   ~override~
+      SAY 0x8 @132
+      SAY 0x50 @133
+COPY  ~Eldritch_Magic/Spells/embs2g.spl~   ~override~
+      SAY 0x8 @134
+      SAY 0x50 @135
+COPY  ~Eldritch_Magic/Spells/embs3.spl~   ~override~
+      SAY 0x8 @128
+      SAY 0x50 @129
+COPY  ~Eldritch_Magic/Spells/embs3g.spl~   ~override~
+      SAY 0x8 @130
+      SAY 0x50 @131
+COPY  ~Eldritch_Magic/Spells/embsong.spl~   ~override~
+
+ACTION_IF GAME_IS ~bgee~ BEGIN
+  STRING_SET 25046 @1000
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+  STRING_SET 34174 @1000
+END
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+  STRING_SET 37732 @1000
+END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	COPY ~Eldritch_Magic/2DA/K_FM_E.2da~ ~override~
+  END
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS ~7~ "kit_row"
+  BUT_ONLY
+  OUTER_SET kit_row -= 2
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	APPEND ~K_FM_E.2da~ ~1	%kit_row%~
+  END
+END
+END
+
+ PRINT ~Thank you for installing: "Bladesinger Kit"~

@@ -1,0 +1,29 @@
+// Enables elven paladins
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "PALADIN"      = 0) BEGIN
+      FOR (col = 2; col < 3 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+// Enables elven undead hunters
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "UNDEAD_HUNTER"      = 0) BEGIN
+      FOR (col = 2; col < 3 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+
+PRINT ~Thank you for installing: "Undead Hunter (Paladin kit for Elves)"~

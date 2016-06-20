@@ -1,0 +1,171 @@
+LAF qd_multiclass_tables STR_VAR mc_dir = ~Eldritch_Magic/Multiclass~ END
+
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+ADD_KIT ~EM_ELDRITCH_KNIGHT~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_ELDRITCH_KNIGHT                1           1           1           1           1           1           1           1~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_ELDRITCH_KNIGHT 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_ELDRITCH_KNIGHT                9       7       6       9       3       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_ELDRITCH_KNIGHT                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_ELDRITCH_KNIGHT                17      0       0       17      0       0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_ELDRITCH_KNIGHT                15      0       0       15      0       0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_ELDRITCH_KNIGHT                1       1       1       1       1       1       1       1       1~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_ELDRITCH_KNIGHT                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABEK.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    7~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~FM0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~eldritch knight~
+  SAY ~Eldritch Knight~
+  SAY @3
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_ELDRITCH_KNIGHT
+    clswpbon = ~1 0 2~
+    numwslot = ~2~
+    clascolr = ~30 91 93 23 93~ // Fighter colors
+    clasiskl = ~0 0 0 0 0 0 0~
+    clasthac = ~0~
+    thiefscl = ~0 0 0 0 0 0 0 0~
+    hpclass  = ~HPWAR~
+    clsrcreq = ~0 1 1 0 0 0 0~
+END
+
+LAF qd_multiclass
+  STR_VAR
+	kit_name = ~EM_ELDRITCH_KNIGHT~
+	kit_clab = ~EMCLABEK~
+	base_class = ~F~
+	mc_dir = ~Eldritch_Magic/Multiclass~
+  END
+  
+COPY ~Eldritch_Magic/Spells/EMWW2.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMGBLADE.spl~   ~override~
+  SAY 0x8 @289
+  SAY 0x50 @290
+COPY ~Eldritch_Magic/Spells/EMGFB.spl~   ~override~ // Green-Flame Blade
+  SAY 0x8 @289
+  SAY 0x50 @290
+COPY ~Eldritch_Magic/ITM/EMGFB1.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/ITM/EMGFB2.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/ITM/EMGFB3.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/ITM/EMGFB4.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/ITM/EMGFB5.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/ITM/EMGFB6.itm~   ~override~
+  SAY NAME1 @289
+  SAY NAME2 @289
+  SAY UNIDENTIFIED_DESC @290
+  SAY DESC @290
+COPY ~Eldritch_Magic/Spells/EMBBLADE.spl~   ~override~
+  SAY 0x8 @291
+  SAY 0x50 @292
+COPY ~Eldritch_Magic/Spells/EMBOOM.spl~   ~override~  // Booming Blade
+  SAY 0x8 @291
+  SAY 0x50 @292
+COPY ~Eldritch_Magic/ITM/EMBB1.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+COPY ~Eldritch_Magic/ITM/EMBB2.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+COPY ~Eldritch_Magic/ITM/EMBB3.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+COPY ~Eldritch_Magic/ITM/EMBB4.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+COPY ~Eldritch_Magic/ITM/EMBB5.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+COPY ~Eldritch_Magic/ITM/EMBB6.itm~   ~override~
+  SAY NAME1 @291
+  SAY NAME2 @291
+  SAY UNIDENTIFIED_DESC @292
+  SAY DESC @292
+
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	COPY ~Eldritch_Magic/2DA/K_FM_E.2da~ ~override~
+  END
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS ~7~ "kit_row"
+  BUT_ONLY
+  OUTER_SET kit_row -= 2
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	APPEND ~K_FM_E.2da~ ~1	%kit_row%~
+  END
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+COPY ~Eldritch_Magic/ITM/EMEK.itm~   ~override~ // Tome of Eldritch Secrets
+  SAY NAME1 ~~
+  SAY NAME2 @288
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @3
+COMPILE ~Eldritch_Magic/BAF/EMEK.baf~   ~override~
+COMPILE ~Eldritch_Magic/BAF/EMELRITC.baf~   ~override~
+COPY ~Eldritch_Magic/Creatures/EMEK.cre~   ~override~
+ACTION_IF GAME_IS ~bgee~ BEGIN
+COPY ~Eldritch_Magic/2DA/EMCLABEK.2da~   ~override~
+COPY_EXISTING ~INN2616.sto~              ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY ~Eldritch_Magic/2DA/BG2EE/EMCLABEK.2da~   ~override~
+COPY_EXISTING ~RIBALD.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD2.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD3.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL2.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+COPY_EXISTING ~EHPOMAB.sto~ ~override~
+ ADD_STORE_ITEM ~EMEK~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+END
+END
+
+ PRINT ~Thank you for installing: "Eldritch Knight Kit"~
