@@ -11,7 +11,7 @@ Mod Features:
 
 		Abyssal Warrior - Chaotic Neutral/Evil, Tiefling warrior with minor demonic abilities. 				(Fighter kit)*					N/A
 
-		Bladesinger - Good, Elf, Fighter/Mage specializing in arcane magic & single-weapon style, loyal			(Fighter/Mage or Bard kit)*					N/A
+		Bladesinger - Good, Elf, Fighter/Mage specializing in arcane magic & single-weapon style, loyal			(Fighter/Mage or Bard kit)*			N/A
 			to Bladesinger's Guild.
 			Changes to all Bards: Elven Bards enabled, Fighter APR & proficiencies (first level & rate),
 			Fighter max proficiences for first & other levels, bards may now wear helmets and robes,
@@ -63,7 +63,7 @@ Mod Features:
 
 Instructions: 
 	(1) Download Eldritch_Magic folder to game directory (BGEE = 00766, BG2EE = 00783, IWDEE = 00798, SoD = 00806).
-	(2) Move setup-Eldritch_Magic.exe (WeiDU v239) from mod folder to 00766/00783/00798/00806 and run the application.
+	(2) Move setup-Eldritch_Magic.exe (WeiDU v239) from mod folder to 00766/00783/00798/00806 if necessary and run the application.
             Alternatively, download latest version of WeiDU and rename executable to setup-Eldritch_Magic.exe. Move
             to game directory and run application as usual.
 	(3) Choose which components to install. The mod currently only features English.
