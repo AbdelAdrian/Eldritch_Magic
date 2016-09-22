@@ -238,6 +238,8 @@ COPY ~Eldritch_Magic/ITM/Ioun/EMI14.spl~ ~override~ // Scarlet/Blue Ioun Stone
 COPY ~Eldritch_Magic/ITM/Ioun/EMI15.spl~ ~override~ // Clear Ioun Stone
   SAY 0x8  @154
   SAY 0x50 @155
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IBDION02.bam~ ~override~  
 COPY ~Eldritch_Magic/ITM/Ioun/ohioun01.bam~ ~override~
 COPY ~Eldritch_Magic/ITM/Ioun/ohioun02.bam~ ~override~
 COPY ~Eldritch_Magic/ITM/Ioun/ohioun03.bam~ ~override~
