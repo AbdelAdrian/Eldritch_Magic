@@ -42,7 +42,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h13.itm~ ~override~ // Elemental Long Sword +1
   SAY NAME2 @116
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @117
-COPY ~Eldritch_Magic/ITM/BGEE/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
+COPY ~Eldritch_Magic/ITM/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
   SAY NAME1 ~~
   SAY NAME2 @118
   SAY UNIDENTIFIED_DESC ~~
@@ -104,20 +104,20 @@ COPY ~Eldritch_Magic/ITM/emchan01.itm~ ~override~ // Holy Elven Chain +6
   SAY UNIDENTIFIED_DESC @32
   SAY DESC @33
   SAY 0x3fe @96
-COPY ~Eldritch_Magic/ITM/BGEE/emclck01.itm~ ~override~ // Bladesinger's Shroud
+COPY ~Eldritch_Magic/ITM/emclck01.itm~ ~override~ // Bladesinger's Shroud
   SAY NAME1 @34
   SAY NAME2 @35
   SAY UNIDENTIFIED_DESC @36
   SAY DESC @37
   SAY 0x2b6 @96
-COPY ~Eldritch_Magic/ITM/BGEE/emring01.itm~ ~override~ // Bladesinger's Signet
+COPY ~Eldritch_Magic/ITM/emring01.itm~ ~override~ // Bladesinger's Signet
   SAY NAME1 @38
   SAY NAME2 @39
   SAY UNIDENTIFIED_DESC @40
   SAY DESC @41
   SAY 0x2de @96
 COPY ~Eldritch_Magic/BAM/emsw1h01.bam~ ~override~
-COPY ~Eldritch_Magic/ITM/BGEE/emsw1h01.itm~ ~override~// Seldarine's Fury +6: Shame of the Gods
+COPY ~Eldritch_Magic/ITM/emsw1h01.itm~ ~override~// Seldarine's Fury +6: Shame of the Gods
   SAY NAME1 @42
   SAY NAME2 @43
   SAY UNIDENTIFIED_DESC @44
@@ -145,7 +145,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h04.itm~ ~override~ // Blue Flame Taragarth +3
   SAY NAME2 @62
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @63
-COPY ~Eldritch_Magic/ITM/BGEE/emdagg01.itm~ ~override~ // Netherese Spellblade
+COPY ~Eldritch_Magic/ITM/emdagg01.itm~ ~override~ // Netherese Spellblade
   SAY NAME1 ~~
   SAY NAME2 @64
   SAY UNIDENTIFIED_DESC ~~
@@ -156,12 +156,12 @@ COPY ~Eldritch_Magic/ITM/emsw1h08.itm~ ~override~ // Plasma Blade of Kossuth: Ig
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @67
 COPY ~Eldritch_Magic/BAM/phelm29.bmp~ ~override~
-COPY ~Eldritch_Magic/ITM/BGEE/empsion.itm~ ~override~ // Drow Psionicist's Cowl
+COPY ~Eldritch_Magic/ITM/empsion.itm~ ~override~ // Drow Psionicist's Cowl
   SAY NAME1 ~~
   SAY NAME2 @68
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @69
-COPY ~Eldritch_Magic/ITM/BGEE/emveye.itm~ ~override~ // Eye of Vecna
+COPY ~Eldritch_Magic/ITM/emveye.itm~ ~override~ // Eye of Vecna
   SAY NAME1 ~~
   SAY NAME2 @70
   SAY UNIDENTIFIED_DESC ~~
@@ -310,7 +310,6 @@ COPY_EXISTING ~STO4803.sto~ ~override~
 // Black Lily
 COPY_EXISTING ~STOBLACK.sto~ ~override~
  ADD_STORE_ITEM ~emsw1h12~ AFTER ~sw1h07~ #0 #0 #0 ~IDENTIFIED~ #1 // Vampiric Short Sword +1
-
 // Archmage spells: "mainly for... experiments." - Irenicus
 ///////////////////////////////////////////////////////////
 // Fireball-Lightning Bolt
@@ -328,10 +327,10 @@ COPY ~Eldritch_Magic/Spells/EMFBLB.spl~ ~override~
   SAY DESC @1002
 // Wand of Fire and Lightning
 COPY ~Eldritch_Magic/ITM/EMWAND05.itm~ ~override~
-  SAY NAME1 @5001
-  SAY NAME2 @5002
-  SAY UNIDENTIFIED_DESC @5003
-  SAY DESC @5004
+  SAY NAME1 @5000
+  SAY NAME2 @5001
+  SAY UNIDENTIFIED_DESC @5002
+  SAY DESC @5003
 // Improved Magic Missile
 COPY ~Eldritch_Magic/Spells/EMMM0.spl~ ~override~
 COPY ~Eldritch_Magic/ITM/EMIMPMM.itm~ ~override~
@@ -403,11 +402,6 @@ COPY ~Eldritch_Magic/Spells/EMSSDL.spl~ ~override~
 // Call Lightning-Flame Strike
 COPY ~Eldritch_Magic/Spells/EMIMPCL.spl~ ~override~
 COPY ~Eldritch_Magic/Spells/EMIMPFS.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMCLFS.itm~ ~override~
-  SAY NAME1 @1013
-  SAY NAME2 @1013
-  SAY UNIDENTIFIED_DESC @1014
-  SAY DESC @1014
 COPY ~Eldritch_Magic/Spells/EMCLFS.spl~ ~override~
   SAY NAME1 @1013
   SAY NAME2 @1013
@@ -441,11 +435,6 @@ COPY ~Eldritch_Magic/Spells/EMCONT3.spl~ ~override~
   SAY UNIDENTIFIED_DESC @1020
   SAY DESC @1020
 // Improved Chromatic Orb
-COPY ~Eldritch_Magic/ITM/EMIMPCO.itm~ ~override~
-  SAY NAME1 @1021
-  SAY NAME2 @1021
-  SAY UNIDENTIFIED_DESC @1022
-  SAY DESC @1022
 COPY ~Eldritch_Magic/Spells/EMIMPCO.spl~ ~override~
   SAY NAME1 @1021
   SAY NAME2 @1021
@@ -454,28 +443,17 @@ COPY ~Eldritch_Magic/Spells/EMIMPCO.spl~ ~override~
 // Unweave Magic
 COPY ~Eldritch_Magic/Spells/EMIMPPS.spl~ ~override~
 COPY ~Eldritch_Magic/Spells/EMIMPKW.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPSS.itm~ ~override~
-  SAY NAME1 @1023
-  SAY NAME2 @1023
-  SAY UNIDENTIFIED_DESC @1024
-  SAY DESC @1024
 COPY ~Eldritch_Magic/Spells/EMIMPSS.spl~ ~override~
   SAY NAME1 @1023
   SAY NAME2 @1023
   SAY UNIDENTIFIED_DESC @1024
   SAY DESC @1024
 // Call Upon Abyss: Baphomet
-COPY ~Eldritch_Magic/ITM/EMIMPSC.itm~ ~override~
-  SAY NAME1 @1025
-  SAY NAME2 @1025
-  SAY UNIDENTIFIED_DESC @1026
-  SAY DESC @1026
 COPY ~Eldritch_Magic/Spells/EMIMPSC.spl~ ~override~
   SAY NAME1 @1025
   SAY NAME2 @1025
   SAY UNIDENTIFIED_DESC @1026
   SAY DESC @1026
-
 // Adds HLAs (BGEE) Not yet SoD compatible!
 // Bard HLAs
 COPY ~Eldritch_Magic/2DA/BG2EE/LUBA0.2DA~ ~override~
@@ -788,13 +766,13 @@ COPY ~Eldritch_Magic/ITM/emchan01.itm~ ~override~ // Holy Elven Chain +6
   SAY UNIDENTIFIED_DESC @32
   SAY DESC @33
   SAY 0x3fe @96
-COPY ~Eldritch_Magic/ITM/BG2EE/emclck01.itm~ ~override~ // Bladesinger's Shroud
+COPY ~Eldritch_Magic/ITM/emclck01.itm~ ~override~ // Bladesinger's Shroud
   SAY NAME1 @34
   SAY NAME2 @35
   SAY UNIDENTIFIED_DESC @36
   SAY DESC @37
   SAY 0x2b6 @96
-COPY ~Eldritch_Magic/ITM/BG2EE/emring01.itm~ ~override~ // Bladesinger's Signet
+COPY ~Eldritch_Magic/ITM/emring01.itm~ ~override~ // Bladesinger's Signet
   SAY NAME1 @38
   SAY NAME2 @39
   SAY UNIDENTIFIED_DESC @40
@@ -829,7 +807,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h04.itm~ ~override~ // Blue Flame Taragarth +3
   SAY NAME2 @62
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @63
-COPY ~Eldritch_Magic/ITM/BG2EE/emdagg01.itm~ ~override~ // Netherese Spellblade
+COPY ~Eldritch_Magic/ITM/emdagg01.itm~ ~override~ // Netherese Spellblade
   SAY NAME1 ~~
   SAY NAME2 @64
   SAY UNIDENTIFIED_DESC ~~
@@ -840,12 +818,12 @@ COPY ~Eldritch_Magic/ITM/emsw1h08.itm~ ~override~ // Plasma Blade of Kossuth: Ig
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @67
 COPY ~Eldritch_Magic/BAM/phelm29.bmp~ ~override~
-COPY ~Eldritch_Magic/ITM/BG2EE/empsion.itm~ ~override~ // Drow Psionicist's Cowl
+COPY ~Eldritch_Magic/ITM/empsion.itm~ ~override~ // Drow Psionicist's Cowl
   SAY NAME1 ~~
   SAY NAME2 @68
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @69
-COPY ~Eldritch_Magic/ITM/BG2EE/emveye.itm~ ~override~ // Eye of Vecna
+COPY ~Eldritch_Magic/ITM/emveye.itm~ ~override~ // Eye of Vecna
   SAY NAME1 ~~
   SAY NAME2 @70
   SAY UNIDENTIFIED_DESC ~~
@@ -1097,7 +1075,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h13.itm~ ~override~ // Elemental Long Sword +1
   SAY NAME2 @116
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @117
-COPY ~Eldritch_Magic/ITM/BG2EE/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
+COPY ~Eldritch_Magic/ITM/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
   SAY NAME1 ~~
   SAY NAME2 @118
   SAY UNIDENTIFIED_DESC ~~
@@ -1112,7 +1090,6 @@ COPY ~Eldritch_Magic/ITM/emchanco.itm~ ~override~ // Elven Chain Mail of the Col
   SAY NAME2 @140
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @141
-
 // Fireball-Lightning Bolt
 COPY ~Eldritch_Magic/Spells/EMIMPFB.spl~ ~override~
 COPY ~Eldritch_Magic/Spells/EMIMPLB.spl~ ~override~
@@ -1128,10 +1105,10 @@ COPY ~Eldritch_Magic/Spells/EMFBLB.spl~ ~override~
   SAY DESC @1002
 // Wand of Fire and Lightning
 COPY ~Eldritch_Magic/ITM/EMWAND05.itm~ ~override~
-  SAY NAME1 @5001
-  SAY NAME2 @5002
-  SAY UNIDENTIFIED_DESC @5003
-  SAY DESC @5004
+  SAY NAME1 @2001
+  SAY NAME2 @2002
+  SAY UNIDENTIFIED_DESC @2003
+  SAY DESC @2004
 // Improved Magic Missile
 COPY ~Eldritch_Magic/Spells/EMMM0.spl~ ~override~
 COPY ~Eldritch_Magic/ITM/EMIMPMM.itm~ ~override~
@@ -1203,11 +1180,6 @@ COPY ~Eldritch_Magic/Spells/EMSSDL.spl~ ~override~
 // Call Lightning-Flame Strike
 COPY ~Eldritch_Magic/Spells/EMIMPCL.spl~ ~override~
 COPY ~Eldritch_Magic/Spells/EMIMPFS.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMCLFS.itm~ ~override~
-  SAY NAME1 @1013
-  SAY NAME2 @1013
-  SAY UNIDENTIFIED_DESC @1014
-  SAY DESC @1014
 COPY ~Eldritch_Magic/Spells/EMCLFS.spl~ ~override~
   SAY NAME1 @1013
   SAY NAME2 @1013
@@ -1241,11 +1213,6 @@ COPY ~Eldritch_Magic/Spells/EMCONT3.spl~ ~override~
   SAY UNIDENTIFIED_DESC @1020
   SAY DESC @1020
 // Improved Chromatic Orb
-COPY ~Eldritch_Magic/ITM/EMIMPCO.itm~ ~override~
-  SAY NAME1 @1021
-  SAY NAME2 @1021
-  SAY UNIDENTIFIED_DESC @1022
-  SAY DESC @1022
 COPY ~Eldritch_Magic/Spells/EMIMPCO.spl~ ~override~
   SAY NAME1 @1021
   SAY NAME2 @1021
@@ -1254,28 +1221,17 @@ COPY ~Eldritch_Magic/Spells/EMIMPCO.spl~ ~override~
 // Unweave Magic
 COPY ~Eldritch_Magic/Spells/EMIMPPS.spl~ ~override~
 COPY ~Eldritch_Magic/Spells/EMIMPKW.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPSS.itm~ ~override~
-  SAY NAME1 @1023
-  SAY NAME2 @1023
-  SAY UNIDENTIFIED_DESC @1024
-  SAY DESC @1024
 COPY ~Eldritch_Magic/Spells/EMIMPSS.spl~ ~override~
   SAY NAME1 @1023
   SAY NAME2 @1023
   SAY UNIDENTIFIED_DESC @1024
   SAY DESC @1024
 // Call Upon Abyss: Baphomet
-COPY ~Eldritch_Magic/ITM/EMIMPSC.itm~ ~override~
-  SAY NAME1 @1025
-  SAY NAME2 @1025
-  SAY UNIDENTIFIED_DESC @1026
-  SAY DESC @1026
 COPY ~Eldritch_Magic/Spells/EMIMPSC.spl~ ~override~
   SAY NAME1 @1025
   SAY NAME2 @1025
   SAY UNIDENTIFIED_DESC @1026
   SAY DESC @1026
-
  PRINT ~“He who fights with monsters should look to it that he himself does not become a monster . . . when you gaze long into the abyss the abyss also gazes into you”
 - Friedrich Nietzsche~
 END
@@ -1325,7 +1281,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h13.itm~ ~override~ // Elemental Long Sword +1
   SAY NAME2 @116
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @117
-COPY ~Eldritch_Magic/ITM/IWDEE/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
+COPY ~Eldritch_Magic/ITM/emsw1h09.itm~ ~override~ // Holy Avenger Long Sword +3
   SAY NAME1 ~~
   SAY NAME2 @118
   SAY UNIDENTIFIED_DESC ~~
@@ -1395,13 +1351,13 @@ COPY ~Eldritch_Magic/ITM/emchan01.itm~ ~override~ // Holy Elven Chain +6
   SAY UNIDENTIFIED_DESC @32
   SAY DESC @33
   SAY 0x3fe @96
-COPY ~Eldritch_Magic/ITM/IWDEE/emclck01.itm~ ~override~ // Bladesinger's Shroud
+COPY ~Eldritch_Magic/ITM/emclck01.itm~ ~override~ // Bladesinger's Shroud
   SAY NAME1 @34
   SAY NAME2 @35
   SAY UNIDENTIFIED_DESC @36
   SAY DESC @37
   SAY 0x2b6 @96
-COPY ~Eldritch_Magic/ITM/IWDEE/emring01.itm~ ~override~ // Bladesinger's Signet
+COPY ~Eldritch_Magic/ITM/emring01.itm~ ~override~ // Bladesinger's Signet
   SAY NAME1 @38
   SAY NAME2 @39
   SAY UNIDENTIFIED_DESC @40
@@ -1436,7 +1392,7 @@ COPY ~Eldritch_Magic/ITM/emsw1h04.itm~ ~override~ // Blue Flame Taragarth +3
   SAY NAME2 @62
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @63
-COPY ~Eldritch_Magic/ITM/IWDEE/emdagg01.itm~ ~override~ // Netherese Spellblade
+COPY ~Eldritch_Magic/ITM/emdagg01.itm~ ~override~ // Netherese Spellblade
   SAY NAME1 ~~
   SAY NAME2 @64
   SAY UNIDENTIFIED_DESC ~~
@@ -1447,12 +1403,12 @@ COPY ~Eldritch_Magic/ITM/emsw1h08.itm~ ~override~ // Plasma Blade of Kossuth: Ig
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @67
 COPY ~Eldritch_Magic/BAM/phelm29.bmp~ ~override~
-COPY ~Eldritch_Magic/ITM/IWDEE/empsion.itm~ ~override~ // Drow Psionicist's Cowl
+COPY ~Eldritch_Magic/ITM/empsion.itm~ ~override~ // Drow Psionicist's Cowl
   SAY NAME1 ~~
   SAY NAME2 @68
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @69
-COPY ~Eldritch_Magic/ITM/IWDEE/emveye.itm~ ~override~ // Eye of Vecna
+COPY ~Eldritch_Magic/ITM/emveye.itm~ ~override~ // Eye of Vecna
   SAY NAME1 ~~
   SAY NAME2 @70
   SAY UNIDENTIFIED_DESC ~~
@@ -1502,170 +1458,6 @@ COPY ~Eldritch_Magic/ITM/emhide.itm~ ~override~ // Kazgaroth's Hide
   SAY UNIDENTIFIED_DESC @226
   SAY DESC @223
   SAY 0x22e @224
-  
-// Fireball-Lightning Bolt
-COPY ~Eldritch_Magic/Spells/EMIMPFB.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPLB.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMFBLB.itm~ ~override~
-  SAY NAME1 @1001
-  SAY NAME2 @1001
-  SAY UNIDENTIFIED_DESC @1002
-  SAY DESC @1002
-COPY ~Eldritch_Magic/Spells/EMFBLB.spl~ ~override~
-  SAY NAME1 @1001
-  SAY NAME2 @1001
-  SAY UNIDENTIFIED_DESC @1002
-  SAY DESC @1002
-// Wand of Fire and Lightning
-COPY ~Eldritch_Magic/ITM/EMWAND05.itm~ ~override~
-  SAY NAME1 @5001
-  SAY NAME2 @5002
-  SAY UNIDENTIFIED_DESC @5003
-  SAY DESC @5004
-// Improved Magic Missile
-COPY ~Eldritch_Magic/Spells/EMMM0.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPMM.itm~ ~override~
-  SAY NAME1 @1003
-  SAY NAME2 @1003
-  SAY UNIDENTIFIED_DESC @1004
-  SAY DESC @1004
-COPY ~Eldritch_Magic/Spells/EMIMPMM.spl~ ~override~
-  SAY NAME1 @1003
-  SAY NAME2 @1003
-  SAY UNIDENTIFIED_DESC @1004
-  SAY DESC @1004
-// Shadovar Wraithform
-COPY ~Eldritch_Magic/ITM/EMWRAITH.itm~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPWF.itm~ ~override~
-  SAY NAME1 @1005
-  SAY NAME2 @1005
-  SAY UNIDENTIFIED_DESC @1006
-  SAY DESC @1006
-COPY ~Eldritch_Magic/Spells/EMIMPWF.spl~ ~override~
-  SAY NAME1 @1005
-  SAY NAME2 @1005
-  SAY UNIDENTIFIED_DESC @1006
-  SAY DESC @1006
-// Greater Animate Dead
-COPY ~Eldritch_Magic/Creatures/EMSKELWA.cre~ ~override~
-COPY ~Eldritch_Magic/Creatures/EMSKELWB.cre~ ~override~
-COPY ~Eldritch_Magic/Creatures/EMSKELWC.cre~ ~override~
-COPY ~Eldritch_Magic/Creatures/EMSKELWD.cre~ ~override~
-COPY ~Eldritch_Magic/Effects/SPANDL19.eff~ ~override~
-COPY ~Eldritch_Magic/Effects/SPANDL23.eff~ ~override~
-COPY ~Eldritch_Magic/Effects/SPANDL27.eff~ ~override~
-COPY ~Eldritch_Magic/Effects/SPANDL31.eff~ ~override~
-COPY ~Eldritch_Magic/ITM/EMSKELWB.itm~ ~override~
-COPY ~Eldritch_Magic/ITM/EMSKELWC.itm~ ~override~
-COPY ~Eldritch_Magic/ITM/EMSKELWD.itm~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPAD.itm~ ~override~
-  SAY NAME1 @1007
-  SAY NAME2 @1007
-  SAY UNIDENTIFIED_DESC @1008
-  SAY DESC @1008
-COPY ~Eldritch_Magic/Spells/EMIMPAD.spl~ ~override~
-  SAY NAME1 @1007
-  SAY NAME2 @1007
-  SAY UNIDENTIFIED_DESC @1008
-  SAY DESC @1008
-// Shapeshift: Lycanthrope
-COPY ~Eldritch_Magic/Spells/EMWW.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMGWW.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMSSWW.itm~ ~override~
-  SAY NAME1 @1009
-  SAY NAME2 @1009
-  SAY UNIDENTIFIED_DESC @1010
-  SAY DESC @1010
-COPY ~Eldritch_Magic/Spells/EMSSWW.spl~ ~override~
-  SAY NAME1 @1009
-  SAY NAME2 @1009
-  SAY UNIDENTIFIED_DESC @1010
-  SAY DESC @1010
-// Shapeshift: Demon Lord
-COPY ~Eldritch_Magic/Spells/EMDL.spl~ ~override~
-COPY ~Eldritch_Magic/Creatures/EMTANAR.cre~ ~override~
-COPY ~Eldritch_Magic/ITM/EMTANAR.itm~ ~override~
-COPY ~Eldritch_Magic/Spells/EMSSDL.spl~ ~override~
-  SAY NAME1 @1011
-  SAY NAME2 @1011
-  SAY UNIDENTIFIED_DESC @1012
-  SAY DESC @1012
-// Call Lightning-Flame Strike
-COPY ~Eldritch_Magic/Spells/EMIMPCL.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPFS.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMCLFS.itm~ ~override~
-  SAY NAME1 @1013
-  SAY NAME2 @1013
-  SAY UNIDENTIFIED_DESC @1014
-  SAY DESC @1014
-COPY ~Eldritch_Magic/Spells/EMCLFS.spl~ ~override~
-  SAY NAME1 @1013
-  SAY NAME2 @1013
-  SAY UNIDENTIFIED_DESC @1014
-  SAY DESC @1014
-// Contingency I
-COPY ~Eldritch_Magic/Spells/EMARMOR.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMPROEVI.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMPROPET.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMCONT1.spl~ ~override~
-  SAY NAME1 @1015
-  SAY NAME2 @1015
-  SAY UNIDENTIFIED_DESC @1016
-  SAY DESC @1016
-// Contingency II
-COPY ~Eldritch_Magic/Spells/EMIMPVOC.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPBLU.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPRF.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMCONT2.spl~ ~override~
-  SAY NAME1 @1017
-  SAY NAME2 @1017
-  SAY UNIDENTIFIED_DESC @1018
-  SAY DESC @1018
-// Contingency III
-COPY ~Eldritch_Magic/Spells/EMIMPStS.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPSB.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPSR.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMCONT3.spl~ ~override~
-  SAY NAME1 @1019
-  SAY NAME2 @1019
-  SAY UNIDENTIFIED_DESC @1020
-  SAY DESC @1020
-// Improved Chromatic Orb
-COPY ~Eldritch_Magic/ITM/EMIMPCO.itm~ ~override~
-  SAY NAME1 @1021
-  SAY NAME2 @1021
-  SAY UNIDENTIFIED_DESC @1022
-  SAY DESC @1022
-COPY ~Eldritch_Magic/Spells/EMIMPCO.spl~ ~override~
-  SAY NAME1 @1021
-  SAY NAME2 @1021
-  SAY UNIDENTIFIED_DESC @1022
-  SAY DESC @1022
-// Unweave Magic
-COPY ~Eldritch_Magic/Spells/EMIMPPS.spl~ ~override~
-COPY ~Eldritch_Magic/Spells/EMIMPKW.spl~ ~override~
-COPY ~Eldritch_Magic/ITM/EMIMPSS.itm~ ~override~
-  SAY NAME1 @1023
-  SAY NAME2 @1023
-  SAY UNIDENTIFIED_DESC @1024
-  SAY DESC @1024
-COPY ~Eldritch_Magic/Spells/EMIMPSS.spl~ ~override~
-  SAY NAME1 @1023
-  SAY NAME2 @1023
-  SAY UNIDENTIFIED_DESC @1024
-  SAY DESC @1024
-// Call Upon Abyss: Baphomet
-COPY ~Eldritch_Magic/ITM/EMIMPSC.itm~ ~override~
-  SAY NAME1 @1025
-  SAY NAME2 @1025
-  SAY UNIDENTIFIED_DESC @1026
-  SAY DESC @1026
-COPY ~Eldritch_Magic/Spells/EMIMPSC.spl~ ~override~
-  SAY NAME1 @1025
-  SAY NAME2 @1025
-  SAY UNIDENTIFIED_DESC @1026
-  SAY DESC @1026
-
  PRINT ~“He who fights with monsters should look to it that he himself does not become a monster . . . when you gaze long into the abyss the abyss also gazes into you”
 - Friedrich Nietzsche~
 END

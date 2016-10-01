@@ -18,7 +18,7 @@
 Advantages:
 – Receives a +1 bonus to all Saving Throws.
 – Proficient in Blind-fighting.
-– 1st level:  Receives a weapon of choice and suit of armor from the Abyss.
+– 1st level:  Receives a weapon and suit of armor from the Abyss.*
 – 10th level: Gains +1 Strength.
 – 13th level: Immune to Demon Fear.
 – 15th level: May cast Cacofiend once per day.
@@ -28,14 +28,15 @@ Disadvantages:
 – -1 Charisma.
 – -1 Penalty to THAC0 in bright sunlight.
 – Alignment restricted to chaotic neutral and chaotic evil.
-– Race restricted to tiefling.*
+– Race restricted to tiefling.**
 
 
-* Character will be converted to tiefling upon creation if elf is selected.
-  Tieflings have the following traits:
-  – 50% cold and magic cold, 25% fire and magic fire, and 15% physical resistance.
-  – Infravision.
-  – +1 INT and CHA, -1 STR and WIS.~
+*  Stand still for a moment, then hover over the quick spell options using TAB to select your weapon choice.
+** Character will be converted to tiefling upon creation.
+   Tieflings have the following traits:
+   – 50% cold and magic cold, 25% fire and magic fire, and 15% physical resistance.
+   – Infravision.
+   – +1 INT and CHA, -1 STR and WIS.~
      @1 = ~BLADESINGER: Of the roving elves, there are few as deadly as the Bladesinger. They are masters of their weapons and have spent their lives in the study of their chosen weapons. They have also learned to cast spells while engaged in combat, and thus they double their might. While some characters may stay at home to defend the elven way, Bladesingers go out and actively promote it. They do this by seeking out their race's foes and eliminating them, either through words or actions. Acting as both diplomats and one-elf armies, they insure the safety of the elf race.
 
 CLASS FEATURES:
@@ -1023,8 +1024,8 @@ Equipped abilities:
 
 Weight: 0~
      @156 = ~Tweaks~
-     @157 = ~Abyssal Weapon~
-     @158 = ~The Abyssal Warrior, one who makes their home in the Abyss among Tanar'ri and their livelihood fighting Baatezu, is as good as dead without a sturdy weapon.~
+     @157 = ~~
+     @158 = ~~
      @159 = ~~
      @160 = ~~
      @161 = ~~
@@ -1145,7 +1146,7 @@ Requires:
 
 Weight: 25~
      @227 = ~Abyssal Plate Mail~
-     @228 = ~Abyssal plate armor is the best armor a fiendish warrior can acquire, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect the blows of Baatezu, and the entire suit is carefully adorned with demonic engraving and embossed detail of an unholy nature.
+     @228 = ~Abyssal plate armor is the best armor a fiendish warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with demonic engraving and embossed detail.
 
 STATISTICS:
 
@@ -1200,18 +1201,12 @@ Dexterity: 16
 
 Base Armor Class: 3
 Number of Attacks: 4
-Attack Damage: 1d4 (piercing)
+Attack Damage: 1d4 (piercing), poison on successsful hit: 1 damage/2 seconds for 6 rounds (no save)
 
 Special Abilities:
-– Armor Class: +4 bonus vs. missile
-– Haste at level 14
-– Immunity to web
-
-Level 1: Strikes as +1, Speed Factor 2
-Level 7: Strikes as +2, Poison on successful hit: 2 damage/round for 5 rounds (Save vs. Poison at +1 negates)
-Level 14: Strikes as +3, Speed Factor 1, Poison on successful hit: 2 damage/second for 37 seconds (Save vs. Poison negates)
-Level 21: Strikes as +4, Poison on successful hit: 5 damage/second for 20 seconds (Save vs. Poison at -2 negates)
-Level 28: Strikes as +5, Speed Factor 0, Poison on successful hit: 5 damage/second for 20 seconds (no save)~
+– Armor Class: +4
+– Haste
+– Immunity to web~
      @255 = ~Sword of Cymrych Hugh~
      @256 = ~The Sword of Cymrych Hugh, named after one of the great kings of the Moonshae Isles, was the weapon of High King Tristan Kendrick. The sword has a special enmity towards giants and the undead. The legendary sword was used to inflict permanent death unto Kazgaroth the Beast, minion of Bhaal, and is said to be the only weapon capable of doing so.
     
@@ -2135,18 +2130,7 @@ Area of Effect: The caster
 Saving Throw: None
 
 Harnessing the power of the earth, this powerful shapechange ability allows the Druid to become a 24 HD earth elemental of immense strength. The elemental form has an AC of -5, a THAC0 of 2, and does 2d10 crushing damage with its attacks. When the Druid returns to human form, <PRO_HESHE> is also healed 3d10 Hit Points.~
-     @1113 = ~ARCHMAGE: The archwizard strives to be a master of magical energies, shaping them and casting them as spells. To do so, <PRO_HESHE> studies strange tongues and obscure facts and devotes much of <PRO_HISHER> time to magical research. An archwizard must rely on knowledge and wit to survive, but differs from an ordinary mage in their sorcerer-like natural talent. Archwizards are rarely seen adventuring without a retinue of fighters and men-at-arms, but it is not unheard of. Because there are different types (or schools) of magic, there are different types of wizards. The Archmage studies all types of magic and learns a wide variety of spells; <PRO_HISHER> broad range makes <PRO_HIMHER> well suited to the demands of adventuring.
-     
-CLASS FEATURES:
-     
-– May not wear any armor.
-– May only use the following weapons: dagger, quarterstaff, dart, sling.
-– May only become Proficient (one slot) in any weapon class.
-– May not place any slots in any fighting style.
-– May cast arcane spells.
-– May brew potions and scribe scrolls.
-– May craft wands and magical items at higher levels.
-– Hit Die: d4~
+     @1113 = ~~
      @1114 = ~~
      @1115 = ~~
      @1116 = ~~
@@ -2298,31 +2282,6 @@ STATISTICS:
 Weight: 1~
      @5002 = ~Wand of Fire and Lightning~
      @5003 = ~Wand of Fire and Lightning~
-     @5004 = ~Alchemy~
-     @5005 = ~Alchemy
-With years of study and practiced precision characteristic of the class, an experienced archmage has seen read enough potion recipies in his or her adventuring career to simulate the creation of one. With the Alchemy skill, the archmage can create one of eight types of potions once per day.
-
-The potions an archmage can create are randomly chosen from the following list:
-1) Potion of Magic Blocking
-2) Potion of Magic Protection
-3) Potion of Magic Shielding
-4) Potion of Genius
-5) Potion of Mind Focusing
-6) Elixir of Health
-7) Oil of Speed
-8) Potion of Clarity~
-     @5006 = ~Scribe Scrolls~
-     @5007 = ~Scribe Scrolls
-This ability allows an archmage to create spell scrolls and experimental spells of various levels with potential negative consequences. The scrolls that the archmage can create are randomly chosen from the following list:
-1) Improved Magic Missile
-2) Improved Chromatic Orb
-3) Fireball-Lightning Bolt
-4) Unweave Magic
-5) Call Lightning-Flame Stike
-6) Call Upon Abyss: Baphomet
-7) Shadovar Wraithform
-8) Greater Animate Dead
-9) Shapeshift: Lycanthrope~
 
      @100000 = ~the components from [Kits: Clergy of the Seldarine]~
 

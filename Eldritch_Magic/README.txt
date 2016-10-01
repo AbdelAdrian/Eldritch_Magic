@@ -1,4 +1,4 @@
-﻿[MOD] Eldritch Magic v1.62
+﻿[MOD] Eldritch Magic v1.61
 BG:EE v2.3, BGII:EE v2.3, IWD:EE v1.4
 
 Author: Eric.McLaughlin@Alumni.StonyBrook.edu
@@ -48,21 +48,10 @@ Mod Features:
 
 	Items/Spells:
 
-		EE: Item Expansion [BETA]**		- Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough. Includes High Level Abilities (HLAs) for BGEE, but not SoD.
+		EE: Item Expansion [BETA]**	    - Adds numerous items to existing merchants; inadvisable to uninstall with an active playthrough. Includes High Level Abilities (HLAs) for BGEE, but not SoD.
 		
-		Congenio's Pebble Collection		- Allows multiple Ioun stones to stack without using any equipment slots.
-							WARNING: Ioun stones that use Opcode "Stat: Maximum HP Modifier [18]" work differently than others. In order for the HP modifier to be removed when the Ioun stone is, the HP modifier cannot be saved and loaded. In other words, if you save with the Pale Green Ioun Stone and/or Wong Fei's Ioun Stone equipped in orbit, you must equip them again upon loading to receive the HP modifier.
-	
-	Tweaks:
-		
-		XP Cap Removal				- Remove XP Cap: Allows XP to exceed BG2EE:ToB XP cap, includes thieving abilities to level 50, does not include class ability extensions.
-							- Remove XP Cap (BGEE:SoD up to HLAs - not included): Recommended for BGEE/SoD XP cap removal, max XP set to 2,999,999.
-
-		START_XP - BGEE:SoD 161k & BG2EE 500k	- Sets the starting XP of BGEE:SoD to 161k and BG2EE to 500k, the max XP of BGEE:TotSC and BGEE:SoD, respectively.
-
-		Remove Dual & Multi Class Restrictions	- Multiclass Humans & Dualclass Demihumans: Allows humans to choose any multiclass and demihumans to choose any dualclass within their normal race-class restrictions.
-							- Multiclass Humans: Only allows humans to choose any multiclass within their normal race-class restrictions.
-							- Dualclass Demihumans: Only allows demihumans to choose any dualclass within their normal race-class restrictions.
+		Congenio's Pebble Collection	    - Allows multiple Ioun stones to stack without using any equipment slots.
+						    WARNING: Ioun stones that use Opcode "Stat: Maximum HP Modifier [18]" work differently than others. In order for the HP modifier to be removed when the Ioun stone is, the HP modifier cannot be saved and loaded. In other words, if you save with the Pale Green Ioun Stone and/or Wong Fei's Ioun Stone equipped in orbit, you must equip them again upon loading to receive the HP modifier.
 
 *   Kit descriptions are more or less directly from AD&D 2E PHBs, not everything is my own work.
     Full kit descriptions at bottom. Multiclass (Pre-2.0) kits must be "selected" in-game after character creation through the use of a specific
@@ -72,20 +61,21 @@ Mod Features:
 **  Enhanced Edition Item Expansions and HLAs are reasonably tested, but still in progress.
 
 Instructions: 
-	(1) Extract Eldritch_Magic folder from mod master folder .zip to game directory (BGEE = 00766, BG2EE = 00783, IWDEE = 00798, SoD = 00806).
-	    Extract setup-Eldritch_Magic.exe (WeiDU v239) from mod master folder .zip to 00766/00783/00798/00806 if necessary and run the application.
+	(1) Download Eldritch_Magic folder to game directory (BGEE = 00766, BG2EE = 00783, IWDEE = 00798, SoD = 00806).
+	(2) Move setup-Eldritch_Magic.exe (WeiDU v239) from mod folder to 00766/00783/00798/00806 and run the application.
             Alternatively, download latest version of WeiDU and rename executable to setup-Eldritch_Magic.exe. Move
             to game directory and run application as usual.
-	(2) Choose which components to install. The mod currently only features English.
+	(3) Choose which components to install. The mod currently only features English.
 
 Kit Descriptions:
 
+	Abyssal Warrior:
 ABYSSAL WARRIOR: Those cutters hardy enough to not only survive but thrive in the deadly realms of the Abyss among the pain-inflicting, death-dealing tanar'ri are a tough breed indeed. The Abyss shows no kindness to wizards, but a blood who's good with a sword or axe is useful to the plane's lords and worthy of some respect. That which remains useful in that horrible place stays alive. Abyssal warriors are the mortal fighters who serve in the Blood War, guard tanar'ri palaces, and work as mercenaries in those Abyssal towns where planars can survive.
 
 Advantages:
 – Receives a +1 bonus to all Saving Throws
 – Proficient in Blind-fighting
-– 1st level:  Receives a weapon and suit of armor from the Abyss
+– 1st level:  Receives a weapon and suit of armor from the Abyss*
 – 10th level: Gains +1 Strength
 – 13th level: Immune to Demon Fear
 – 15th level: May cast Cacofiend once per day
@@ -95,13 +85,15 @@ Disadvantages:
 – -1 Charisma
 – -1 Penalty to THAC0 in bright sunlight
 – Alignment restricted to chaotic neutral and chaotic evil
-– Race restricted to tiefling*
-* Character will be converted to tiefling upon creation.
-  Tieflings have the following traits:
-  – 50% cold and magic cold, 25% fire and magic fire, and 15% physical resistance.
-  – Infravision.
-  – +1 INT and CHA, -1 STR and WIS.
+– Race restricted to tiefling**
+*  Stand still for a moment, then hover over the quick spell options using TAB to select your weapon choice.
+** Character will be converted to tiefling upon creation.
+   Tieflings have the following traits:
+   – 50% cold and magic cold, 25% fire and magic fire, and 15% physical resistance.
+   – Infravision.
+   – +1 INT and CHA, -1 STR and WIS.
 
+	Bladesinger:
 BLADESINGER: Of the roving elves, there are few as deadly as the Bladesinger. They are masters of their weapons and have spent their lives in the study of their chosen weapons. They have also learned to cast spells while engaged in combat, and thus they double their might. While some characters may stay at home to defend the elven way, Bladesingers go out and actively promote it. They do this by seeking out their race's foes and eliminating them, either through words or actions. Acting as both diplomats and one-elf armies, they insure the safety of the elf race.
 
 CLASS FEATURES:
@@ -145,6 +137,7 @@ Bladesingers are so devoted to their chosen weapon that they can never learn ano
 	Collector: Coming soon!
 COLLECTOR: Occasionally, humans will come into possession of items that either aren't theirs or are too dangerous for these short-lived beings to have. The Collector is there to make sure these things return to elf hands. The Collector's role in life is to retrieve things from dangerous places. Whether this item is a stolen suit of elven plate armor or an ancient, unearthed artifact, the Collector will get it back. When humans seem in danger of destroying things of beauty or of historical power, the Collector makes sure those objects are spirited away to safety. The Collector is not only a thief, but an archaeologist as well. She uses all her classes' skills to retrieve the items from wherever they lie, even deep beneath the earth, then keeps them from the hands of the elves' enemies.
 
+	Eldritch Knight:
 ELDRITCH KNIGHT: The archetypal Eldritch Knight combines the martial mastery common to all fighters with a careful study of magic. Eldritch Knights use magical techniques similar to those practiced by wizards. They focus their study on two of the eight schools of magic: abjuration and evocation. Abjuration spells grant an Eldritch Knight additional protection in battle, and evocation spells deal damage to many foes at once, extending the fighter's reach in combat. These knights learn a comparatively small number of spells, committing them to memory instead of keeping them in a spellbook. Unlike Bladesingers and War Wizards, the Eldritch Knight kit is not uniquely elven, but rather is limited to fighter/mages and any race that may become one. In fact, there are even rumors of Gnomish Eldritch Knights who exclusively use illusionary magic.
 
 Advantages:
@@ -159,6 +152,7 @@ Disadvantages:
 ELVEN MINSTEL: Only elves and half-elves can become Minstrels. Of all musicians in the world, none can play as purely as an elf. Minstrels spend their entire lives seeking musical perfection. Of course, the definition of 
 perfection differs from one culture to the next. Elves believe that music should be simple, pure, beautiful, and natural. Furthermore, those who listen should become lost in the music, and their spirits should transcend their bodies to ride upon the sweet flow of glittering notes. Elves are a very magical race, and this is especially true of Minstrels. It is said that Minstrels cast spells by the simple strumming of an instrument.
 
+	Herbalist:
 HERBALIST: Even when these priests have run out of healing spells, they are not useless as healers. The elf Herbalist can soothe fevers and mend wounds with the utmost ability and speed. Herbalists are very knowledgeable about the various herbs found in their domains. They can locate even the hard-to-find ones, although that might take some searching. Their herb lore is unsurpassed, except by druids.
 
 Advantages:
@@ -175,6 +169,7 @@ HUNTSMAN: Although some call them bounty hunters, the Huntsmen know better. Thei
 	Infiltrator: Coming soon!
 INFILTRATOR: The Infiltrator is the very model of an elf scout. Whether in urban or wilderness situations, the Infiltrator is the master of stealth and disguise. When elves need quick and reliable information with a minimum of fuss, they call on an Infiltrator. The Infiltrators' motto is "If it's a secret, it's not." Sometimes, the Infiltrator will gain information simply for the sheer joy of knowing it. Although this is a typically elven trait, only the Infiltrators go to such an extent to learn a secret. 
 
+	Priest of Mystra:
 PRIEST OF MYSTRA: Mystra is the Mother of All Magic and tender of the Weave. Her followers are often proficient with both arcane and divine spells.
 
 Advantages:
@@ -186,6 +181,7 @@ Disadvantages:
 – Race restricted to half-elf.
 – Alignment restricted to good and neutral.
 
+	Priestess of Lolth:
 PRIESTESS OF LOLTH: Lolth, or Lloth in the drow tongue, the Demon Queen of Spiders, is the chief goddess of drow elves. Her servants must appease the arachnid deity to avoid death, or punishment in the form of life as a drider. Priestesses of Lolth gain no more abilities from their deity than clerics of the surface elves; in fact, the Demon Queen only blesses drow with the most exceptional power, and only the greatest among those ever attain the rank of High Priestess. It is for this reason that followers of Lolth work exceptionally hard to overcome mortal limits. It is routine for priestesses to emulate spiders in their training at any cost. They must learn on their own how to avoid being caught in spider web, lest they be devoured by their own arachnids. Furthermore, each priestess relentlessly consumes poison in order to build up a natural resistance, either eventually overcoming the frail elven constitution, or dying.
 
 Advantages:
@@ -205,6 +201,7 @@ Disadvantages:
 	Spellfilcher: Coming soon!
 SPELLFILCHER: This mage/thief is adept at breaking into wizard's domiciles to purloin magical goods, particularly spellbooks and rare spell components. Through a strange inner talent, the spellfilcher has an amazing ability. When there is a magical trap to be disarmed or magical treasure to be gotten, the Spellfilcher is the one to do it. Trained from her early years, the Spellfilcher uses an innate magical ability to locate and disarm traps that would victimize another. 
 
+	Undead Hunter:
 UNDEAD HUNTER: This holy avenger has honed his abilities toward the destruction of the undead and other unnatural creatures and is immune to many of their most devastating abilities.
 
 Advantages:
@@ -214,6 +211,7 @@ Advantages:
 Disadvantages:
 – May not use Lay On Hands ability.
 
+	War Wizard:
 WAR WIZARD: Although elves do not desire war, preferring instead to live their lives in peace and idyllic happiness, they recognize that the world is full of races hostile to elves, all of whom would love to see them driven into the dirt. A War Wizard is one who has devoted <PRO_HISHER> life to defending against such attacks. The War Wizard is usually the person in charge of defense for any given elf town. When there is a problem with an enemy, the War Wizard is the one to call. Even if not associated with a town, the War Wizard is an invaluable asset to any group that expects to face trouble. Simple strategic knowledge is <PRO_HISHER> bread and butter, but <PRO_HISHER> expertise does not end there - <PRO_HESHE> can work offensive marvels physically, and <PRO_HISHER> spellcasting skills are excellent. Magic is an integral part of the elven lifestyle. Elves' very lives are inherently magical; the blood of a god flowing through one's veins tends to give that person a much different perspective on the workings 
 of magic. As such, War Wizards become increasingly defensive, in personality and passive protections. These elves excel at repelling enemy spellcasting and even weapons with their layers of contingencies, but War Wizards have no shortage of offensive spells for retaliation.
 
@@ -232,6 +230,7 @@ Disadvantages:
 – Race restricted to elf
 – Class restricted to fighter/mage
 
+	Wilderness Runner: 
 WILDERNESS RUNNER: There are rangers, and then there are rangers. Elves are uniquely connected with the rhythms of the forests, some more deeply than others. Only those who have chosen to become rangers may elect to become more fully part of the forest. They are called Wilderness Runners. Wilderness Runners have cast aside the trappings of even elven society to serve the needs of the wood. Although they still respect and serve their own society, they take no part in its functions. They may serve as scouts or advance guards for elf cities, but they will not willingly enter civilization. If the Wilderness Runner is a high elf, he is far less civilized than his brethren and demonstrates the tendencies of sylvan elves. 
      
 Advantages:
@@ -246,6 +245,7 @@ Disadvantages:
 – Alignment restricted to chaotic good.
 – May not wear armor heavier than studded leather.
 
+	Windrider: 
 WINDRIDER: Few mounted cavalry are as glamorous and exciting as the Windriders. The elite of the elf forces, they are greatly envied by common elves and greatly feared by foes. The powerful and majestic mounts they ride into combat make Windriders more dangerous than most infantry, but at the cost of being a larger and more preferentially attacked target. The Windrider is the knight of the air, defending elf lands against aerial attacks. In times of war, they are both shock troops and scouts. While most Windriders mount griffons, hippogriffs, or pegasi, brave elves of the Sword Coast are rather limited in their choices and have been known to ride wyverns instead.
      
 Advantages:
