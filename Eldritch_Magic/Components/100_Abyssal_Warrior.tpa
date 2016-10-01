@@ -85,6 +85,9 @@ COPY ~Eldritch_Magic/Spells/EMCACO.spl~   ~override~
 COPY ~Eldritch_Magic/Spells/EMFIEND.spl~  ~override~
      SAY 0x8  @217
      SAY 0x50 @218
+ COPY ~Eldritch_Magic/Spells/EMDAY1.spl~   ~override~
+ COPY ~Eldritch_Magic/Effects/EMDAY2.eff~  ~override~
+ COPY ~Eldritch_Magic/Spells/EMDAY3.spl~   ~override~
 COPY ~Eldritch_Magic/ITM/EMOBYRIT.itm~    ~override~ // Obyrithian Executioner
   SAY NAME1 ~~
   SAY NAME2 @138
@@ -99,6 +102,9 @@ COPY ~Eldritch_Magic/ITM/EMABPLAT.itm~    ~override~ // Abyssal Plate Mail
 ACTION_IF GAME_IS ~bgee iwdee~ BEGIN
 COPY ~Eldritch_Magic/2DA/EMCDAB.2da~      ~override~
 COPY ~Eldritch_Magic/Spells/EMCDAB.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMCDAB1.spl~  ~override~
+     SAY 0x8  @157
+     SAY 0x50 @158
 COPY ~Eldritch_Magic/Spells/EMCDAX.spl~   ~override~
 COPY ~Eldritch_Magic/Spells/EMCDBS.spl~   ~override~
 COPY ~Eldritch_Magic/Spells/EMCDCL.spl~   ~override~

@@ -10,7 +10,7 @@ ADD_KIT ~EM_BLADESINGER~ /* this is the "internal" name of your kit, like BERSER
   ~EM_BLADESINGER                15      15      15      15      0       0~ /* this line is appened to ABDCSCRQ.2DA */
   ~EM_BLADESINGER                1       0       0       1       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
   ~EM_BLADESINGER                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
-  ~Eldritch_Magic/2DA/EMCLABFM.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~Eldritch_Magic/2DA/EMCLABBS.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
   ~K_B_H    K_B_D   K_B_G   K_B_E   K_B_HE   K_B_HL   K_B_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
   ~0x00200000    7~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
   ~EM0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
@@ -40,7 +40,7 @@ END
 LAF qd_multiclass
   STR_VAR
 	kit_name = ~EM_BLADESINGER~
-	kit_clab = ~EMCLABFM~
+	kit_clab = ~EMCLABBS~
 	base_class = ~F~
 	mc_dir = ~Eldritch_Magic/Multiclass~
   END 
@@ -113,7 +113,7 @@ END
 // Adds Bladesinger's custom CLAB spells.
 COPY  ~Eldritch_Magic/Spells/emac1.spl~   ~override~
 COPY  ~Eldritch_Magic/Spells/emsee.spl~   ~override~
-COPY  ~Eldritch_Magic/Spells/emblsr.spl~   ~override~
+COPY  ~Eldritch_Magic/Spells/emfm.spl~   ~override~
 
 // SWS Grand Mastery
 COPY_EXISTING ~stylbonu.2da~ ~override~

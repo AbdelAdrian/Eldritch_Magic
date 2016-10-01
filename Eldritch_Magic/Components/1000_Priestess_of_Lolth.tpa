@@ -51,6 +51,11 @@ COPY ~Eldritch_Magic/ITM/EMLOLTH.itm~ ~override~ // Holy Symbol of Lolth
   SAY NAME2 @136
   SAY UNIDENTIFIED_DESC ~~
   SAY DESC @137
+COPY ~Eldritch_Magic/ITM/EMSPID1.itm~ ~override~
+COPY ~Eldritch_Magic/ITM/EMSPID2.itm~ ~override~
+COPY ~Eldritch_Magic/ITM/EMSPID3.itm~ ~override~
+COPY ~Eldritch_Magic/ITM/EMSPID4.itm~ ~override~
+COPY ~Eldritch_Magic/ITM/EMSPID5.itm~ ~override~
 
 //DEFINE SPHERE ACCESS____________________________________________________
 //
