@@ -22,13 +22,13 @@
 
 COPY  ~Eldritch_Magic/2DA/XPCAP.2DA~   ~override~
 ACTION_IF GAME_IS ~bgee~ BEGIN
-COPY  ~Eldritch_Magic/2DA/STARTARE.2DA.~   ~override~
-COPY  ~Eldritch_Magic/2DA/STARTBP.2DA.~   ~override~
+COPY  ~Eldritch_Magic/2DA/STARTARE.2DA~   ~override~
+COPY  ~Eldritch_Magic/2DA/STARTBP.2DA~   ~override~
 COPY  ~Eldritch_Magic/2DA/SODSTRTA.2DA~   ~override~
 END
 ACTION_IF GAME_IS ~bg2ee~ BEGIN
-COPY  ~Eldritch_Magic/2DA/BG2EE/STARTARE.2DA.~   ~override~
-COPY  ~Eldritch_Magic/2DA/BG2EE/STARTBP.2DA.~   ~override~
+COPY  ~Eldritch_Magic/2DA/BG2EE/STARTARE.2DA~   ~override~
+COPY  ~Eldritch_Magic/2DA/BG2EE/STARTBP.2DA~   ~override~
 END
 
 ACTION_CLEAR_ARRAY  cd_extend_tables

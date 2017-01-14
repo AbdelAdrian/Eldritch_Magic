@@ -1,7 +1,7 @@
 BACKUP "Eldritch_Magic/backup"
 AUTHOR ~Eric.McLaughlin@Alumni.StonyBrook.edu~
 
-VERSION v1.62
+VERSION v1.65
 README ~Eldritch_Magic/README.txt~
 
 ALWAYS
@@ -234,7 +234,7 @@ SUBCOMPONENT ~War Wizard~
 INCLUDE ~Eldritch_Magic/Components/1301_War_Wizard.tpa~
 ///////////////////////////////////////////////////////
 
-BEGIN ~Wildnerness Runner~ DESIGNATED 1400
+BEGIN ~Wilderness Runner~ DESIGNATED 1400
 GROUP @101
 REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
 
