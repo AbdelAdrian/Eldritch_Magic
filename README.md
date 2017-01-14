@@ -1,4 +1,4 @@
-[MOD] Eldritch Magic v1.62
+[MOD] Eldritch Magic v1.65
 
 BG:EE v2.3, BGII:EE v2.3, IWD:EE v1.4
 
