@@ -1,5 +1,3 @@
-LAF qd_multiclass_tables STR_VAR mc_dir = ~Eldritch_Magic/Multiclass~ END
-
 ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
 ADD_KIT ~EM_ELDRITCH_KNIGHT~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
   ~EM_ELDRITCH_KNIGHT                1           1           1           1           1           1           1           1~ /* this line is appened to CLASWEAP.2DA */
