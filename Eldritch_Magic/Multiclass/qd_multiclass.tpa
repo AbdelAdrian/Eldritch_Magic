@@ -3,11 +3,11 @@
 // For adding existing kits to the multiclass kit selection during chargen.
 // For use with the Enhanced Infinity Engine v2.0 and later. 
 // Author: Aquadrizzt 
-// Version: 0.1 
-// Published: June 7, 2016 
+// Version: 0.2 
+// Published: January 20, 2017 
 //---------------------------------------------
 
-OUTER_SPRINT qd_multiclass#version "0.1"
+OUTER_SPRINT qd_multiclass#version "0.2"
 
 DEFINE_ACTION_FUNCTION qd_multiclass 
 	STR_VAR 
@@ -18,7 +18,7 @@ DEFINE_ACTION_FUNCTION qd_multiclass
 BEGIN 
 	
 	ACTION_IF NOT FILE_EXISTS_IN_GAME ~clabma01.2da~ BEGIN
-	  COPY ~%mc_dir%/blankclab.2da~ ~clabma01.2da~
+	  COPY ~%mc_dir%/blankclab.2da~ ~override/clabma01.2da~
 	END
 
 	//this will only install the first time a multiclass kit using this macro is installed
@@ -114,6 +114,15 @@ BEGIN
 			APPEND ~CLABRN01.2da~ ~QD_MULTI     AP_QD_MCR01 AP_QD_MCR02 AP_QD_MCR03 AP_QD_MCR04 AP_QD_MCR05 AP_QD_MCR06 AP_QD_MCR07 AP_QD_MCR08 AP_QD_MCR09 AP_QD_MCR10 AP_QD_MCR11 AP_QD_MCR12 AP_QD_MCR13 AP_QD_MCR14 AP_QD_MCR15 AP_QD_MCR16 AP_QD_MCR17 AP_QD_MCR18 AP_QD_MCR19 AP_QD_MCR20 AP_QD_MCR21 AP_QD_MCR22 AP_QD_MCR23 AP_QD_MCR24 AP_QD_MCR25 AP_QD_MCR26 AP_QD_MCR27 AP_QD_MCR28 AP_QD_MCR29 AP_QD_MCR30 AP_QD_MCR31 AP_QD_MCR32 AP_QD_MCR33 AP_QD_MCR34 AP_QD_MCR35 AP_QD_MCR36 AP_QD_MCR37 AP_QD_MCR38 AP_QD_MCR39 AP_QD_MCR40 AP_QD_MCR41 AP_QD_MCR42 AP_QD_MCR43 AP_QD_MCR44 AP_QD_MCR45 AP_QD_MCR46 AP_QD_MCR47 AP_QD_MCR48 AP_QD_MCR49 AP_QD_MCR50~ //cleric
 		END
 		
+		//making the multiclass clabs
+		ACTION_FOR_EACH mc IN ~FM~ ~FC~ ~FT~ ~FMT~ ~MT~ ~CM~ ~CT~ ~FD~ ~FMC~ ~CR~ BEGIN 
+			ACTION_FOR_EACH race IN ~H~ ~D~ ~G~ ~E~ ~HE~ ~HL~ ~HO~ BEGIN 
+				ACTION_IF NOT FILE_EXISTS_IN_GAME ~K_%mc%_%race%.2da~ BEGIN
+					COPY ~%mc_dir%/blank_K_X_X.2da~ ~override/K_%mc%_%race%.2da~
+				END
+			END
+		END	
+	
 		//making the empty multiclass spells	
 		COPY ~%mc_dir%/QD_MC_01.SPL~ ~override/QD_MCF01.SPL~ 
 			 ~%mc_dir%/QD_MC_01.SPL~ ~override/QD_MCF02.SPL~ 
@@ -467,7 +476,7 @@ BEGIN
 								END 
 								ACTION_IF (%col_length% = 2) BEGIN
 									COPY_EXISTING ~override/QD_MC%base_class%%col%.spl~ ~override~ 
-										LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 timing = 9 resist_dispel = 0 power = 0 parameter1 = %kit_code% parameter2 = 9 STR_VAR resource = ~%abil_new%#~ END  
+										LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 timing = 9 resist_dispel = 0 power = 0 parameter1 = %kit_code% parameter2 = 9 STR_VAR resource = EVAL ~%abil_new%#~ END  
 								END 
 							END 
 						END
@@ -485,7 +494,7 @@ BEGIN
 								END 
 								ACTION_IF (%col_length% = 2) BEGIN
 									COPY_EXISTING ~override/QD_MC%base_class%%col%.spl~ ~override~ 
-										LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 timing = 9 resist_dispel = 0 power = 0 parameter1 = %kit_code% parameter2 = 9 STR_VAR resource = ~%abil_new%#~ END  
+										LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 timing = 9 resist_dispel = 0 power = 0 parameter1 = %kit_code% parameter2 = 9 STR_VAR resource = EVAL ~%abil_new%#~ END  
 								END 
 							END 
 						END
@@ -501,15 +510,3 @@ BEGIN
 		END 
 END 
 
-DEFINE_ACTION_FUNCTION qd_multiclass_tables 
-	STR_VAR 
-		mc_dir = ""
-BEGIN 
-	ACTION_FOR_EACH mc IN ~FM~ ~FC~ ~FT~ ~FMT~ ~MT~ ~CM~ ~CT~ ~FD~ ~FMC~ ~CR~ BEGIN 
-		ACTION_FOR_EACH race IN ~H~ ~D~ ~G~ ~E~ ~HE~ ~HL~ ~HO~ BEGIN 
-			ACTION_IF NOT FILE_EXISTS_IN_GAME ~K_%mc%_%race%.2da~ BEGIN
-				COPY ~%mc_dir%/blank_K_X_X.2da~ ~override/K_%mc%_%race%.2da~
-			END
-		END
-	END	
-END 
