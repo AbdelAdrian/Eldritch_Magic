@@ -41,7 +41,7 @@ LAF qd_multiclass
 	kit_clab = ~EMCLABBS~
 	base_class = ~F~
 	mc_dir = ~Eldritch_Magic/Multiclass~
-  END 
+  END
 
 COPY  ~Eldritch_Magic/Spells/emcdcha.spl~   ~override~
       SAY 0xfe @219 //You feel a tug from the Pocket Plane as an artifact lost to time materializes among your possessions. Surely such a happening is linked to your powerful heritage.

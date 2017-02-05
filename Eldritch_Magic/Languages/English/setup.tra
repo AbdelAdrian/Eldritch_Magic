@@ -2324,6 +2324,67 @@ This ability allows an archmage to create spell scrolls and experimental spells 
 8) Greater Animate Dead
 9) Shapeshift: Lycanthrope~
 
+@10000 = ~Add Kensai/Thief~
+@10001 = ~kensai / thief~
+@10002 = ~Kensai / Thief~
+@10003 = ~KENSAI/THIEF: A "kensai", which means "sword saint" in the common tongue, refers to a warrior who has been specially trained to be one with <PRO_HISHER> weapon. The kensai is deadly, fast, and trained to fight without the protection of armor. Kensai/Thieves supplement their martial ability with more subtle and technical skills.
+
+Advantages:
+– May achieve Grandmastery in any melee weapon class.
+– +2 bonus to Armor Class.
+– +1 to hit and damage rolls every 3 levels of Fighter.
+– -1 bonus to Speed Factor every 4 levels of Fighter.
+– May use the Kai ability once per day. Gains one use at level 1 and an additional use every 4 levels of Fighter thereafter. 
+
+Disadvantages:
+– May not wear any armor.
+– May not use missile weapons.
+– May not wear gauntlets or bracers.~ 
+
+@10004 = ~Add Berserker/Priest of Talos~
+@10005 = ~berserker / priest of talos~
+@10006 = ~Berserker / Priest of Talos~
+@10007 = ~BERSERKER/PRIEST OF TALOS: Talos is the evil god of storms, destruction, and rebellion. Berserker/Priests of the Stormlord rain destruction upon their enemies with furious rage and powerful destructive magic. 
+
+Advantages:
+– May cast Lightning Bolt once per day. Gains one use at level 1 and an additional use every 5 levels of Cleric thereafter.
+– May cast Storm Shield once per day. Gains one use at level 1 and an additional use every 10 levels of Cleric thereafter.
+– May use Rage ability once per day. Gains one use at level 1 and an additional use every 4 levels of Fighter thereafter.
+
+Disadvantages:
+– Alignment restricted to neutral evil or chaotic evil. 
+– Becomes winded after berserking: -2 penalty to Armor Class, to-hit rolls, and damage rolls.
+– May not Specialize in ranged weapons.~
+
+@10008 = ~kensai / mage / assassin~
+@10009 = ~Kensai / Mage / Assassin~
+@10010 = ~KENSAI/MAGE/ASSASSIN: A "kensai", which means "sword saint" in the common tongue, refers to a warrior who has been specially trained to be one with <PRO_HISHER> weapon. The kensai is deadly, fast, and trained to fight without the protection of armor. The mage strives to be a master of magical energies, shaping them and casting them as spells. An assassin is a killer trained in discreet and efficient murder, relying on anonymity and surprise to perform <PRO_HISHER> task.
+
+Advantages:
+– +2 bonus to Armor Class.
+– +1 to hit and damage rolls at level 1 and every 3 levels of Fighter.
+– -1 bonus to Speed Factor every 4 levels of Fighter.
+– May use the Kai ability once per day. Gains one use at level 1 and an additional use every 4 levels of Fighter thereafter.
+– May cast arcane spells.
+– Backstab ability reaches x7 multiplier instead of capping at x5.
+– May use the Poison Weapon ability. Gains one use at level 1 and an additional use every 4 levels of Thief thereafter.
+
+KAI: All successful attacks within the next 10 seconds deal maximum damage.
+
+POISON WEAPON: Each successful hit within the next 5 rounds will inject poison into the target. Each target can only be affected once per round. The amount of poison damage depends on the character's Thief level:
+
+1st - Target suffers 1 poison damage per second for 6 seconds (Save vs. Death at +1 negates)
+5th - Target suffers 1 poison damage per second for 12 seconds (Save vs. Death negates), and also immediately suffers 2 poison damage (no save)
+9th - Target suffers 1 poison damage per second for 18 seconds (Save vs. Death at -1 negates), and also immediately suffers 4 poison damage (no save)
+13th - Target suffers 1 poison damage per second for 24 seconds (Save vs. Death at -2 negates), and also immediately suffers 6 poison damage (no save)
+
+Disadvantages:
+– May not wear any armor.
+– May not use missile weapons.
+– May not wear gauntlets or bracers.
+– Alignment restricted to any non-chaotic, except lawful good.
+– May only distribute 15 skill points per level among thieving skills.~
+
      @100000 = ~the components from [Kits: Clergy of the Seldarine]~
 
      @100001 = ~HALCYON OF AERDRIE: Aerdrie Faenya, also known as the Winged Mother, Lady of Air and Wind, Queen of the Avariel, She of the Azure Plumage, and Bringer of Rain and Storms, is the Seldarine's intermediate goddess of air, weather, avians, rain, fertility, and the avariel - "winged folk." Aerdrie is both an aspect of Angharradh and one of the three elven goddesses – the other two being Hanali Celanil and Sehanine Moonbow – who collectively form the Triune Goddess.~

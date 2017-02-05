@@ -1,0 +1,247 @@
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+
+// Fighter_Mage		7
+
+// Fighter_Cleric	8
+
+// -----------------------------
+// BERSERKER / PRIEST OF TALOS
+// -----------------------------
+ADD_KIT ~EM_BERSERKER_TALOS~
+	~EM_BERSERKER_TALOS 0 0 0 0 5 5 0 1~ //clasweap.2da
+	~EM_BERSERKER_TALOS 0 0 0 0 5 5 0 1 0 0 0 0 0 0 0 0 5 5 0 0 5 5 5 1 1 1 1 1 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+	~EM_BERSERKER_TALOS 9 0 0 0 9 0~ //abclasrq.2da
+	~EM_BERSERKER_TALOS 0 0 0 0 0 0~ //abclsmod.2da
+	~EM_BERSERKER_TALOS 17 0 0 0 17 0~ //abdcdsrq.2da
+	~EM_BERSERKER_TALOS 15 0 0 0 15 0~ //abdcscrq.2da
+	~EM_BERSERKER_TALOS 0 0 0 0 0 1 0 0 1~ //alignmnt.2da
+	~EM_BERSERKER_TALOS 0 1 1 1 1 0~ //dualclas.2da
+	~Eldritch_Magic/Multiclass/blankclab.2da~ //CLAB
+	~K_FC_H K_FC_D K_FC_G K_FC_E K_FC_HO K_FC_HE K_FC_HL~ 
+	~0x01004001	8~ //usability flag is combination of the two kits + 0x4000; 8 is the class ID for fighter/cleric
+	~FC0~ 
+	~CHAN09 * HELM07 BAG26 RING06 RING31 * BOOT01 AMUL20 BRAC10 BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ //25STWEAP.2da
+	SAY @10005
+	SAY @10006
+	SAY @10007
+
+LAF fl#add_kit_ee
+	INT_VAR
+		briefdesc = RESOLVE_STR_REF (@10007)
+	STR_VAR
+		kit_name = ~EM_BERSERKER_TALOS~
+
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_BERSERKER_TALOS~
+		kit_clab = ~CLABFI02~ // Berserker
+		base_class = ~F~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_BERSERKER_TALOS~
+		kit_clab = ~CLABPR02~ // Priest of Talos
+		base_class = ~P~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+// Fighter_Thief	9
+
+// -----------------------------
+// KENSAI / THIEF
+// -----------------------------
+ADD_KIT ~EM_KENSAI_THIEF~
+	~EM_KENSAI_THIEF 5 5 0 5 5 5 5 0~ //clasweap.2da
+	~EM_KENSAI_THIEF 5 5 0 5 5 5 5 0 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 0 0 0 0 2 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+	~EM_KENSAI_THIEF 9 9 0 0 0 0~ //abclasrq.2da
+	~EM_KENSAI_THIEF 0 0 0 0 0 0~ //abclsmod.2da
+	~EM_KENSAI_THIEF 17 17 0 0 0 0~ //abdcdsrq.2da
+	~EM_KENSAI_THIEF 15 15 0 0 0 0~ //abdcscrq.2da
+	~EM_KENSAI_THIEF 0 1 1 1 1 1 0 0 0~ //alignmnt.2da
+	~EM_KENSAI_THIEF 0 1 1 1 1 0~ //dualclas.2da
+	~Eldritch_Magic/Multiclass/blankclab.2da~ //CLAB
+	~K_FT_H K_FT_D K_FT_G K_FT_E K_FT_HO K_FT_HE K_FT_HL~ 
+	~0x00044004	9~ 
+	~FT0~ 
+	~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 BRAC14 BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ //25STWEAP.2da
+	SAY @10001
+	SAY @10002
+	SAY @10003
+	
+LAF fl#add_kit_ee 
+	INT_VAR
+		briefdesc = RESOLVE_STR_REF (@10003)
+	STR_VAR 
+		kit_name = ~EM_KENSAI_THIEF~
+		
+END 
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_THIEF~
+		kit_clab = ~CLABFI04~ // Kensai
+		base_class = ~F~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+// -----------------------------
+// KENSAI / ASSASSIN
+// -----------------------------
+ADD_KIT ~EM_KENSAI_ASSASSIN~
+	~EM_KENSAI_ASSASSIN 5 5 0 5 5 5 5 0~ //clasweap.2da
+	~EM_KENSAI_ASSASSIN 5 5 0 5 5 5 5 0 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 0 0 0 0 2 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+	~EM_KENSAI_ASSASSIN 9 9 0 0 0 0~ //abclasrq.2da
+	~EM_KENSAI_ASSASSIN 0 0 0 0 0 0~ //abclsmod.2da
+	~EM_KENSAI_ASSASSIN 17 17 0 0 0 0~ //abdcdsrq.2da
+	~EM_KENSAI_ASSASSIN 15 15 0 0 0 0~ //abdcscrq.2da
+	~EM_KENSAI_ASSASSIN 0 1 1 1 1 1 0 0 0~ //alignmnt.2da
+	~EM_KENSAI_ASSASSIN 0 1 1 1 1 0~ //dualclas.2da
+	~Eldritch_Magic/Multiclass/blankclab.2da~ //CLAB
+	~K_FT_H K_FT_D K_FT_G K_FT_E K_FT_HO K_FT_HE K_FT_HL~ 
+	~0x00044004	9~ 
+	~FT0~ 
+	~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 * BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ //25STWEAP.2da
+	SAY @1
+	SAY @2
+	SAY @3
+	
+LAF fl#add_kit_ee 
+	INT_VAR
+		briefdesc = RESOLVE_STR_REF (@3)
+	STR_VAR 
+		kit_name = ~EM_KENSAI_ASSASSIN~
+		
+END 
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_ASSASSIN~
+		kit_clab = ~CLABFI04~ // Kensai
+		base_class = ~F~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_ASSASSIN~
+		kit_clab = ~CLABTH02~ //Assassin
+		base_class = ~T~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+// Fighter_Mage_Thief	10
+
+// -----------------------------
+// KENSAI / MAGE / ASSASSIN
+// -----------------------------
+ADD_KIT ~EM_KENSAI_MAGE_ASSASSIN~
+	~EM_KENSAI_MAGE_ASSASSIN 5 5 0 5 5 5 5 0~ //clasweap.2da
+	~EM_KENSAI_MAGE_ASSASSIN 5 5 0 5 5 5 5 0 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 0 0 0 0 2 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+	~EM_KENSAI_MAGE_ASSASSIN 9 9 0 9 0 0~ //abclasrq.2da
+	~EM_KENSAI_MAGE_ASSASSIN 0 0 0 0 0 0~ //abclsmod.2da
+	~EM_KENSAI_MAGE_ASSASSIN 17 17 0 17 0 0~ //abdcdsrq.2da
+	~EM_KENSAI_MAGE_ASSASSIN 15 15 0 15 0 0~ //abdcscrq.2da
+	~EM_KENSAI_MAGE_ASSASSIN 0 1 1 1 1 1 0 0 0~ //alignmnt.2da
+	~EM_KENSAI_MAGE_ASSASSIN 0 0 0 0 0 0~ //dualclas.2da
+	~Eldritch_Magic/Multiclass/blankclab.2da~ //CLAB
+	~K_FMT_H K_FMT_D K_FMT_G K_FMT_E K_FMT_HO K_FMT_HE K_FMT_HL~
+	~0x00044004	10~
+	~FMT~
+	~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 * BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ //25STWEAP.2da
+	SAY @10008
+	SAY @10009
+	SAY @10010
+	
+LAF fl#add_kit_ee 
+	INT_VAR
+		briefdesc = RESOLVE_STR_REF (@10010)
+	STR_VAR 
+		kit_name = ~EM_KENSAI_MAGE_ASSASSIN~
+		
+END 
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_MAGE_ASSASSIN~
+		kit_clab = ~CLABFI04~ // Kensai
+		base_class = ~F~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_MAGE_ASSASSIN~
+		kit_clab = ~CLABMA01~ // Mage
+		base_class = ~M~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_MAGE_ASSASSIN~
+		kit_clab = ~CLABTH02~ //Assassin
+		base_class = ~T~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+// Mage_Thief		13
+
+// Cleric_Mage		14
+
+// Cleric_Thief		15
+
+// Fighter_Druid	16
+
+// -----------------------------
+// KENSAI / SHAPESHIFTER
+// -----------------------------
+ADD_KIT ~EM_KENSAI_SHAPESHIFTER~
+	~EM_KENSAI_SHAPESHIFTER 5 5 0 5 5 5 5 0~ //clasweap.2da
+	~EM_KENSAI_SHAPESHIFTER 5 5 0 5 5 5 5 0 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 0 0 0 0 0 2 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da
+	~EM_KENSAI_SHAPESHIFTER 9 9 0 0 0 0~ //abclasrq.2da
+	~EM_KENSAI_SHAPESHIFTER 0 0 0 0 0 0~ //abclsmod.2da
+	~EM_KENSAI_SHAPESHIFTER 17 17 0 0 0 0~ //abdcdsrq.2da
+	~EM_KENSAI_SHAPESHIFTER 15 15 0 0 0 0~ //abdcscrq.2da
+	~EM_KENSAI_SHAPESHIFTER 0 1 1 1 1 1 0 0 0~ //alignmnt.2da
+	~EM_KENSAI_SHAPESHIFTER 0 1 1 1 1 0~ //dualclas.2da
+	~Eldritch_Magic/Multiclass/blankclab.2da~ //CLAB
+	~K_FD_H K_FD_D K_FD_G K_FD_E K_FD_HO K_FD_HE K_FD_HL~
+	~0x00044004	16~
+	~FD0~
+	~* * HELM19 BAG22 RING06 RING29 CLCK02 BOOT01 AMUL19 BRAC14 BELT06 * * * POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ //25STWEAP.2da
+	SAY @10001
+	SAY @10002
+	SAY @10003
+	
+LAF fl#add_kit_ee 
+	INT_VAR
+		briefdesc = RESOLVE_STR_REF (@10003)
+	STR_VAR 
+		kit_name = ~EM_KENSAI_SHAPESHIFTER~
+		
+END 
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_SHAPESHIFTER~
+		kit_clab = ~CLABFI04~ // Kensai
+		base_class = ~F~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+LAF qd_multiclass
+	STR_VAR
+		kit_name = ~EM_KENSAI_SHAPESHIFTER~
+		kit_clab = ~CLABDR03~ // Shapeshifter
+		base_class = ~D~
+		mc_dir = ~Eldritch_Magic/Multiclass~
+END
+
+// Fighter_Mage_Cleric	17
+
+// Cleric_Ranger	18
+END
