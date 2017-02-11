@@ -29,28 +29,28 @@ INCLUDE ~Eldritch_Magic/Components/0_EE_Item_Expansion.tpa~
 
 BEGIN ~Congenio's Pebble Collection~ DESIGNATED 1
 GROUP @100
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/10_Ioun.tpa~
 ///////////////////////////////////////////////
 
 BEGIN ~START_XP - BGEE:SoD 161k & BG2EE 500k~ DESIGNATED 2
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/START_XP.tpa~
 ////////////////////////////////////////////////
 
 BEGIN ~Remove XP Cap~ DESIGNATED 3
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~XP Cap Removal~
 
 INCLUDE ~Eldritch_Magic/Components/XP_Infinite.tpa~
 ///////////////////////////////////////////////////
 BEGIN ~Remove XP Cap (BGEE:SoD up to HLAs - not included)~ DESIGNATED 4
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~XP Cap Removal~
 
 INCLUDE ~Eldritch_Magic/Components/XP_Max.tpa~
@@ -58,7 +58,7 @@ INCLUDE ~Eldritch_Magic/Components/XP_Max.tpa~
 
 BEGIN ~Multiclass Humans & Dualclass Demihumans~ DESIGNATED 5
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Remove Dual & Multi Class Restrictions~
 
 INCLUDE ~Eldritch_Magic/Components/Dual.tpa~
@@ -66,14 +66,14 @@ INCLUDE ~Eldritch_Magic/Components/Multi.tpa~
 /////////////////////////////////////////////
 BEGIN ~Multiclass Humans~ DESIGNATED 6
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Remove Dual & Multi Class Restrictions~
 
 INCLUDE ~Eldritch_Magic/Components/Multi.tpa~
 /////////////////////////////////////////////
 BEGIN ~Dualclass Demihumans~ DESIGNATED 7
 GROUP @156
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Remove Dual & Multi Class Restrictions~
 
 INCLUDE ~Eldritch_Magic/Components/Dual.tpa~
@@ -81,7 +81,7 @@ INCLUDE ~Eldritch_Magic/Components/Dual.tpa~
 
 //BEGIN ~Kitted Multiclasses (Credit to Aquadrizzt)~ DESIGNATED 99
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 //INCLUDE ~Eldritch_Magic/Components/EM_KittedMulti.tpa~
 
@@ -89,7 +89,7 @@ INCLUDE ~Eldritch_Magic/Components/Dual.tpa~
 
 //BEGIN ~Archmage~ DESIGNATED 199
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 //INCLUDE ~Eldritch_Magic/Components/100005_Archmage.tpa~
 ///////////////////////////////////////////////////////
@@ -98,14 +98,14 @@ INCLUDE ~Eldritch_Magic/Components/Dual.tpa~
 
 BEGIN ~Abyssal Warrior~ DESIGNATED 200
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/100_Abyssal_Warrior.tpa~
 ///////////////////////////////////////////////////////////
 
 BEGIN ~Windrider~ DESIGNATED 201
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/1500_Windrider.tpa~
 //////////////////////////////////////////////////////
@@ -114,14 +114,14 @@ INCLUDE ~Eldritch_Magic/Components/1500_Windrider.tpa~
 
 BEGIN ~Herbalist~ DESIGNATED 300
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/600_Herbalist.tpa~
 /////////////////////////////////////////////////////
 
 BEGIN ~Priestess of Lolth~ DESIGNATED 301
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/1000_Priestess_of_Lolth.tpa~
 ///////////////////////////////////////////////////////////////
@@ -132,14 +132,14 @@ INCLUDE ~Eldritch_Magic/Components/1000_Priestess_of_Lolth.tpa~
 
 //BEGIN ~Elven Minstrel~ DESIGNATED 500
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 //INCLUDE ~Eldritch_Magic/Components/500_Elven_Minstrel.tpa~
 //////////////////////////////////////////////////////////
 
 BEGIN ~Bladesinger Bard Kit - Not Recommended with Elven Minstrel or other Bards (Pre-2.0)~ DESIGNATED 501
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Bladesinger~
 
 INCLUDE ~Eldritch_Magic/Components/201_Bladesinger.tpa~
@@ -149,7 +149,7 @@ INCLUDE ~Eldritch_Magic/Components/201_Bladesinger.tpa~
 
 BEGIN ~Undead Hunter~ DESIGNATED 600
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/1200_Undead_Hunter.tpa~
 //////////////////////////////////////////////////////////
@@ -158,7 +158,7 @@ INCLUDE ~Eldritch_Magic/Components/1200_Undead_Hunter.tpa~
 
 BEGIN ~Bladesinger~ DESIGNATED 700
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Bladesinger~
 
 INCLUDE ~Eldritch_Magic/Components/200_Bladesinger.tpa~
@@ -166,14 +166,14 @@ INCLUDE ~Eldritch_Magic/Components/200_Bladesinger.tpa~
 
 BEGIN ~Eldritch Knight~ DESIGNATED 701
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Eldritch Knight~
 
 INCLUDE ~Eldritch_Magic/Components/400_Eldritch_Knight.tpa~
 ///////////////////////////////////////////////////////////
 BEGIN ~Eldritch Knight (Pre-2.0)~ DESIGNATED 703
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Eldritch Knight~
 
 INCLUDE ~Eldritch_Magic/Components/401_Eldritch_Knight.tpa~
@@ -181,17 +181,17 @@ INCLUDE ~Eldritch_Magic/Components/401_Eldritch_Knight.tpa~
 
 BEGIN ~War Wizard~ DESIGNATED 702
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~War Wizard~
 
 INCLUDE ~Eldritch_Magic/Components/1300_War_Wizard.tpa~
 ///////////////////////////////////////////////////////
 BEGIN ~War Wizard (Pre-2.0)~ DESIGNATED 704
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~War Wizard~
 
-//INCLUDE ~Eldritch_Magic/Components/1301_War_Wizard.tpa~
+INCLUDE ~Eldritch_Magic/Components/1301_War_Wizard.tpa~
 ///////////////////////////////////////////////////////
 
 // Fighter_Cleric		8
@@ -200,14 +200,14 @@ SUBCOMPONENT ~War Wizard~
 
 //BEGIN ~Huntsman~ DESIGNATED 900
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Huntsman~
 
 //INCLUDE ~Eldritch_Magic/Components/700_Huntsman.tpa~
 ////////////////////////////////////////////////////
 //BEGIN ~Huntsman (Pre-2.0)~ DESIGNATED 901
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Huntsman~
 
 //INCLUDE ~Eldritch_Magic/Components/701_Huntsman.tpa~
@@ -217,14 +217,14 @@ SUBCOMPONENT ~War Wizard~
 
 //BEGIN ~Collector~ DESIGNATED 1000
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Collector~
 
 //INCLUDE ~Eldritch_Magic/Components/300_Collector.tpa~
 /////////////////////////////////////////////////////
 //BEGIN ~Collector (Pre-2.0)~ DESIGNATED 1002
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Collector~
 
 //INCLUDE ~Eldritch_Magic/Components/301_Collector.tpa~
@@ -232,14 +232,14 @@ SUBCOMPONENT ~War Wizard~
 
 //BEGIN ~Infiltrator~ DESIGNATED 1001
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Infiltrator~
 
 //INCLUDE ~Eldritch_Magic/Components/800_Infiltrator.tpa~
 ///////////////////////////////////////////////////////
 //BEGIN ~Infiltrator (Pre-2.0)~ DESIGNATED 1003
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Infiltrator~
 
 //INCLUDE ~Eldritch_Magic/Components/801_Infiltrator.tpa~
@@ -251,7 +251,7 @@ SUBCOMPONENT ~War Wizard~
 
 BEGIN ~Wilderness Runner~ DESIGNATED 1200
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 
 INCLUDE ~Eldritch_Magic/Components/1400_Wilderness_Runner.tpa~
 //////////////////////////////////////////////////////////////
@@ -260,14 +260,14 @@ INCLUDE ~Eldritch_Magic/Components/1400_Wilderness_Runner.tpa~
 
 //BEGIN ~Spellfilcher~ DESIGNATED 1300
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Spellfilcher~
 
 //INCLUDE ~Eldritch_Magic/Components/1100_Spellfilcher.tpa~
 /////////////////////////////////////////////////////////
 //BEGIN ~Spellfilcher (Pre-2.0)~ DESIGNATED 1301
 //GROUP @101
-//REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 //SUBCOMPONENT ~Spellfilcher~
 
 //INCLUDE ~Eldritch_Magic/Components/1101_Spellfilcher.tpa~
@@ -277,14 +277,14 @@ INCLUDE ~Eldritch_Magic/Components/1400_Wilderness_Runner.tpa~
 
 BEGIN ~Priest of Mystra~ DESIGNATED 1400
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
-//SUBCOMPONENT ~Priest of Mystra~
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
+SUBCOMPONENT ~Priest of Mystra~
 
 INCLUDE ~Eldritch_Magic/Components/900_Priest_of_Mystra.tpa~
 ////////////////////////////////////////////////////////////
 BEGIN ~Priest of Mystra (Pre-2.0)~ DESIGNATED 1401
 GROUP @101
-REQUIRE_PREDICATE GAME_IS ~iwdee~ @25
+REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
 SUBCOMPONENT ~Priest of Mystra~
 
 INCLUDE ~Eldritch_Magic/Components/901_Priest_of_Mystra.tpa~
@@ -304,36 +304,34 @@ INCLUDE ~Eldritch_Magic/Components/901_Priest_of_Mystra.tpa~
 
 // Shaman			21
 
- BEGIN ~Clerics, Druids, & Rangers of the Seldarine~ DESIGNATED 2200
- GROUP @101
- REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @25
- SUBCOMPONENT ~the components from [Kits: Clergy of the Seldarine]~
+//BEGIN ~Clerics, Druids, & Rangers of the Seldarine~ DESIGNATED 2200
+//GROUP @101
+//REQUIRE_PREDICATE GAME_IS ~bgee sod bg2ee iwdee~ @25
+//SUBCOMPONENT ~the components from [Kits: Clergy of the Seldarine]~
 
- INCLUDE ~Eldritch_Magic/Components/100001_Clerics.tpa~
- INCLUDE ~Eldritch_Magic/Components/100002_Druids.tpa~
- INCLUDE ~Eldritch_Magic/Components/100003_Rangers.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100001_Clerics.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100002_Druids.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100003_Rangers.tpa~
  //////////////////////////////////////////////////////
 
-  BEGIN ~the kits from [Kits: Clergy of the Seldarine] by class~ DESIGNATED 2201
-  SUBCOMPONENT ~the components from [Kits: Clergy of the Seldarine]~
+//BEGIN ~the kits from [Kits: Clergy of the Seldarine] by class~ DESIGNATED 2201
+//SUBCOMPONENT ~the components from [Kits: Clergy of the Seldarine]~
+  //////////////////////////////////////////////////////////////////
 
-  INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
-  ///////////////////////////////////////////
+//BEGIN ~the Clerics from [Kits: Clergy of the Seldarine]~ DESIGNATED 2202
+//REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
 
-  BEGIN ~the Clerics from [Kits: Clergy of the Seldarine]~ DESIGNATED 2202
-  REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
-
-  INCLUDE ~Eldritch_Magic/Components/100001_Clerics.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100001_Clerics.tpa~
   //////////////////////////////////////////////////////
 
-  BEGIN ~the Druids from [Kits: Clergy of the Seldarine]~ DESIGNATED 2203
-  REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
+//BEGIN ~the Druids from [Kits: Clergy of the Seldarine]~ DESIGNATED 2203
+//REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
 
-  INCLUDE ~Eldritch_Magic/Components/100002_Druids.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100002_Druids.tpa~
   /////////////////////////////////////////////////////
 
-  BEGIN ~the Rangers from [Kits: Clergy of the Seldarine]~ DESIGNATED 2204
-  REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
+//BEGIN ~the Rangers from [Kits: Clergy of the Seldarine]~ DESIGNATED 2204
+//REQUIRE_COMPONENT ~Eldritch_Magic.tp2~ ~100001~ ~skipping~
 
-  INCLUDE ~Eldritch_Magic/Components/100003_Rangers.tpa~
+//INCLUDE ~Eldritch_Magic/Components/100003_Rangers.tpa~
   //////////////////////////////////////////////////////
