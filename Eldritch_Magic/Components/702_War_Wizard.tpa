@@ -1,0 +1,105 @@
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+ADD_KIT ~EM_WAR_WIZARD~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_WAR_WIZARD                1           1           1           1           1           1           1           1~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_WAR_WIZARD 5 5 1 5 5 5 5 1 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 1 1 1 1 1 2 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_WAR_WIZARD                9       7       6       9       3       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_WAR_WIZARD                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_WAR_WIZARD                17      0       0       17      0       0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_WAR_WIZARD                15      0       0       15      0       0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_WAR_WIZARD                1       1       0       1       1       0       1       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_WAR_WIZARD                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABWW.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00004000    7~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~FM0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG26 RING06 RING31 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~
+  SAY ~war wizard~
+  SAY ~War Wizard~
+  SAY @12
+
+LAF fl#add_kit_ee
+   INT_VAR
+     biography = ~-1~
+     briefdesc = 102499 // Normal briefdesc for fighter/mages
+     fallen = 0
+     fallen_notice = ~-1~
+   STR_VAR
+     kit_name = EM_WAR_WIZARD
+     clswpbon = ~1 0 2~
+     numwslot = ~2~
+     clascolr = ~57 58 122 1 43~ // F/M colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPWAR~
+     clsrcreq = ~0 1 0 0 0 0 0~
+END
+
+LAF qd_multiclass
+  STR_VAR
+	kit_name = ~EM_WAR_WIZARD~
+	kit_clab = ~EMCLABWW~
+	base_class = ~F~
+	mc_dir = ~Eldritch_Magic/Multiclass~
+  END
+
+COPY ~Eldritch_Magic/Spells/EMWW0.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMWW1.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMWW2.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMWW3.spl~   ~override~
+COPY ~Eldritch_Magic/Spells/EMENWEA.spl~   ~override~ //Enchanted Weapon
+      SAY 0x8 @159
+      SAY 0x50 @160
+COPY ~Eldritch_Magic/Spells/EMMORDS.spl~   ~override~ //Mordenkainen's Sword
+      SAY 0x8 @161
+      SAY 0x50 @162
+COMPILE ~Eldritch_Magic/BAF/EMWARWIZ.baf~   ~override~
+COPY ~Eldritch_Magic/Creatures/EMWARWIZ.cre~   ~override~
+
+ACTION_IF FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+  ACTION_IF NOT FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	COPY ~Eldritch_Magic/2DA/K_FM_E.2da~ ~override~
+  END
+
+  COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS ~7~ "kit_row"
+  BUT_ONLY
+  OUTER_SET kit_row -= 2
+
+  ACTION_IF FILE_EXISTS_IN_GAME ~K_FM_E.2da~ BEGIN
+	APPEND ~K_FM_E.2da~ ~1	%kit_row%~
+  END
+END
+
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~enginest.2da~ BEGIN
+COPY ~Eldritch_Magic/ITM/EMWARWIZ.itm~   ~override~ // The Elven Arts of War and Wizardry
+  SAY NAME1 ~~
+  SAY NAME2 @287
+  SAY UNIDENTIFIED_DESC ~~
+  SAY DESC @12
+ACTION_IF GAME_IS ~bgee~ BEGIN
+COPY ~Eldritch_Magic/2DA/EMCLABWW.2da~   ~override~
+COPY_EXISTING ~INN2616.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+COPY ~Eldritch_Magic/2DA/BG2EE/EMCLABWW.2da~   ~override~
+COPY_EXISTING ~RIBALD.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD2.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~RIBALD3.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING ~25SPELL2.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+COPY_EXISTING ~EHPOMAB.sto~ ~override~
+ ADD_STORE_ITEM ~EMWARWIZ~ LAST #1 #0 #0 ~IDENTIFIED~ #1
+END
+END
+END
+
+ PRINT ~Thank you for installing: "War Wizard Kit"~

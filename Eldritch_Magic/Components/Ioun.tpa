@@ -1,0 +1,502 @@
+ACTION_IF GAME_IS ~bgee bg2ee~ BEGIN
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun01.itm~ ~override~ // Trollblood Ioun Stone
+  SAY NAME1 @74 // Ioun Stone
+  SAY NAME2 @76
+  SAY UNIDENTIFIED_DESC @75 // This is a small stone that floats in an orbit around the owner's head. Simply equip the stone to set it in its orbit. These obviously magical stones have different properties depending on their color.
+  SAY DESC @77
+COPY ~Eldritch_Magic/ITM/Ioun/EMI01.itm~ ~override~ // Trollblood Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @76
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @77
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun02.itm~ ~override~ // Blood Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @78
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @79
+COPY ~Eldritch_Magic/ITM/Ioun/EMI02.itm~ ~override~ // Blood Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @78
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @79
+COPY ~Eldritch_Magic/ITM/Ioun/helm18.itm~ ~override~ // Pearly White Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @80
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @81
+COPY ~Eldritch_Magic/ITM/Ioun/EMI03.itm~ ~override~ // Pearly White Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @80
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @81
+COPY ~Eldritch_Magic/ITM/Ioun/helm19.itm~ ~override~ // Dusty Rose Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @82
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @83
+COPY ~Eldritch_Magic/ITM/Ioun/EMI04.itm~ ~override~ // Dusty Rose Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @82
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @83
+COPY ~Eldritch_Magic/ITM/Ioun/helm20.itm~ ~override~ // Pale Green Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @84
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @85
+COPY ~Eldritch_Magic/ITM/Ioun/EMI05.itm~ ~override~ // Pale Green Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @84
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @85
+COPY ~Eldritch_Magic/ITM/Ioun/helm23.itm~ ~override~ // Golden Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @86
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @87
+COPY ~Eldritch_Magic/ITM/Ioun/EMI06.itm~ ~override~ // Golden Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @86
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @87
+COPY ~Eldritch_Magic/ITM/Ioun/helm24.itm~ ~override~ // Obsidian Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @88
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @89
+COPY ~Eldritch_Magic/ITM/Ioun/EMI07.itm~ ~override~ // Obsidian Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @88
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @89
+COPY ~Eldritch_Magic/ITM/Ioun/helm25.itm~ ~override~ // Silver Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @90
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @91
+COPY ~Eldritch_Magic/ITM/Ioun/EMI08.itm~ ~override~ // Silver Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @90
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @91
+COPY ~Eldritch_Magic/ITM/Ioun/helm26.itm~ ~override~ // Lavender Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @92
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @93
+COPY ~Eldritch_Magic/ITM/Ioun/EMI09.itm~ ~override~ // Lavender Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @92
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @93
+COPY ~Eldritch_Magic/ITM/Ioun/helm27.itm~ ~override~ // Bronze Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @142
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @143
+COPY ~Eldritch_Magic/ITM/Ioun/EMI10.itm~ ~override~ // Bronze Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @142
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @143
+COPY ~Eldritch_Magic/ITM/Ioun/helm34.itm~ ~override~ // Wong Fei's Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @144
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @145
+COPY ~Eldritch_Magic/ITM/Ioun/EMI11.itm~ ~override~ // Wong Fei's Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @144
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @145
+COPY ~Eldritch_Magic/ITM/Ioun/amsoul01.itm~ ~override~ // Malla's Soul Stone
+  SAY NAME1 @146 // Gemstone
+  SAY NAME2 @148
+  SAY UNIDENTIFIED_DESC @147 // This otherwise normal star sapphire shimmers with a pale aura and floats serenely above your hand, lighter than air.
+  SAY DESC @149
+COPY ~Eldritch_Magic/ITM/Ioun/EMI12.itm~ ~override~ // Malla's Soul Stone
+  SAY NAME1 @146
+  SAY NAME2 @148
+  SAY UNIDENTIFIED_DESC @147
+  SAY DESC @149
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun01.itm~ ~override~ // Deep Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @150
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @151
+COPY ~Eldritch_Magic/ITM/Ioun/EMI13.itm~ ~override~ // Deep Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @150
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @151
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun02.itm~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @152
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @153
+COPY ~Eldritch_Magic/ITM/Ioun/EMI14.itm~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @152
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @153
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun03.itm~ ~override~ // Clear Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @154
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @155
+COPY ~Eldritch_Magic/ITM/Ioun/EMI15.itm~ ~override~ // Clear Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @154
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @155
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun01.spl~ ~override~ // Trollblood Ioun Stone
+  SAY 0x8  @76
+  SAY 0x50 @77
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun02.spl~ ~override~ // Blood Red Ioun Stone
+  SAY 0x8  @78
+  SAY 0x50 @79
+COPY ~Eldritch_Magic/ITM/Ioun/helm18.spl~ ~override~ // Pearly White Ioun Stone
+  SAY 0x8  @80
+  SAY 0x50 @81
+COPY ~Eldritch_Magic/ITM/Ioun/helm19.spl~ ~override~ // Dusty Rose Ioun Stone
+  SAY 0x8  @82
+  SAY 0x50 @83
+COPY ~Eldritch_Magic/ITM/Ioun/helm20.spl~ ~override~ // Pale Green Ioun Stone
+  SAY 0x8  @84
+  SAY 0x50 @85
+COPY ~Eldritch_Magic/ITM/Ioun/helm23.spl~ ~override~ // Golden Ioun Stone
+  SAY 0x8  @86
+  SAY 0x50 @87
+COPY ~Eldritch_Magic/ITM/Ioun/helm24.spl~ ~override~ // Obsidian Ioun Stone
+  SAY 0x8  @88
+  SAY 0x50 @89
+COPY ~Eldritch_Magic/ITM/Ioun/helm25.spl~ ~override~ // Silver Ioun Stone
+  SAY 0x8  @90
+  SAY 0x50 @91
+COPY ~Eldritch_Magic/ITM/Ioun/helm26.spl~ ~override~ // Lavender Ioun Stone
+  SAY 0x8  @92
+  SAY 0x50 @93
+COPY ~Eldritch_Magic/ITM/Ioun/helm27.spl~ ~override~ // Bronze Ioun Stone
+  SAY 0x8  @142
+  SAY 0x50 @143
+COPY ~Eldritch_Magic/ITM/Ioun/helm34.spl~ ~override~ // Wong Fei's Ioun Stone
+  SAY 0x8  @144
+  SAY 0x50 @145
+COPY ~Eldritch_Magic/ITM/Ioun/amsoul01.spl~ ~override~ // Malla's Soul Stone
+  SAY 0x8  @148
+  SAY 0x50 @149
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun1.spl~ ~override~ // Deep Red Ioun Stone
+  SAY 0x8  @150
+  SAY 0x50 @151
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun2.spl~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY 0x8  @152
+  SAY 0x50 @153
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun3.spl~ ~override~ // Clear Ioun Stone
+  SAY 0x8  @154
+  SAY 0x50 @155
+COPY ~Eldritch_Magic/ITM/Ioun/EMI01.spl~ ~override~ // Trollblood Ioun Stone
+  SAY 0x8  @76
+  SAY 0x50 @77
+COPY ~Eldritch_Magic/ITM/Ioun/EMI02.spl~ ~override~ // Blood Red Ioun Stone
+  SAY 0x8  @78
+  SAY 0x50 @79
+COPY ~Eldritch_Magic/ITM/Ioun/EMI03.spl~ ~override~ // Pearly White Ioun Stone
+  SAY 0x8  @80
+  SAY 0x50 @81
+COPY ~Eldritch_Magic/ITM/Ioun/EMI04.spl~ ~override~ // Dusty Rose Ioun Stone
+  SAY 0x8  @82
+  SAY 0x50 @83
+COPY ~Eldritch_Magic/ITM/Ioun/EMI05.spl~ ~override~ // Pale Green Ioun Stone
+  SAY 0x8  @84
+  SAY 0x50 @85
+COPY ~Eldritch_Magic/ITM/Ioun/EMI06.spl~ ~override~ // Golden Ioun Stone
+  SAY 0x8  @86
+  SAY 0x50 @87
+COPY ~Eldritch_Magic/ITM/Ioun/EMI07.spl~ ~override~ // Obsidian Ioun Stone
+  SAY 0x8  @88
+  SAY 0x50 @89
+COPY ~Eldritch_Magic/ITM/Ioun/EMI08.spl~ ~override~ // Silver Ioun Stone
+  SAY 0x8  @90
+  SAY 0x50 @91
+COPY ~Eldritch_Magic/ITM/Ioun/EMI09.spl~ ~override~ // Lavender Ioun Stone
+  SAY 0x8  @92
+  SAY 0x50 @93
+COPY ~Eldritch_Magic/ITM/Ioun/EMI10.spl~ ~override~ // Bronze Ioun Stone
+  SAY 0x8  @142
+  SAY 0x50 @143
+COPY ~Eldritch_Magic/ITM/Ioun/EMI11.spl~ ~override~ // Wong Fei's Ioun Stone
+  SAY 0x8  @144
+  SAY 0x50 @145
+COPY ~Eldritch_Magic/ITM/Ioun/EMI12.spl~ ~override~ // Malla's Soul Stone
+  SAY 0x8  @148
+  SAY 0x50 @149
+COPY ~Eldritch_Magic/ITM/Ioun/EMI13.spl~ ~override~ // Deep Red Ioun Stone
+  SAY 0x8  @150
+  SAY 0x50 @151
+COPY ~Eldritch_Magic/ITM/Ioun/EMI14.spl~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY 0x8  @152
+  SAY 0x50 @153
+COPY ~Eldritch_Magic/ITM/Ioun/EMI15.spl~ ~override~ // Clear Ioun Stone
+  SAY 0x8  @154
+  SAY 0x50 @155
+COPY ~Eldritch_Magic/ITM/Ioun/bdioun01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IBDION02.bam~ ~override~  
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun02.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/ohioun03.bam~ ~override~
+
+ PRINT ~“Fate leads him who follows it, and drags him who resist.”
+- Plutarch~
+END
+
+ACTION_IF GAME_IS ~iwdee~ BEGIN
+// 0x48-Hat -> 7-Helmet
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/bdioun01.itm~ ~override~ // Trollblood Ioun Stone BDIOUN01 -> IHELM20
+  SAY NAME1 @74
+  SAY NAME2 @76
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @77
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI01.itm~ ~override~ // Trollblood Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @76
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @77
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/bdioun02.itm~ ~override~ // Blood Red Ioun Stone IBDION02 -> OHIOUN01
+  SAY NAME1 @74
+  SAY NAME2 @78
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @79
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI02.itm~ ~override~ // Blood Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @78
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @79
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm18.itm~ ~override~ // Pearly White Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @80
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @81
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI03.itm~ ~override~ // Pearly White Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @80
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @81
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm19.itm~ ~override~ // Dusty Rose Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @82
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @83
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI04.itm~ ~override~ // Dusty Rose Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @82
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @83
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm20.itm~ ~override~ // Pale Green Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @84
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @85
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI05.itm~ ~override~ // Pale Green Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @84
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @85
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm23.itm~ ~override~ // Golden Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @86
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @87
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI06.itm~ ~override~ // Golden Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @86
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @87
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm24.itm~ ~override~ // Obsidian Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @88
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @89
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI07.itm~ ~override~ // Obsidian Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @88
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @89
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm25.itm~ ~override~ // Silver Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @90
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @91
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI08.itm~ ~override~ // Silver Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @90
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @91
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm26.itm~ ~override~ // Lavender Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @92
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @93
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI09.itm~ ~override~ // Lavender Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @92
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @93
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm27.itm~ ~override~ // Bronze Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @142
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @143
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI10.itm~ ~override~ // Bronze Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @142
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @143
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm34.itm~ ~override~ // Wong Fei's Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @144
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @145
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI11.itm~ ~override~ // Wong Fei's Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @144
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @145
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/amsoul01.itm~ ~override~ // Malla's Soul Stone
+  SAY NAME1 @146
+  SAY NAME2 @148
+  SAY UNIDENTIFIED_DESC @147
+  SAY DESC @149
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI12.itm~ ~override~ // Malla's Soul Stone
+  SAY NAME1 @146
+  SAY NAME2 @148
+  SAY UNIDENTIFIED_DESC @147
+  SAY DESC @149
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun01.itm~ ~override~ // Deep Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @150
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @151
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI13.itm~ ~override~ // Deep Red Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @150
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @151
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun02.itm~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @152
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @153
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI14.itm~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @152
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @153
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun03.itm~ ~override~ // Clear Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @154
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @155
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI15.itm~ ~override~ // Clear Ioun Stone
+  SAY NAME1 @74
+  SAY NAME2 @154
+  SAY UNIDENTIFIED_DESC @75
+  SAY DESC @155
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/bdioun01.spl~ ~override~ // Trollblood Ioun Stone
+  SAY 0x8  @76
+  SAY 0x50 @77
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/bdioun02.spl~ ~override~ // Blood Red Ioun Stone
+  SAY 0x8  @78
+  SAY 0x50 @79
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm18.spl~ ~override~ // Pearly White Ioun Stone
+  SAY 0x8  @80
+  SAY 0x50 @81
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm19.spl~ ~override~ // Dusty Rose Ioun Stone
+  SAY 0x8  @82
+  SAY 0x50 @83
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm20.spl~ ~override~ // Pale Green Ioun Stone
+  SAY 0x8  @84
+  SAY 0x50 @85
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm23.spl~ ~override~ // Golden Ioun Stone
+  SAY 0x8  @86
+  SAY 0x50 @87
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm24.spl~ ~override~ // Obsidian Ioun Stone
+  SAY 0x8  @88
+  SAY 0x50 @89
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm25.spl~ ~override~ // Silver Ioun Stone
+  SAY 0x8  @90
+  SAY 0x50 @91
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm26.spl~ ~override~ // Lavender Ioun Stone
+  SAY 0x8  @92
+  SAY 0x50 @93
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm27.spl~ ~override~ // Bronze Ioun Stone
+  SAY 0x8  @142
+  SAY 0x50 @143
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/helm34.spl~ ~override~ // Wong Fei's Ioun Stone
+  SAY 0x8  @144
+  SAY 0x50 @145
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/amsoul01.spl~ ~override~ // Malla's Soul Stone
+  SAY 0x8  @148
+  SAY 0x50 @149
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun1.spl~ ~override~ // Deep Red Ioun Stone
+  SAY 0x8  @150
+  SAY 0x50 @151
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun2.spl~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY 0x8  @152
+  SAY 0x50 @153
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun3.spl~ ~override~ // Clear Ioun Stone
+  SAY 0x8  @154
+  SAY 0x50 @155
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI01.spl~ ~override~ // Trollblood Ioun Stone
+  SAY 0x8  @76
+  SAY 0x50 @77
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI02.spl~ ~override~ // Blood Red Ioun Stone
+  SAY 0x8  @78
+  SAY 0x50 @79
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI03.spl~ ~override~ // Pearly White Ioun Stone
+  SAY 0x8  @80
+  SAY 0x50 @81
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI04.spl~ ~override~ // Dusty Rose Ioun Stone
+  SAY 0x8  @82
+  SAY 0x50 @83
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI05.spl~ ~override~ // Pale Green Ioun Stone
+  SAY 0x8  @84
+  SAY 0x50 @85
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI06.spl~ ~override~ // Golden Ioun Stone
+  SAY 0x8  @86
+  SAY 0x50 @87
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI07.spl~ ~override~ // Obsidian Ioun Stone
+  SAY 0x8  @88
+  SAY 0x50 @89
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI08.spl~ ~override~ // Silver Ioun Stone
+  SAY 0x8  @90
+  SAY 0x50 @91
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI09.spl~ ~override~ // Lavender Ioun Stone
+  SAY 0x8  @92
+  SAY 0x50 @93
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI10.spl~ ~override~ // Bronze Ioun Stone
+  SAY 0x8  @142
+  SAY 0x50 @143
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI11.spl~ ~override~ // Wong Fei's Ioun Stone
+  SAY 0x8  @144
+  SAY 0x50 @145
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI12.spl~ ~override~ // Malla's Soul Stone
+  SAY 0x8  @148
+  SAY 0x50 @149
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI13.spl~ ~override~ // Deep Red Ioun Stone
+  SAY 0x8  @150
+  SAY 0x50 @151
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI14.spl~ ~override~ // Scarlet/Blue Ioun Stone
+  SAY 0x8  @152
+  SAY 0x50 @153
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/EMI15.spl~ ~override~ // Clear Ioun Stone
+  SAY 0x8  @154
+  SAY 0x50 @155
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/bdioun01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/IBDION02.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun01.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun02.bam~ ~override~
+COPY ~Eldritch_Magic/ITM/Ioun/IWDEE/ohioun03.bam~ ~override~
+
+ PRINT ~“Fate leads him who follows it, and drags him who resist.”
+- Plutarch~
+END

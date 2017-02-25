@@ -108,7 +108,7 @@ Disadvantages:
      @5 = ~HERBALIST: Even when these priests have run out of healing spells, they are not useless as healers. The elf Herbalist can soothe fevers and mend wounds with the utmost ability and speed. Herbalists are very knowledgeable about the various herbs found in their domains. They can locate even the hard-to-find ones, although that might take some searching. Their herb lore is unsurpassed, except by druids.
 
 Advantages:
-– May cast Goodberry once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
+– May cast Feyberry once per day. Gains one use at level 1 and an additional use every 5 levels thereafter.
 – May cast Neutralize Poison once per day. Gains one use at level 1 and an additional use every 10 levels thereafter.
 
 Disadvantages:
@@ -133,8 +133,10 @@ Disadvantages:
      @8 = ~PRIEST OF MYSTRA: Mystra is the Mother of All Magic and tender of the Weave. Her followers are often proficient with both arcane and divine spells.
 
 Advantages:
-– May cast Mystra's Silver Fire once per day. Gains two uses at level 1 and an additional use every 5 and 10 levels thereafter.
+– May cast Improved Dispel Magic once per day. Gains one uses at level 1 and an additional use every 5 levels thereafter.
+– May cast Mystra's Silver Fire once per day. Gains one uses at level 1 and an additional use every 10 levels thereafter.
 
+IMPROVED DISPEL MAGIC: An incredibly fast Dispel Magic with 150% of normal range. Dispels at twice normal level plus one.
 MYSTRA'S SILVER FIRE: This spell explodes for 1d6 fire damage per level of the caster up to 20d6. Save vs. Spell for half.
 
 Disadvantages:
@@ -491,7 +493,7 @@ Requires:
 
 Weight: 7~
      @64 = ~Netherese Spellblade~
-     @65 = ~Long before the Sharn trapped the evil Phaerimm beneath the Anauroch Desert, the Netherese archwizard Karsus devised a plan to temporarily become a deity and defeat the Phaerimm himself- subsequently leading to the fall of Netheril known as Karsus's Folly. Some blame the great archwizard Ioulaum for abandoning Netheril and promting Karsus to take such drastic measures. Before his disappearance, and even the start of the war with the Phaerimm, Ioulaum collaborated with Karsus on the creation of this powerful dagger. It's covered in indecipherable Loross written with Draconic script, the Netherese noble tongue and one of the languages of the City of Shade, Thultanthar. It's rumored that the dagger was a gift for Thultanthar's high mage, known only as Lord Shadow. It was Lord Shadow who experimented with the Plane of Shadow, and shifted his entire city over from the Prime Material Plane mere days before Karsus temporarily destroyed the Weave- and it seems like he took this now shade-touched dagger with him for at least 1700 years, before Thultanthar returned to Faerun. This dagger weighs heavily in your hand and is warm to the touch. Merely having it on your person makes you feel uneasy for some reason. The gem mounted in the hilt seems to have an inner light of some sort, though how it can have such illumination and still be so deathly black at its core, you do not know. It is also unknown which enchantments are original to the spellblade and which are from millennia of residing in the Plane of Shadow and being wielded by powerful Shadovar.
+     @65 = ~Long before the Sharn trapped the evil Phaerimm beneath the Anauroch Desert, the Netherese archwizard Karsus devised a plan to temporarily become a deity and defeat the Phaerimm himself- subsequently leading to the fall of Netheril known as Karsus's Folly. Some blame the great archwizard Ioulaum for abandoning Netheril and promting Karsus to take such drastic measures. Before his disappearance, Ioulaum collaborated with Karsus on the creation of this powerful dagger. It's covered in indecipherable Loross written with Draconic script, the Netherese noble tongue and one of the languages of the City of Shade, Thultanthar. It's rumored that the dagger was a gift for Thultanthar's high mage, known only as Lord Shadow. It was Lord Shadow who experimented with the Plane of Shadow, and shifted his entire city over from the Prime Material Plane mere days before Karsus temporarily destroyed the Weave- and it seems like he took this now shade-touched dagger with him for at least 1700 years, before Thultanthar returned to Faerun. This dagger weighs heavily in your hand and is warm to the touch. Merely having it on your person makes you feel uneasy for some reason. The gem mounted in the hilt seems to have an inner light of some sort, though how it can have such illumination and still be so deathly black at its core, you do not know. It is also unknown which enchantments are original to the spellblade and which are from millennia of residing in the Plane of Shadow and being wielded by powerful Shadovar.
 
 STATISTICS:
 
@@ -723,7 +725,7 @@ Weight: 0~
      @97 = ~Red Wizard of Thay~
      @98 = ~IMOEN~
      @99 = ~BLADE_SINGER~
-     @100 = ~Items & Spells~
+     @100 = ~Items, Spells, and More~
      @101 = ~Kits~
      @102 = ~Silver Long Sword +2~
      @103 = ~These swords are usually referred to as double-edged swords, war swords, or military swords. This item, ornate and flawlessly crafted is composed of a razor-sharp silver blade, etched with elven script, and counterbalanced by a solid gold hilt. Heavily enchanted, the sword retains its edge while serving as an excellent, albeit gaudy, melee weapon. Although it was never intended for combat, the blade is especially lethal against lycanthropes due to its exotic materials.
@@ -890,17 +892,29 @@ Weight: 1~
      @122 = ~Whispering Wind~
      @123 = ~James the Page, a mortal man with a humble origin become traveler of both time and space, is the only one known to have ever possessed this ring. It is said that he received it from elders of the gentle race, whoever those may be, no one seems to agree as it changes with every recount- some swear it was an ancient group of elves, others say titans or dragons, and a few even say it was a gift from the gods themselves. One thing is fairly certain though: James lived an incredible life that puts most bardic tales of bravery and heroism to shame. He sailed on the Wandering Eye with Balduran and battled lycanthropes with a sword of gold that he supposedly stole from a dragon's hoard. Being one of the few survivors to make it back to the mainland, James decided to charter his own ship and sail westward, believing the Father of the Four Winds blessed his explorations. Along the way, he angered Talos with his lack of fear or tribute to the Stormlord, but despite the deity leaving no trace of his vessel, James miraculously made it to uncharted shores. While mapping this new world, he saved the fey Prince of Peace from a black dragon and was subsequently knighted by the Queen of Light. Many historians, however, doubt any of this actually happened- seeing as nothing recorded beyong his youth as a page has been uncovered, and it is even said he never made the rank of squire for reasons unknown. Furthermore, many of the characters involved in the wild tale of Sir James have never been documented, only strengthening the resolve of disbelievers. Possibly all that remains of his adventures is this ring, if it was truly his- all you know for sure is that this band of gold, inscribed with magic runes, possesses incredible power.~
      @124 = ~Defensive Bladesong~ //embs1
-     @125 = ~The Bladesinger gains a +1 bonus to their AC. Defensive Bladesong may not be used in conjunction with any other bladesong.~
+     @125 = ~The Bladesinger gains a +1 bonus to their AC. Defensive Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @126 = ~Greater Defensive Bladesong~ //embs1g
-     @127 = ~The Bladesinger gains a +2 bonus to their AC. Greater Defensive Bladesong may not be used in conjunction with any other bladesong.~
+     @127 = ~The Bladesinger gains a +2 bonus to their AC. Greater Defensive Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @128 = ~Balanced Bladesong~ //embs3
-     @129 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1/2 attack per round. Balanced Bladesong may not be used in conjunction with any other bladesong.~
+     @129 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1/2 attack per round. Balanced Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @130 = ~Greater Balanced Bladesong~ //embs3g
-     @131 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1 attack per round. Greater Balanced Bladesong may not be used in conjunction with any other bladesong.~
+     @131 = ~The Bladesinger may attack and parry in the same round, without wasting any additional attacks- extra 1 attack per round. Greater Balanced Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @132 = ~Offensive Bladesong~ //embs2
-     @133 = ~The Bladesinger gains a +1 bonus to hit. Offensive Bladesong may not be used in conjunction with any other bladesong.~
+     @133 = ~The Bladesinger gains a +1 bonus to hit. Offensive Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @134 = ~Greater Offensive Bladesong~ //embs2g
-     @135 = ~The Bladesinger gains a +2 bonus to hit. Greater Offensive Bladesong may not be used in conjunction with any other bladesong.~
+     @135 = ~The Bladesinger gains a +2 bonus to hit. Greater Offensive Bladesong may not be used in conjunction with any other bladesong.
+     
+Bladesinging requires a single one-handed melee weapon and an empty off-hand. Ranged weapons, two-handed weapons, and shields remove and prevent the effects of bladesinging. Changing weapons also cancels the effects, but as long as the current weapon is a one-handed melee weapon and the off-hand is available, the bladesong can be reapplied.~
      @136 = ~Holy Symbol of Lolth~
      @137 = ~Only the most worthy and devoted servants of the Demon Queen are granted these powerful holy symbols.
 
@@ -1025,18 +1039,85 @@ Weight: 0~
      @156 = ~Tweaks~
      @157 = ~Abyssal Weapon~
      @158 = ~The Abyssal Warrior, one who makes their home in the Abyss among Tanar'ri and their livelihood fighting Baatezu, is as good as dead without a sturdy weapon.~
-     @159 = ~~
-     @160 = ~~
-     @161 = ~~
-     @162 = ~~
-     @163 = ~~
-     @164 = ~~
-     @165 = ~~
-     @166 = ~~
-     @167 = ~~
-     @168 = ~~
-     @169 = ~~
-     @170 = ~~
+     @159 = ~Enchanted Weapon~
+     @160 = ~Enchanted Weapon
+(Enchantment/Charm)
+
+Level: 4
+Range: 0
+Duration:  5 rounds/level
+Casting Time: 4
+Area of Effect: 1 creature
+Saving Throw: None
+
+When this spell is cast on a creature it enchants any weapons that it currently wields. For the duration of the spell, those weapons are treated as having a +3 enchantment for the purposes of determining what they can hit.~
+     @161 = ~Mordenkainen's Sword~
+     @162 = ~Mordenkainen's Sword
+(Evocation)
+
+Level: 7
+Range: 0
+Duration: 1 round/level
+Casting Time: 7
+Area of Effect: Special
+Saving Throw: None
+
+Upon casting this spell, the wizard brings into being a shimmering, sword-like plane of force that leaps into the wizard's hands. The sword acts as a +4 weapon in all respects and deals 5d4 points of damage upon hitting a target. Once the spell is cast, the sword will float in the air completely under the caster's control. This does not prevent the caster from doing any other actions during the spell's duration.~
+     @163 = ~Feyberry~
+     @164 = ~Feyberry
+(Alteration, Evocation)
+
+Sphere: Plant
+Range: Touch
+Duration: Permanent
+Casting Time: 9 
+Area of Effect: Special 
+Saving Throw: None 
+
+Casting a Feyberry spell creates between one and ten potent magical berries, depending on caster level, that the Herbalist can carry with <PRO_HIMHER>. Each berry restores between 1 and 1d5 Hit Points when eaten, depending on caster level.
+
+Level 1: Heals 1 Hit Point
+Level 5: Heals 1d2 Hit Points, Cures Blindness & Deafness.
+Level 10: Heals 1d3 Hit Points, Cures Blindness, Deafness, & Disease.
+Level 15: Heals 1d4 Hit Points, Cures Blindness, Deafness, Disease, Poison, Fatigue, & Intoxication.
+Level 20: Heals 1d5 Hit Points, Cures Blindness, Deafness, Disease, Poison, Fatigue, Intoxication, and Removes Silence.~
+     @165 = ~Neutralize Poison~
+     @166 = ~Neutralize Poison
+(Necromancy)
+
+Sphere: Healing
+Range: Touch 
+Duration: Instant 
+Casting Time: 1 
+Area of Effect: 1 creature 
+Saving Throw: None 
+
+This spell removes all toxins from the body, both natural and magical in nature. When this spell is cast upon a poisoned individual, it immediately neutralizes any poison and restores 10 lost Hit Points. This spell will also cure any diseases that the target might be suffering from, as well as blindness and deafness.~
+     @167 = ~Fey Berry~
+     @168 = ~Created by the Feyberry spell, these simple-looking blueberries will heal between one and five points of damage for each handful of berries eaten, depending on the Herbalist's level.
+
+STATISTICS:
+
+Level 1: Heals 1 Hit Point
+Level 5: Heals 1d2 Hit Points, Cures Blindness & Deafness.
+Level 10: Heals 1d3 Hit Points, Cures Blindness, Deafness, & Disease.
+Level 15: Heals 1d4 Hit Points, Cures Blindness, Deafness, Disease, Poison, Fatigue, & Intoxication.
+Level 20: Heals 1d5 Hit Points, Cures Blindness, Deafness, Disease, Poison, Fatigue, Intoxication, and Removes Silence.
+
+Weight: 0~
+     @169 = ~Improved Dispel Magic~
+     @170 = ~Improved Dispel Magic
+(Abjuration)
+
+Range: 60 ft.
+Duration: Instant
+Casting Time: 0
+Area of Effect: 30-ft. radius
+Saving Throw: None
+
+An Improved Dispel Magic spell removes magical effects upon anyone within the area. This includes effects given from spells, potions and certain magical items such as wands. It does not, however, affect enchanted magical items or spell protections such as Spell Turning and Spell Deflection. The chance of the dispel succeeding is determined by the level of the caster and the level of the magic being dispelled. The base chance of successfully dispelling is 50%. For every level that the caster of the Dispel Magic is above the original caster, <PRO_HISHER> chance of success increases by 5%. For every level that the caster of Dispel Magic is below the original caster, <PRO_HISHER> chance of success decreases by 10%. However, despite the difference in levels, there is always at least a 5% chance of success or failure. Thus, if a caster is 10 levels higher than the magic <PRO_HESHE> is trying to dispel, there is only a 5% chance of failure. Similarly if the caster is 4 levels lower than the magic <PRO_HESHE> is trying to dispel, there is only a 10% chance of success. Intuitively, this spell is almost useless if the target is 5 or more levels higher than the caster.
+Improved Dispel Magic casts at an effective caster level of (2xlevel)+1.
+Note: While this spell dispels the individual effects of Grease, Web, Stinking Cloud, and other such spells, it does not dispel the area of effect.~
      @171 = ~~
      @172 = ~~
      @173 = ~~

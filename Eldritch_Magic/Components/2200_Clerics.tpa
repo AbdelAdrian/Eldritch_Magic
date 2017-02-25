@@ -1,0 +1,763 @@
+// CLERICS/PRIESTS (3)
+
+// Halcyon of Aerdrie Faenya (DEX 13, WIS 13) CG, CN Halcyons must be elves, half-elves, aarakocra, or kenku.
+ADD_KIT ~EM_HALCYON~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_HALCYON                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_HALCYON 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_HALCYON                9       13      6       8       13      8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_HALCYON                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_HALCYON                0       17      0       0       17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_HALCYON                0       15      0       0       15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_HALCYON                0       0       0       0       0       0       1       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_HALCYON                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC1.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~halcyon of aerdrie~
+  SAY ~Halcyon of Aerdrie~
+  SAY @100001
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_HALCYON
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 1
+	c_ranger_cleric		= 0
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~minor~
+	s_Protection 		= ~major~
+	s_War 			= ~minor~
+	s_Knowledge 		= ~minor~
+	s_Deception 		= ~x~
+	s_Thought 		= ~minor~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~minor~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~major~
+	s_Plant 		= ~x~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~major~
+	s_Fire 			= ~x~
+	s_Light 		= ~x~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Circle Singer of Angharradh (WIS 16, CHA 16) CG Circle Singers must be elves or half-elves.
+ADD_KIT ~EM_CIRCLE_SINGER~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_CIRCLE_SINGER                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_CIRCLE_SINGER 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_CIRCLE_SINGER                9       7       6       9       16      16~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_CIRCLE_SINGER                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_CIRCLE_SINGER                0       0       0       0       17      17~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_CIRCLE_SINGER                0       0       0       0       16      16~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_CIRCLE_SINGER                0       0       0       0       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_CIRCLE_SINGER                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC2.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~circle singer of angharradh~
+  SAY ~Circle Singer of Angharradh~
+  SAY @100002
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_CIRCLE_SINGER
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 1
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~minor~
+	s_Protection 		= ~major~
+	s_War 			= ~minor~
+	s_Knowledge 		= ~major~
+	s_Deception 		= ~x~
+	s_Thought 		= ~minor~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~minor~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~major~
+	s_Earth 		= ~minor~
+	s_Water 		= ~minor~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~minor~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Feywarden of Corellon Larethian (STR 11, INT 11, WIS 9) CG Feywardens must be elves or half-elves.
+ADD_KIT ~EM_FEY_WARDEN~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_FEY_WARDEN                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_FEY_WARDEN 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_FEY_WARDEN                11      7       6       11      9       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_FEY_WARDEN                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_FEY_WARDEN                17      0       0       17      17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_FEY_WARDEN                15      0       0       15      15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_FEY_WARDEN                0       0       0       0       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_FEY_WARDEN                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC3.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~feywarden of corellon~
+  SAY ~Feywarden of Corellon~
+  SAY @100003
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_FEY_WARDEN
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 1
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~minor~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~minor~
+	s_Protection 		= ~major~
+	s_War 			= ~major~
+	s_Knowledge 		= ~major~
+	s_Deception 		= ~x~
+	s_Thought 		= ~major~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~minor~
+	s_Earth 		= ~minor~
+	s_Water 		= ~minor~
+	s_Air 			= ~minor~
+	s_Fire 			= ~minor~
+	s_Light 		= ~minor~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~major~
+END
+//________________________________________________________________________
+
+// Mischiefmaker of Erevan Illesere (DEX 13, INT 10, WIS 9) CN Mischiefmakers must be elves, half-elves, leprechauns, sprites, or pixies.
+ADD_KIT ~EM_MISCHIEF~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_MISCHIEF                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_MISCHIEF 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_MISCHIEF                9       13      6       10      9       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_MISCHIEF                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_MISCHIEF                0       17      0       17      17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_MISCHIEF                0       15      0       15      15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_MISCHIEF                0       0       0       0       0       0       0       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_MISCHIEF                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC4.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~mischiefmaker of erevan~
+  SAY ~Mischiefmaker of Erevan~
+  SAY @100004
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_MISCHIEF
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 0   // any other combinations are fair game
+	c_cleric_mage		= 0
+	c_cleric_thief 		= 1
+	c_ranger_cleric		= 0
+	c_f_m_c			= 0
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~minor~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~major~
+	s_Benediction 		= ~minor~
+	s_Destruction 		= ~minor~
+	s_Protection 		= ~minor~
+	s_War 			= ~minor~
+	s_Knowledge 		= ~minor~
+	s_Deception 		= ~major~
+	s_Thought 		= ~minor~
+	s_Dread 		= ~major~
+	s_Vigor 		= ~minor~
+	s_Affliction 		= ~major~
+	s_Animal 		= ~x~
+	s_Plant 		= ~x~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~x~
+	s_Shadow 		= ~major~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Lone Wolf of Fenmarel Mestarine (CON 11, WIS 9) CN Lone wolves must be elves or half-elves.
+ADD_KIT ~EM_LONE_WOLF~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_LONE_WOLF                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_LONE_WOLF 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_LONE_WOLF                9       7       11      9       9       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_LONE_WOLF                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_LONE_WOLF                0       0       17      0       17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_LONE_WOLF                0       0       15      0       15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_LONE_WOLF                0       0       0       0       0       0       0       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_LONE_WOLF                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC5.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~lone wolf of fenmarel~
+  SAY ~Lone Wolf of Fenmarel~
+  SAY @100005
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_LONE_WOLF
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 0
+	c_cleric_thief 		= 1
+	c_ranger_cleric		= 1
+	c_f_m_c			= 0
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~minor~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~minor~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~minor~
+	s_War 			= ~x~
+	s_Knowledge 		= ~x~
+	s_Deception 		= ~minor~
+	s_Thought 		= ~x~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~major~
+	s_Plant 		= ~major~
+	s_Earth 		= ~minor~
+	s_Water 		= ~minor~
+	s_Air 			= ~minor~
+	s_Fire 			= ~minor~
+	s_Light 		= ~x~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Goldheart of Hanali Celanil (CHA 16, WIS 12) CG Goldhearts must be elves or half-elves.
+ADD_KIT ~EM_GOLD_HEART~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_GOLD_HEART                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_GOLD_HEART 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_GOLD_HEART                9       7       6       9       12      16~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_GOLD_HEART                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_GOLD_HEART                0       0       0       0       17      17~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_GOLD_HEART                0       0       0       0       15      16~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_GOLD_HEART                0       0       0       0       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_GOLD_HEART                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC6.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~goldheart of hanali~
+  SAY ~Goldheart of Hanali~
+  SAY @100006
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_GOLD_HEART
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~major~
+	s_War 			= ~x~
+	s_Knowledge 		= ~minor~
+	s_Deception 		= ~x~
+	s_Thought 		= ~minor~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~minor~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~minor~
+	s_Earth 		= ~minor~
+	s_Water 		= ~minor~
+	s_Air 			= ~minor~
+	s_Fire 			= ~minor~
+	s_Light 		= ~major~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Chronologian of Labelas Enoreth (INT 11, WIS 12) CG Chronologians must be elves or half-elves.
+ADD_KIT ~EM_CHRONO~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_CHRONO                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_CHRONO 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_CHRONO                9       7       6       11      12      8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_CHRONO                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_CHRONO                0       0       0       17      17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_CHRONO                0       0       0       15      15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_CHRONO                0       0       0       0       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_CHRONO                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC7.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~chronologian of labelas~
+  SAY ~Chronologian of Labelas~
+  SAY @100007
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_CHRONO
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~minor~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~minor~
+	s_War 			= ~x~
+	s_Knowledge 		= ~major~
+	s_Deception 		= ~major~
+	s_Thought 		= ~major~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~minor~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~minor~
+	s_Shadow 		= ~minor~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Starsinger of Sehanine Moonbow (INT 9, WIS 13) CG Starsingers must be elves or half-elves.
+ADD_KIT ~EM_STAR_SINGER~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_STAR_SINGER                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_STAR_SINGER 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_STAR_SINGER                9       7       6       9       13      8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_STAR_SINGER                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_STAR_SINGER                0       0       0       17      17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_STAR_SINGER                0       0       0       15      15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_STAR_SINGER                0       0       0       0       0       0       1       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_STAR_SINGER                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC8.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~starsinger of sehanine~
+  SAY ~Starsinger of Sehanine~
+  SAY @100008
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_STAR_SINGER
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 1
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~major~
+	s_War 			= ~x~
+	s_Knowledge 		= ~minor~
+	s_Deception 		= ~x~
+	s_Thought 		= ~minor~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~minor~
+	s_Earth 		= ~minor~
+	s_Water 		= ~minor~
+	s_Air 			= ~minor~
+	s_Fire 			= ~minor~
+	s_Light 		= ~major~
+	s_Shadow 		= ~major~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Dhaeraowathila of Shevarash (STR 11, DEX 11, WIS 9) CG, CN  Dhaeraowathila must be gold elves, moon elves, green elves, or half-elves.
+ADD_KIT ~EM_DHAERAO~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_DHAERAO                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_DHAERAO 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_DHAERAO                11      11      6       9       9       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_DHAERAO                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_DHAERAO                17      17      0       0       17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_DHAERAO                15      15      0       0       15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_DHAERAO                0       0       0       0       0       0       1       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_DHAERAO                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABC9.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~dhaeraowathila of shevarash~
+  SAY ~Dhaeraowathila of Shevarash~
+  SAY @100009
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_DHAERAO
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 1   // any other combinations are fair game
+	c_cleric_mage		= 0
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 0
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~minor~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~major~
+	s_Benediction 		= ~x~
+	s_Destruction 		= ~minor~
+	s_Protection 		= ~x~
+	s_War 			= ~minor~
+	s_Knowledge 		= ~x~
+	s_Deception 		= ~minor~
+	s_Thought 		= ~x~
+	s_Dread 		= ~minor~
+	s_Vigor 		= ~x~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~minor~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~minor~
+	s_Shadow 		= ~major~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+ PRINT ~“The Fair Folk of the Realms worship a pantheon of deities known
+as the Seldarine, a complex term that can be roughly translated
+as the fellowship of brothers and sisters of the wood, implying
+the wide diversity in interests that exists among the gods of
+the elven pantheon and their desire for cooperation."~

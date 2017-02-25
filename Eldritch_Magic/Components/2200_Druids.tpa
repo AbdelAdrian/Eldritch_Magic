@@ -1,0 +1,189 @@
+// Enables elven druids
+COPY_EXISTING ~clsrcreq.2da~ ~override~
+  COUNT_2DA_ROWS 8 rows
+  FOR (row = 0 ; row < rows ; ++row) BEGIN
+    READ_2DA_ENTRY row 0 8 entry
+    PATCH_IF ("%entry%" STRING_COMPARE_CASE "DRUID"      = 0) BEGIN
+      FOR (col = 2; col < 3 ; ++col) BEGIN
+        SET_2DA_ENTRY row col 8 1
+      END
+    END
+  END
+  PRETTY_PRINT_2DA
+  BUT_ONLY
+  
+// DRUIDS (11)
+
+// Totem Sister of Angharradh (WIS 12, CHA 15) NG, CG, N, CN  Totem sisters must be female moon elves
+ADD_KIT ~EM_TOTEM_SISTER~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_TOTEM_SISTER                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_TOTEM_SISTER 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_TOTEM_SISTER                9       7       6       9       12      15~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_TOTEM_SISTER                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_TOTEM_SISTER                0       0       0       0       17      17~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_TOTEM_SISTER                0       0       0       0       15      15~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_TOTEM_SISTER                0       0       0       1       1       0       1       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_TOTEM_SISTER                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABD1.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_D_H    K_D_D   K_D_G   K_D_E   K_D_HE   K_D_HL   K_D_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    11~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Dr0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~totem sister of angharradh~
+  SAY ~Totem Sister of Angharradh~
+  SAY @100010
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_TOTEM_SISTER
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 0   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 0   // any other combinations are fair game
+	c_cleric_mage		= 0
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 0
+	c_druid                 = 1
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~x~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~x~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~x~
+	s_War 			= ~x~
+	s_Knowledge 		= ~x~
+	s_Deception 		= ~x~
+	s_Thought 		= ~x~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~x~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~x~
+	s_Plant 		= ~x~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~x~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+// Druid of Rillifane Rallathil (WIS 12, CHA 15) N  Druids of Rillifane must be elves, half-elves, or wood giants (voadkyn).
+ADD_KIT ~EM_RILLIFAN~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_RILLIFAN                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_RILLIFAN 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_RILLIFAN                9       7       6       9       12      15~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_RILLIFAN                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_RILLIFAN                0       0       0       0       17      17~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_RILLIFAN                0       0       0       0       15      15~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_RILLIFAN                0       0       0       0       1       0       0       0       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_RILLIFAN                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABD2.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_D_H    K_D_D   K_D_G   K_D_E   K_D_HE   K_D_HL   K_D_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00000001    11~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Dr0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Fighter ToB starting weapons
+  SAY ~druid of rillifane~
+  SAY ~Druid of Rillifane~
+  SAY @100011
+
+LAF fl#add_kit_ee
+  INT_VAR
+    biography = ~-1~
+    briefdesc = 102499 // Normal briefdesc for fighter/mages
+    fallen = 0
+    fallen_notice = ~-1~
+  STR_VAR
+    kit_name = EM_RILLIFAN
+    clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 0   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 0   // any other combinations are fair game
+	c_cleric_mage		= 0
+	c_cleric_thief 		= 0
+	c_ranger_cleric		= 0
+	c_f_m_c			= 0
+	c_druid                 = 1
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~x~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~x~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~x~
+	s_War 			= ~x~
+	s_Knowledge 		= ~x~
+	s_Deception 		= ~x~
+	s_Thought 		= ~x~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~x~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~x~
+	s_Plant 		= ~x~
+	s_Earth 		= ~x~
+	s_Water 		= ~x~
+	s_Air 			= ~x~
+	s_Fire 			= ~x~
+	s_Light 		= ~x~
+	s_Shadow 		= ~x~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+ PRINT ~“The Fair Folk of the Realms worship a pantheon of deities known
+as the Seldarine, a complex term that can be roughly translated
+as the fellowship of brothers and sisters of the wood, implying
+the wide diversity in interests that exists among the gods of
+the elven pantheon and their desire for cooperation."~

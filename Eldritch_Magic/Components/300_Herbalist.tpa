@@ -1,0 +1,116 @@
+ADD_KIT ~EM_HERBALIST~ /* this is the "internal" name of your kit, like BERSERKER or LATHANDER */
+  ~EM_HERBALIST                0           0           1           1           0           1           0           0~ /* this line is appened to CLASWEAP.2DA */
+  ~EM_HERBALIST 0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 0 0 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ /* this string is appened column-wise to WEAPPROF.2DA, starting with the third line*/
+  ~EM_HERBALIST                9       7       6       8       9       8~ /* this line is appened to ABCLASRQ.2DA */
+  ~EM_HERBALIST                0       0       0       0       0       0~ /* this line is appened to ABCLSMOD.2DA */
+  ~EM_HERBALIST                0       0       0       0       17      0~ /* this line is appened to ABDCDSRQ.2DA */
+  ~EM_HERBALIST                0       0       0       0       15      0~ /* this line is appened to ABDCSCRQ.2DA */
+  ~EM_HERBALIST                1       1       0       1       1       0       1       1       0~ /* this line is appened to ALIGNMNT.2DA */
+  ~EM_HERBALIST                0       0       0       0       0       0~ /* this line goes to DUALCLAS.2DA */
+  ~Eldritch_Magic/2DA/EMCLABHE.2da~ /* this is the name of your abilities 2DA file, in the style of clabrn02.2da */
+  ~K_C_H    K_C_D   K_C_G   K_C_E   K_C_HE   K_C_HL   K_C_HO~ /* These are the 2da files listed in KITTABLE.2DA that you want your kit to be a part of. List as many as you like. */
+  ~0x00004000    3~ /* This is the "unusable" value you want for your kit and also the class value. These would normally appear at the end of KITLIST.2DA */
+  ~Cl0~ /* This is the High Level Ability Abbreviation (see LUABBR.2DA) Normal values are Fi0, Pa0, etc. */
+  ~CHAN09 * HELM07 BAG26 RING06 RING31 * BOOT01 AMUL20 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 HAMM07 SW1H27 STAF08~ // Cleric ToB starting weapons
+  SAY ~herbalist~
+  SAY ~Herbalist~
+  SAY @5
+
+COPY ~Eldritch_Magic/Spells/EMBERRY.spl~   ~override~ //Feyberry
+     SAY 0x8  @163
+     SAY 0x50 @164
+COPY ~Eldritch_Magic/Spells/EMHERB.spl~   ~override~ //Neutralize Poison
+     SAY 0x8  @165
+     SAY 0x50 @166
+COPY ~Eldritch_Magic/ITM/EMFEYB1.itm~   ~override~
+  SAY NAME1 @167
+  SAY NAME2 @167
+  SAY UNIDENTIFIED_DESC @168
+  SAY DESC @168
+COPY ~Eldritch_Magic/ITM/EMFEYB2.itm~   ~override~
+  SAY NAME1 @167
+  SAY NAME2 @167
+  SAY UNIDENTIFIED_DESC @168
+  SAY DESC @168
+COPY ~Eldritch_Magic/ITM/EMFEYB3.itm~   ~override~
+  SAY NAME1 @167
+  SAY NAME2 @167
+  SAY UNIDENTIFIED_DESC @168
+  SAY DESC @168
+COPY ~Eldritch_Magic/ITM/EMFEYB4.itm~   ~override~
+  SAY NAME1 @167
+  SAY NAME2 @167
+  SAY UNIDENTIFIED_DESC @168
+  SAY DESC @168
+COPY ~Eldritch_Magic/ITM/EMFEYB5.itm~   ~override~
+  SAY NAME1 @167
+  SAY NAME2 @167
+  SAY UNIDENTIFIED_DESC @168
+  SAY DESC @168
+
+LAF fl#add_kit_ee
+   INT_VAR
+     biography = ~-1~
+     briefdesc = 31255 // Normal briefdesc for clerics
+     fallen = 0
+     fallen_notice = ~-1~
+   STR_VAR
+     kit_name = EM_HERBALIST
+     clswpbon = ~0 0 3~
+     numwslot = ~2~
+     clascolr = ~30 37 86 1 110~ // Druid colors
+     clasiskl = ~0 0 0 0 0 0 0~
+     clasthac = ~0~
+     thiefscl = ~0 0 0 0 0 0 0 0~
+     hpclass  = ~HPPRS~
+     clsrcreq = ~0 1 1 0 0 0 0~
+
+END
+
+//DEFINE SPHERE ACCESS____________________________________________________
+//
+ACTION_INCLUDE ~Eldritch_Magic/lib/fnp_compat.tpa~
+COPY_EXISTING ~kitlist.2da~ ~override~
+	COUNT_2DA_ROWS 1 rows
+	READ_2DA_ENTRY (%rows% - 1) 5 1 clab
+BUT_ONLY
+LAF ~DEFINE_FNP_KIT_INFO~
+  INT_VAR
+	c_cleric 		= 1   // put a '1' next to appropriate class combinations for the kit
+	c_acolyte 		= 0   // note, cleric and acolyte are mutually exclusive
+	c_fighter_cleric 	= 0   // any other combinations are fair game
+	c_cleric_mage		= 1
+	c_cleric_thief 		= 1
+	c_ranger_cleric		= 1
+	c_f_m_c			= 0
+	c_druid                 = 0
+        c_champion              = 0
+        c_ranger_1              = 0
+  STR_VAR
+    clab_name = EVAL ~%clab%~
+	race 			= ~elf~  // enter 'all' 'human' 'elf' 'dwarf' 'gnome' 'halfling' or 'orc'
+	s_Life 			= ~major~   // for appropriate spheres, enter 'focus' or 'major' or 'minor'
+	s_Death 		= ~x~
+	s_Benediction 		= ~major~
+	s_Destruction 		= ~x~
+	s_Protection 		= ~major~
+	s_War 			= ~x~
+	s_Knowledge 		= ~major~
+	s_Deception 		= ~x~
+	s_Thought 		= ~x~
+	s_Dread 		= ~x~
+	s_Vigor 		= ~major~
+	s_Affliction 		= ~x~
+	s_Animal 		= ~minor~
+	s_Plant 		= ~major~
+	s_Earth 		= ~major~
+	s_Water 		= ~minor~
+	s_Air 			= ~minor~
+	s_Fire 			= ~minor~
+	s_Light 		= ~minor~
+	s_Shadow 		= ~minor~
+	s_Magic 		= ~x~
+END
+//________________________________________________________________________
+
+ PRINT ~Thank you for installing: "Herbalist Kit"~
